@@ -1,0 +1,397 @@
+<ProdTop>
+  <script>
+    jQuery(document).ready(function (){
+      jQuery(".link-descr").click(function (){
+        jQuery('html, body').animate({
+          scrollTop: jQuery(".descr-prod").offset().top-90}, 1000);
+      })
+    });
+  </script>  
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+  <div id="idDivPath">
+    <div class="line-brand"></div>
+     <div id="idHeadFilters">
+      <div class="FiltersFlex">
+        <div id="idTxtFilters">Filtros da busca:</div>
+        <div id="idShowFilters">
+          <button onclick="ToggleIDs('idHideFilters','idShowFilters');document.getElementById('idFiltersFC').style.display='';">Exibir</button>
+        </div>
+        <div id="idHideFilters" style="display:none;" class="FilterHide"><button onclick="ToggleIDs('idShowFilters','idHideFilters');document.getElementById('idFiltersFC').style.display='none';">Ocultar</button></div>
+      </div>
+      <div class="line-brand"></div>
+
+    </div>
+
+ 
+ 
+
+<!-- ADICIONAIS  --> 
+  <div id="idFiltersFC" style="display:none;">
+    <div id="idListaProdCategoriasFC">
+      <div class="EstTitQts"><LegendaCats></div>
+      <ListPathCatQt>
+    </div>
+    <div id="idListaProdAdicional1FC">
+      <div class="EstTitQts"><NomeAdicional1></div>
+      <ListAdic1Qt>
+    </div>
+    <div id="idListaProdAdicional2FC">
+      <div class="EstTitQts"><NomeAdicional2></div>
+      <ListAdic2Qt>
+    </div>
+    <div id="idListaProdAdicional3FC">
+      <div class="EstTitQts"><NomeAdicional3></div>
+      <ListAdic3Qt>
+    </div>
+  </div>  
+<!-- ADICIONAIS  -->
+
+</div> 
+<!-- Script Filters -->
+<div id="idDivSearch">
+  <div id="idTxtFiltersBy">Filtrando por:</div>
+  <div id="idTxtRemoveFilters"><a href="/prod,idloja,<IDLojaNum>">Remover filtros</a></div>
+  <div id="idTDLinkAdvancedSearchFC"><LinkAdvancedSearch></div>
+  <div id="idTablePathSearchFC"><ListPathSearch></div>
+</div> 
+
+<script>
+  sF$.fnAdjustsFilters();  
+  iQtdProds=<QtProd>;
+    if(iQtdProds=="1"){
+      var sPages=sF$.fnGetID("idPageCountFC");
+      if(sPages)sPages.style.display="none";
+    }
+  OffsetAutoPagFC=290;
+</script>
+<div id="idPagProdTop"></div>
+
+<script>
+function IndicaProd(IDProduto){document.write("<a href='javascript:MostraIndique(10590,"+IDProduto+")'>Recomende</a>");}
+</script>
+
+</ProdTop>
+
+<ProdLista>
+  <div class="c-xs-12 c-s-4 c-m-4 c-l-3 ListProd">
+    <div class="DivListProd">
+     <div onclick="location.href='<URLProd>'">
+        <!-- FLAG DE HIGHLIGHTS -->
+        <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
+        <script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>  
+        <!-- FLAG DE HIGHLIGHTS -->
+        <!-- PRODUCT IMAGE ZOOM -->
+        <div class="DivHomeImagemProd">
+          <a href="<URLProd>">
+            <ImagemProd>
+          </a>
+        </div>
+        <!-- PRODUCT IMAGE ZOOM -->
+        <!-- NAME PRODUCT -->
+        <div class="ProdList-NameProd">
+          <a href="<URLProd>">
+            <h1>
+              <NomeProd>
+            </h1>
+          </a>
+        </div>
+        <!-- NAME PRODUCT --> 
+        <div class="DivHomePriceProd">
+          <!-- PRODUCT PRICES -->
+          <div id="idProdPrice<IDProduto>">
+            <script>sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>',<MaxParcelasProdNum>,<IDProduto>);</script>
+          </div>
+          <!-- PRODUCT PRICES -->   
+          <!-- ECONOMY --> 
+          <div>
+            <p class="prod-price-home-discount">
+              <script>sF$.fnShowEconomy(<PrecoNum>,<PrecoOri>)</script>
+            </p>
+          </div>
+          <!-- ECONOMY --> 
+        </div>
+      </div>
+      <!-- BUTTONS URLPROD --> 
+      <div class="line-brand"></div>
+      <a href="#" class="Club-link">
+        <div class="Club">
+          <span>Clube Atração paga R$ <script>sF$.fnMostraDescontoProdDet(<PrecoNum>);</script></span>
+          <button class="Club-Button">Saiba como funciona!</button>
+        </div>
+      </a>
+      <div class="line-brand"></div>
+      <div class="ProdOut-Buttons">
+        <a href="<URLProd>"><button class="ProdOut-Button">Ver mais</button></a>
+        <a href="#Spy" class="xs-hidden" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'>
+        <button class="ProdOut-Button">Comprar</button>
+        </a>
+      </div>
+       <div class="line-brand"></div>
+      <!-- BUTTON URLPROD -->  
+      <!-- BUTTON CATEGORY --> 
+      <div class="ProdOut-Cacategory">
+        <span>
+          + 
+          <NomeCat>
+        </span>
+      </div>
+      <!-- BUTTON CATEGORY -->   
+    </div>
+  </div>
+</ProdLista>
+<ProdDet>
+  <link  rel="stylesheet" type="text/css" href="<PathTo file="htm/css/fc_grid_v1.css">">
+  <link rel="stylesheet" href="/js/magictoolbox/magiczoomplusv1/magiczoomplus.css?cccfc=1"/>
+ 
+    <div class="row">
+      <div class="c-xs-12 c-s-6 c-m-6 c-l-6 Breadcrumb">
+        <div id="idBreadcrumb">
+          <ul class="ProdDet-Breadcrumb">
+            <li><a href="/categorias.asp?idloja=<IDLoja> class="ProductStyleBreadCrumblinkFC">Departamento:&nbsp;</a></li>
+            <li>
+              <PathCat>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="c-xs-12 c-s-6 c-m-6 c-l-6">
+        <div class="SocialProdLinks">
+          <ul class="ProdDet-SocialIcons" id="idShareProdDet">
+            <li>
+              <span><a href="javascript:MostraIndique(<IDLoja>,<IDProduto>)">
+              <img src="<PathTo file="images/iconprodemail.svg">" width="20" height="20" border="0" alt="E-mail" title="Recomende este produto"></a></span>
+            </li>
+            <li>
+              <span>
+                <ShareGooglePlus>
+              </span>
+            </li>
+            <li>
+              <span>
+                <ShareFacebook>
+              </span>
+            </li>
+            <li>
+              <span>
+                <ShareTwitter>
+              </span>
+            </li>
+            <li>
+              <span>
+                <SharePinterest>
+              </span>
+            </li>
+            <li><span class="ShareWhatsApp"><a href="whatsapp://send?text=Veja o produto '<NomeProd>'. Segue o link: http://lvfc.co/l<IDLojaNum>/p<IDProduto>" target="_blank"><img src="<PathTo file="images/icwhatsapp.svg">" width="35" height="35" border="0" alt="Recomende este produto pelo WhatsApp" title="Recomende este produto pelo WhatsApp"></a></span></li>
+          </ul>
+          <!-- BEGIN: NOME PROD --> 
+          <div class="ProdDet-NameProd">
+            <h1>
+              <NomeProd> 
+            </h1> 
+          </div>
+          <!-- END: NOME PROD --> 
+        </div>
+      </div>
+    </div>
+    <!-- Row -->
+    <div class="row">
+      <!-- BEGIN: IMAGEM ZOOM --> 
+      <div class="c-xs-12 c-s-6 c-m-6 c-l-6 ProdDet-Images">
+        <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
+        <script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script> 
+        <div class="ProdDet-Images" id="idDivGridImg">
+          <a href="<ImagemProdAmp>" class="MagicZoomPlus" rel="hint:false;initialize-on: mouseover;">
+          <img src="<ImagemProdDet>" alt="<NomeProd>" onError="MostraImgOnError(this,0)">
+          </a>
+        </div>
+      </div>
+      <!-- END: IMAGEM ZOOM -->  
+      <div class="c-xs-12 c-s-6 c-m-6 c-l-6 Prod-Infos">
+        <div class="ProdDet-Details">
+          <span class="prod-info">
+            Ref:
+            <small id="idCodProdGrid">
+              <CodProd>
+            </small>
+            |
+          </span>
+          <span class="prod-info">
+            Categoria: 
+            <NomeCat>
+          </span>
+        </div>
+        <!-- PREÇOS DO PRODUTO -->
+        <!-- AVALIAÇÔES DO PRODUTO -->
+        <div class="ProdDet-Evaluation">
+          <ul class="avalia">
+            <li class="text-left ProdRating stars">
+              <script type="text/javascript">
+                iQtdOp=<OpiniaoQtd>;
+                if(iQtdOp==0){document.write("<div class='ProductStyleReviewOffBoxFC'><div class='NotaOpiniaoVazio NotaOpiniaoVazio1'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio2'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio3'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio4'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio5'></div> </div>")}
+                else {document.write("<div class='ProductStyleReviewOnBoxFC'><div class='ProductStyleReviewStarsOnFC'><OpiniaoMedia></div><div class='ProductStyleReviewQtyOnFC'>(<a href='#OP' style='text-decoration:none;'><OpiniaoQtd></a>)</div></div>")}
+              </script>
+            </li>
+            <li class="ProdRating font-14">
+              <a href="/Opiniao.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>">Avalie este produto</a>|<script>IndicaProd(<IDProduto>);</script>
+            </li>
+          </ul>
+         
+        </div>
+        <!-- AVALIAÇÔES DO PRODUTO -->
+        <div>
+          <p class="prod-price" id="idPriceGridFC">
+            <PrecoFlex>
+          </p>
+          <script>(function(){ var e=document.getElementById("idPriceGridFC"); if(e)e.innerHTML += fnMaxInstallmentsGrid(<PrecoNum>,<MaxParcelasProdNum>) + fnShowEconomyGrid(<PrecoNum>,<PrecoOri>); })(); </script> 
+        </div>
+        <span id="ParcelasPagSeg<IDProduto>">
+          <script>//MostraParcelaPagSeguroHome(<PrecoNum>,<MaxParcelasProdNum>,<IDProduto>);</script>
+        </span>
+        <!-- PREÇOS DO PRODUTO -->
+        <!-- COMPRAR GRID -->
+        <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 FCGridMain" id="idMainGridFC_<IDProduto>"></div>
+        <!-- COMPRAR GRID -->
+        <div class="ProdDet-Club">
+          <div class="ProdDet-Club-tittle">
+             <img src="<Baseloja>/images/coracao_icon.svg">
+            <p>Sócio do clube paga <script>sF$.fnMostraDescontoProdDet(<PrecoNum>);</script></p> 
+          </div>
+          <button class="ProdDet-Clu-button">Conheça o clube da atração!</button>
+        </div>
+ 
+        <div class="ProdDet-Desc-Short-Description"> 
+          <DescricaoCurta>
+        </div>
+        <li class="Smais">
+          <a class="link-descr" href="#">
+            mais detalhes
+            <span>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="15px" height="15px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;"
+                xml:space="preserve">
+                <g>
+                  <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                </g>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </div>
+    </div>
+    <div class="line-brand"></div>
+    <div class="c-xs-12 c-s-12 c-m-12 c-l-12 descr-prod">
+      <div class="ProdDet-Desc">
+        
+        <Descricao>
+        <br><br> 
+        <DescrHtm>
+      </div>
+      <div class="line-brand"></div>
+      <div class="ProdDet-Doubts">
+        <h2 class="ProdDet-Tittle">Dúvidas frequentes</h2>
+        <div class="ProdDet-Doubts-desc">
+          <p>1) Sua privacidade e nossa 1ª prioridade. Você receberá seus produtos em uma caixa parda, super segura e sem qualquer identificação da nossa loja.</span></a></p>
+          <p>2) O prazo de entrega e o valor do frete são calculados automaticamente quando você estiver conferindo seu carrinho de compras.</p>
+          <p>3) Comprar na Atração Sex Shop é seguro! Utilizamos os mais altos padrões de segurança e contamos com as maiores empresas em transação eletrônica.</p>
+          <p>4) Na sua fatura aparecerá um nome discreto e formal, como Empreendimentos online ou Loja Online. Tudo para garantir a sua privacidade</p>
+          <p>5) Você receberá seu código de rastreamento pelo email e, assim, poderá acompanhar o status de seu pedido.</p>
+          <p>6) Comprou e não gostou? Aceitamos a devolução sem custo em até 7 dias após o recebimento, independente do motivo!</p>
+          <p>Quer saber mais? Veja aqui todas as respostas para suas dúvidas. Ou utilize nossa <a href="/ajuda.asp?idloja=<IDLoja>"><span class="pleasure">Central de Atendimento.</span></a></p>
+  
+        </div>
+      </div>
+      <div class="line-brand"></div>
+      <div class="ProdDet-Evaluation">
+        <Comments>
+      </div>
+     
+      <CrossSelling>
+    </div>
+ 
+  <script>
+    FCLib$.onReady(sF$.fnCustomizeIconsSocialNetworks(true));
+    fnShowCEP(<IDProduto>);
+    
+    jQuery(".EstNameProdCross").addClass('text-overflow');
+  </script>
+  <!-- Begin: JS scripts grid -->
+  <script src="<PathTo file="htm/js/fc_grid_v1.js">"></script>
+  <script>
+    fnShowCEPGrid(<IDProduto>); /*FC simulação de frete */
+    FCGrid$.fnMultipleZoom("<ImagemProdDet>","<ImagemProdAmp>", false);
+  </script>
+  <script>
+
+  jQuery(document).ready(function movimento() {
+    jQuery('html,body').animate({
+      scrollTop: jQuery("#ponto-rolagem").offset()}, 1000);
+  });
+
+
+    var aProductOnlyOneGrid=[], aProductListGrid=[];
+    
+    /* Begin: produto principal */
+    var sCor= ("<CorVal>" !="") ? "<CorVal>|<CorRGB>":"";
+    aProductOnlyOneGrid.push(JSON.stringify({IDProduto: <IDProduto>,codProd: "<CodProd>", cor: sCor, estoque: <Estoque>, peso: "<PesoNum>", priceOri: "<PrecoOri>", priceNum: "<PrecoNum>", maxInstallmentsNum: <MaxParcelasProdNum>, adicional1: "<Adicional1Val>", adicional2: "<Adicional2Val>", adicional3: "<Adicional3Val>", adicionalD1: "<AdicionalD1Val>", adicionalD2:"<AdicionalD2Val>", adicionalD3:"<AdicionalD3Val>", imgDet:"<ImagemProdDet>", imgAmp:"<ImagemProdAmp>"}));
+    /* End: produto principal */
+    
+    /* Begin: lista subprodutos */
+    <sub>
+    var sCor= ("<CorVal>" !="") ? "<CorVal>|<CorRGB>":"";
+    aProductListGrid.push(JSON.stringify({IDProduto: <IDProduto>, codProd: "<CodProd>", cor: sCor, estoque: <Estoque>, peso: "<PesoNum>", priceOri: "<PrecoOri>", priceNum: "<PrecoNum>", maxInstallmentsNum: <MaxParcelasProdNum>, adicional1: "<Adicional1Val>", adicional2: "<Adicional2Val>", adicional3: "<Adicional3Val>", adicionalD1: "<AdicionalD1Val>", adicionalD2:"<AdicionalD2Val>", adicionalD3:"<AdicionalD3Val>", imgDet:"<ImagemProdDet>", imgAmp:"<ImagemProdAmp>"}));
+    </sub>
+    /* Begin: lista subprodutos */
+    
+    /* código opcional para alterar as configurações da grade:begin */
+    FCGrid$.myOptions = {
+      autoSelect : false,
+      cartOnPage : true,
+      shippingUpdate : false,
+      incMultGrid : false,
+      separadorRGBCor : '|',
+      qtyDescriptors : 7,
+      htmlFlagChecked : '<i class="FCCheckedGrid"></i>',
+      imageProduct : 'cor',
+      colorName : false,
+      colorImg : false, 
+      colorImgFormat : '.gif',
+      stock: false,
+      btnSelectImg : 'botselecionegrid.svg?cccfc=1', 
+      btnBuyImg : 'botcarrinho.svg?cccfc=1',
+      btnContactUSImg : 'botconsultegrid.svg?cccfc=1',
+      btnSoldOut : 'botcarrinhoesgotado.svg?cccfc=1', 
+      textGrid : 'Selecione as opções abaixo',
+      order : ['cor', 'adicional1', 'adicional2', 'adicional3', 'adicionalD1', 'adicionalD2', 'adicionalD3'],
+      nameDescriptor : { 
+        cor : 'Cor',
+        adicional1 : 'Descritor 1',
+        adicional2 : 'Descritor 2',
+        adicional3 : 'Descritor 3',
+        adicionalD1 : 'Descritor 4',
+        adicionalD2 : 'Descritor 5',
+        adicionalD3 : 'Descritor 6'
+      },
+      textDescriptor : {
+        cor : 'Selecione',
+        adicional1 : 'Selecione',
+        adicional2 : 'Selecione',
+        adicional3 : 'Selecione',
+        adicionalD1 : 'Selecione',
+        adicionalD2 : 'Selecione',
+        adicionalD3 : 'Selecione'
+      }
+    };
+    /* código opcional para alterar as configurações da grade:end */
+    
+    FCGrid$.init("idMainGridFC_<IDProduto>", aProductListGrid, aProductOnlyOneGrid); /* Inicia a grade */
+    
+  </script>
+  <!-- End: JS scripts grid -->
+</ProdDet>
+<ProdAmp>
+  <!-- Prod Amp -->
+</ProdAmp>
+<ProdBottom></ProdBottom>
+<!-- Fastcommerce - EstiloProduto.htm : Grid v1 08.07.2015  (Xtreme Responsive Store) -->
