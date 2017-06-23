@@ -1,0 +1,100 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- TOPO FIXO -->
+<div class="amp-home-section top-Sect">
+  <div class="Bar-top">
+    <div class="amp-header-btn">
+      <button on='tap:sidebar.toggle' class="amp-sidebar-btn">
+      <img layout="fill" src="<PathTo file="images/menu_icon.svg">"> 
+      </button>
+    </div>
+    <div class="Home-Cat fones">
+      <ul class="MegaMenu">
+    <!--     <li>
+           <a href="/account.asp?idloja=<IDLoja>"><img alt="icone-login" class="icone-login" src="<PathTo file="images/user-icon.svg?cccfc=1">"></a>
+        </li>
+        <li>
+           <a href="/ajuda.asp?idloja=<IDLoja>"><img alt="icone-Ajuda" class="icone-ajuda" src="<PathTo file="images/help-icon.svg?cccfc=1">"></a>
+        </li> -->
+        <li>
+          <div class="MegaMenu-Select"> 
+            <img alt="icone-contato" class="down-phone" src="<PathTo file="images/contact.svg?cccfc=1">"> contato@atracaosexshop.com.br 
+            <span class="PhoneIcon"></span>
+          </div>
+          <div class="PhoneBox">
+            <ul>
+              <li>(11) 9 9999 9999</li>
+              <li>(11) 9 9999 9999</li>
+              <li>(11) 9 9999 9999</li>
+              <li>(11) 9 9999 9999</li>
+            </ul>
+          </div>
+        </li>
+        <div onclick="drop_close()" class="Menu-overlay"></div>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- TOPO FIXO -->
+
+<!-- MENU SIDEBAR -->
+<div class="sidebar-container">
+  <div class="sidebar-close-container">
+    <img src="<PathTo file="images/ampclose.svg">" width="20" height="20" class="amp-sidebar-btn-close">
+  </div>
+  <nav class="amp-nav">
+    <a href="<PathAMP url="/home.asp?idloja=<IDLoja>">">Home</a>
+    <a href="<PathAMP url="/account.asp?idloja=<IDLoja>">">Minha Conta</a>
+    <a href="<PathAMP url="/track.asp?idloja=<IDLoja>">Meus Pedidos</a>
+    <a href="<PathAMP url="/addProduto.asp?idloja=<IDLojaNum>">">Carrinho</a>
+    <a href="<PathAMP url="/">">Clube Atração</a>
+    <a href="<PathAMP url="/newsletter.asp?idloja=<IDLoja>">">Quer Desconto ?</a>
+    <a href="<PathAMP url="/faleconosco.asp?idloja=<IDLoja>">">Fale Conosco ?</a>
+    <a href="<PathAMP url="/listaprodutos.asp?idloja=<idloja>&lancamento=true">">Lançamentos</a>
+    <a href="<PathAMP url="/listaprodutos.asp?idloja=<idloja>&promocao=true">">Promoções</a>
+    <a href="/buscaavancada.asp?idloja=<idloja>">Busca detalhada</a>
+  </nav>
+  <div class="amp-cats">
+     <a href="<PathAMP url="/categorias.asp?idloja=<idloja>">"class="amp-link-cats">
+       <Categorias>
+     </a>
+    <ListPathCat out="13" id="-1">
+  </div>
+</div>
+<div class="sidebar-mask"></div>
+<!-- MENU SIDEBAR -->
+
+<!-- Includes Javascript -->
+<script src='<PathTo file="htm/mbhlojalib.js">'></script>
+<script src='<PathTo file="htm/jurosparcelas.js">'></script>
+<!-- Includes Javascript -->
+
+<!-- HEADER -->
+<header>
+  <div class="amp-top-bar container">
+    <div class="amp-header-container">
+      <div class=amp-header-logo>
+        <a href="<PathAMP url="/">"><img src="<PathTo file="images/logo-sexshop.svg">" /></a>
+      </div>
+      <div class="amp-header-cart">
+        <a href="/AddProduto.asp"><img src="<PathTo file="images/cart-icon.svg">"></a>
+      </div>
+    </div>
+    <div class="amp-search-container">
+      <form name="TopSearchForm" method="GET" target="_top" action="/listaprodutos.asp" accept-charset="UTF-8">
+        <input type="hidden" name="idloja" value="<IDLoja>">
+        <input type="hidden" name="digitada" value="true">
+        <input type="text" value="<SearchText>" name="Texto" class="InputTextBusca amp-search-input" placeholder="Encontre Produtos">
+        <button type="submit" class="amp-search-btn">
+          <img64 src="<BaseLoja>images/search-icon.svg" plain="true" width="25" height="25" title="Buscar">
+        </button>
+      </form>
+    </div>
+    <div class="amp-advanced-search"><a href="/buscaavancada.asp?idloja=10590">Busca Avançada</a></div>
+  </div>
+  <div class="line-brand Hidden-Home"></div>
+</header>
+<!-- HEADER -->
+
+<!-- BEGIN: SECTION GERAL --> 
+<section class="container amp-main">
