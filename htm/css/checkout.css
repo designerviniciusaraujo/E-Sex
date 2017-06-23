@@ -1,0 +1,51 @@
+/* =================== MY CHECK-OUT ===========================*/
+
+	/* ESTRUTURA RESPONSIVA LOGIN */  
+	.FCCheckoutLogin {  width: 100%;   padding: 0 10px;}  
+	#idChkLoginIntFC { box-shadow: 0px 1px 22px 1px #f3f3f3;} 
+	#idChkLoginIntFC .EstChkNomeCampo { line-height: 3; color: #444444; position: relative; right: 3px;} /* label login */
+	div#idIdentifyFC #idDivLinkContinueFC { width: 100%;}  /* button continue login */
+	#idCheckoutFC #idTxtLinkContinueFC {background-color: #1ec013 !important; transition: 0.3s;}  /* button continue login */
+	#idCheckoutFC #idTxtLinkContinueFC:hover { background: #18a50e !important;  transition: 0.3s;}  /* button continue login */
+	tr#idOptSitSenhaLoginFC svg { margin: 10px;}
+
+ 
+  .EstChkDiv {border-color: transparent !important;}
+	td.EstChkOptSit { line-height: 4;}
+	#idChkAllFC {  width: 100% !important;}
+ 
+	.EstTabPedidoTit {background: #62d7e6 !important; color: #fff !important;}
+  #idCheckoutFC .EstTitCheckoutFC {font-size: 14px !important;  font-family: 'Roboto'!important; text-transform: uppercase;    padding: 22px}
+  .EstChkRequiredField { color: #000000 !important;}
+
+  td.EstChkNomeCampo.EstChkRequiredField { line-height: 4;}  /* Space line form */
+  .EstTxtErrField { color: #ff0d8c  !important;  background-color: transparent  !important; font-size: 11px  !important; text-transform: uppercase;}
+
+	/* ESTRUTURA RESPONSIVA LOGIN */ 
+
+	/* RESUMO DO PEDIDO */ 
+  #idChkTxtPedConfirmadoFC { margin: 10px auto 0;}
+  #idChkOrderNumberFC { color: #e20b7c !important;}
+  div#idChkCompletionIntFC p {padding: 0; margin: 10px auto;}
+  div#idChkCompletionIntFC {  width: 80%;}
+  #idTxtPaymentMethodFC { font-size: 18px !important;  font-family: 'Roboto'!important; margin: 0!important; text-transform: uppercase;}
+  div#idShowOrderDetailsFC a {color: #e3037d;}
+  .idTxtTrackConfFC p a {color: #e3037d;}
+  #idCheckoutFC .EstChkTabTopo { background:transparent !important;    padding: 8px 0px 8px 0px !important; font-family: 'Roboto' !important;  font-size: 18px !important;  text-transform: uppercase !important;}
+  /* RESUMO DO PEDIDO */ 
+
+  /* INTERFACE CHECK-OUT */  
+  #idDivLinkContinueFC {float: right;}
+  #idCheckoutFC #idChkTopFC { text-align: right;  height: 1px !important;  float: right;   width: 100%;  position: relative;}  /* BOTÃO COMPRAR CHECK-OUT */
+  #idTitRegisterFC { background: #ffffff url('<PathTo file="images/01.svg">') no-repeat scroll 10px 10px;  height: 63px;  padding: 20px 0;} /* BULLET 01 */
+  #idTitFreightFC {background: #ffffff url('<PathTo file="images/02.svg">') no-repeat scroll 10px 10px;  height: 63px;  padding: 20px 0;} /* BULLET 02 */
+  #idTitPaymentFC {background: #ffffff url('<PathTo file="images/03.svg">') no-repeat scroll 10px 10px;height: 63px;  padding: 20px 0;} /* BULLET 03 */
+  #idTitCartFC {background: #ffffff url('<PathTo file="images/04.svg">') no-repeat scroll 10px 10px; height: 63px; padding: 20px 0;} /* BULLET 04 */ 
+  #idCheckoutFC .EstChkOrderConfirmationFC { float: right; width: 280px;}
+  div#idTitRegisterFC h5 {font-size: 22px;  margin: 0;  text-transform: uppercase;  font-family: 'Roboto';}
+ /* #idOptSitSenhaLoginFC, td.EstChkRadioOptSit { position: relative;    top: 13px;}*/
+  td.EstChkRadioOptSit {padding: 15px 0 !important;}
+  
+  /* INTERFACE CHECK-OUT   */  
+
+	/* =================== MY CHECK-OUT ===========================*/ 
