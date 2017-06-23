@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="<BaseLoja>htm/css/swipermin.css">  
+<script src="<BaseLoja>htm/js/swipermin.js"></script> 
+
+<style type="text/css">
+  .swiper-slide img { width: 100%; }
+  .swiper-container-banners {overflow: hidden;}
+  .swiper-container-banners img {min-width: 100%; height: } 
+</style>
+
+<div class="swiper-container-banners xs-hidden" height="100%">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+    <banner 1> 
+    </div> 
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>  
+
+  <script>FCLib$.execLazyLoad();</script>
+</div>
+<script>  
+  setTimeout(function(){
+    carousel.swipers.banners(); 
+  },1000);  
+</script>
