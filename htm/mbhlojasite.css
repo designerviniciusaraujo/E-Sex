@@ -1,0 +1,146 @@
+	/* Reset */
+	@import url('https://fonts.googleapis.com/css?family=Roboto');
+	html{font-size: 16px;}
+	body{font-family: "Roboto",Helvetica,Arial,sans-serif;background-color: #efefef;margin:0;}
+	header{background-color: #ffffff;max-width: 600px; margin: 25px auto 0;  }
+	input,form {outline-color: #ff87c8  !important; }
+	footer,section{max-width: 600px; margin:0 auto; }
+	#idProdCrossFC {margin:0;width:100%;background-color:<tag-FCCSSColor8>;}  
+	footer {background-color: #424242;}
+	section {background: white;} 
+	*{box-sizing: border-box;} 
+	a { text-decoration: none; }
+	li { list-style: none; }
+	button { background-color: transparent; border: 0; }
+	img { max-width: 100%; }
+	.text-center{ text-align: center;}
+	img[data-src*="/lojas/"][src$="/images/loading.gif"]{max-width: 16px!important;}
+	   
+	/* ============== ATRAÇÂO STYLES MBH ============== */
+	.FCHome .zFProdSeloProd { position: absolute; color: #fff; z-index: 999; font-size: 0.8em; width: 85%; }
+	body.FCProduct.ProductList .zFProdSeloProd { position: absolute; z-index: 99; top: 0.7em; }
+	body.FCProduct.ProductList .zFProdSeloProd span { font-size: 0.5em; }
+	.zFProdSeloProd span { color: #fff; padding: 2px 5px; border-radius: 5px; font-family: 'Roboto'; float: right; bottom: 7px; position: relative; }
+	  
+	.amp-home-section.Category .swiper-slide { min-width: 120px; max-width: 120px;width: 120px;}
+	amp-home-section.banners,.swiper-button-next, .swiper-button-prev {position: absolute; top: 55%;}  
+	.bs-category {position: relative;  top: -30px;}
+	.bs-products {position: relative; bottom: 16em;} 
+	.amp-home-section.banners .swiper-slide {min-width: 280px; max-width: 280px;}
+	.amp-home-section.products .swiper-slide {min-width: 240px; max-width: 240px;}
+
+	/*slide categorias*/
+	.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("<PathTo file="images/icoLeftgray.svg">")!important;background-color:transparent!important;background-size:contain!important;left:0px!important;height:85px!important;width:45px!important}
+	.swiper-button-next,.swiper-container-rtl .swiper-button-prev { background-image: url("<PathTo file="images/icoRigthgray.svg">") !important; background-color: transparent !important; background-size: contain !important; height: 85px !important; width: 45px !important; right: 0px !important; }
+	 
+	span.Prom { background: #e3037d; }
+	span.LancFlag { background: #62d7e6; }
+	span.DestFlag { background: #f9ce19; }
+	.swiper-container-banners.swiper-container-horizontal { overflow: hidden; position: relative; }
+	.amp-home-section.banners .swiper-slide span {display: block;}
+	.amp-home-section.banners .swiper-slide a { color: #000000; font-size: 0.8em;text-transform: uppercase; font-family: 'Roboto';text-align: center;}
+	.amp-home-section.top-Sect { padding: 0; margin: 0; max-width: 600px; margin: 0 auto; }
+	.amp-advanced-search { margin: 10px; }
+	.Bar-top { background: #000; color: #fff; position: fixed; max-width: 600px; width: 100%; z-index: 11; box-shadow: 0px 8px 16px 0 #d6d6d6; padding: 5px 10px 0; display: flex; justify-content: space-between; align-items: center; }
+	.amp-header-container { display: flex; justify-content: space-between; align-items: center; padding: 25px 0 15px; }
+	.amp-prod-home-btn:focus { outline-color: #e3037d; }
+	.col-small-12.col-medium-12.col-large-12.col-xlarge-12.text-left.ProductStyleDetprice { width: 213px; margin: 0 auto; }
+	 
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */color: #848282; font-size: 14px; text-transform: uppercase;}
+	::-moz-placeholder { /* Firefox 19+ */color: #848282; font-size: 14px; text-transform: uppercase;}
+	:-ms-input-placeholder { /* IE 10+ */ color: #848282; font-size: 14px; text-transform: uppercase;}
+	:-moz-placeholder { /* Firefox 18- */ color: #848282; font-size: 14px; text-transform: uppercase; }
+	 
+	@media (max-width:420px){.amp-prod-list-name,.cs-item-name a{width:100%!important}}
+
+	.Home-Cat.fones .PhoneBox { visibility: hidden; background: #eeeeee; z-index: 999; width: 150px; height: 0px; margin-left: 10px; box-shadow: 0px; transition: 0.6s; position: absolute; border-radius: 5px; opacity: 0.0; margin-top: 5px; }
+	.Home-Cat.fones ul li:hover .PhoneBox { height: 145px; transition: 0.4s; visibility: visible; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); display: block; z-index: 3; opacity: 1; background: #eeeeee; padding: 10px 0; right: 9px; }
+	ul.MegaMenu img { max-width: 28px; margin: 0 10px; }
+	.PhoneBox ul { padding: 5px 14px; }
+	.Home-Cat.fones ul.MegaMenu { display: flex; justify-content: flex-end; align-items: center; }
+	img.icone-ajuda { width: 20px; }
+	.Home-Cat.fones .MegaMenu-Select { padding: 0; display: flex; flex-direction: inherit; align-items: center; font-size: 0.8em;}
+	.MegaMenu-Select img { margin-right: 5px; }
+	.PhoneBox li { color: #444; padding: 5px 0; }
+	.advantages { background: #12cf3d; height: 140px; margin: 0px 15px 0; border-radius: 15px; }
+	.advantages p { color: #fff; text-align: center; margin: 0px auto 0; padding: 15px; font-size: 1.3em; }
+	.advantages-form { width: 95%; margin: 0 auto; background: white; position: relative; top: 0; border-radius: 5px; padding: 5px 3px; height: 50px; }
+	.amp-home-section.news-letter { border: 0; margin: 15px 0px 15px; }
+	input.FooterNewsletterInput { background: white; border: 0; height: 40px; margin: 0px auto; width: 85%; padding: 0 5px; }
+	input.advantages-newsletter-button { height: 40px; background: #e3037d; border: 0; color: #ffffff; width: 15%; float: right; margin: 0px 0; border-radius: 7px; text-transform: uppercase; font-weight: bold; }
+	span.HeaderSerachIMGIconFC img { display: none; }
+	.amp-home-banners { min-width: 125px; margin: 0 5px; }
+	.amp-home-banners img { margin: 0 auto; width: 140px; }
+	.amp-home-descr { text-align: center; color: #444444; text-transform: uppercase; font-size: 0.7em; }
+	.FCHome .amp-advanced-search { margin: 10px auto; }
+	.amp-advanced-search a { color: #444444; display: flex; justify-content: center; }
+	.Prodout-tittle h3 { text-align: center; text-transform: uppercase; }
+
+
+	/* PRODLIST */
+	.amp-prod-list-descr .amp-prod-home-btn { display: block; float: right; background: #e20b7c; color: #fff; border-radius: 5px; }
+	/* PRODLIST */
+
+	/* PRODDET */
+	.FCBtnGrid.FCBtnComprarGrid img { width: 100%; }
+	.prod-info.DivDetCat a { color: #444444; }
+	ul.ProdDet-Breadcrumb { display: flex; margin: -5px auto 15px; }
+	.DivDetBtnRelease { width: 150px; margin: 0 auto; }
+	.FCGridBtnZoomContent p { display: none; }
+	ul.ProdDet-Breadcrumb a { color: #8a8a8a; font-size: 0.8em; font-family: 'Roboto'; }
+	ul.ProductStyleULFC { width: 142px; margin: 5px auto 5px; }
+	.zFContentTxtSocialLinks { text-align: center; }
+	.ProductStyleDetprice strike .FCPrice { font-size: 1.1em; }
+	.ProductStyleDetprice .FCPrice { white-space: nowrap; font-size: 2.1em; }
+	span.EstParc font { color: #444444; }
+	button.FCBtnComprarCartOnPage { background: #e8e8e8; width: 100%; text-transform: uppercase; font-family: 'Roboto'; padding: 6px; border-radius: 5px; color: #444; }
+	/* PRODDET */ 
+
+	/* ============== ATRAÇÂO STYLES MBH ============== */ 
+	.amp-main { padding-top: 15px; height: 100%; }
+	.FCHome .amp-main, .HighlightsPage .amp-main { padding-left: 0; padding-right: 0; }
+	.line-brand { background-image: url("<PathTo file="images/line.svg">"); height: 1px; width: 95%;   margin: 0 auto;}
+
+	/* Header - Sidebar */
+	.container { width: 100%; padding-right: 20px; padding-left: 20px; }
+	.sidebar-mask { background-color: rgba(0, 0, 0, .5); position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 999; display: none; }
+	.sidebar-container { position: fixed; max-height: 100vh; height: 100vh; overflow-x: hidden; overflow-y: auto; z-index: 9999; width: 250px; background-color: #efefef; left: -250px; top: 0; padding-top: 10px; padding-right: 10px; }
+	.sidebar-open { left: 0; transition: all .3s ease-in-out; }
+	.sidebar-close { left: -250px; transition: all .3s ease-out; }
+	.sidebar-close-container { text-align: right; }
+	.amp-sidebar-btn-close { position: relative; right: 0; }
+	amp-sidebar { width: 250px; padding-right: 10px; }
+	.amp-sidebar-image { line-height: 100px; vertical-align: middle; }
+	.amp-close-image { top: 15px; left: 215px; cursor: pointer; }
+	.amp-header-container { display: flex; justify-content: space-between; align-items: center; }
+	.amp-header-logo, .amp-header-cart, .amp-sidebar-btn { position: relative; }
+	.amp-header-logo { width: 180px; height: 54px; }
+	.amp-header-cart { width: 40px; height: 40px; }
+	.amp-sidebar-btn { width: 45px; height: 45px; }
+	.amp-search-container { position: relative; width: 100%; overflow: hidden; border-radius: 5px; margin-top: 15px; padding: 1px; }
+	.amp-search-input { width: 100%; height: 50px; border: 1px solid #848282; background-color: #fcfcfc; padding-right: 50px; padding-left: 10px; font-size: 1.2rem; border-radius: 5px; }
+	.amp-search-btn { position: absolute; top: 0; bottom: 0; right: 0; margin-top: auto; margin-bottom: auto; background-color: transparents; height: 41px; }
+	.amp-search-btn svg { fill: #fff; }
+	.amp-cats { background-color: #e8e8e8; }
+	.amp-cats .amp-link-cats { display: block; padding: 25px 20px; color: gray; font-weight: bold; text-transform: uppercase; }
+	.CatContainerFC { background-image: none !important; margin-bottom: 10px; }
+	.CatListFC { padding-left: 20px; margin-bottom: 0; margin-top: 0; }
+	section.amp-accordion a:before { margin: 10px -9px !important; }
+	.Cat0FC { margin-bottom: 0; }
+	footer .Cat0FC a { color: #ffffff; }
+	footer .Cat1FC a { color: #fff; }
+	.Cat0FC a { text-transform: uppercase; font-weight: bold; color: #585757; display: block; line-height: 29px; padding-top: 5px; padding-bottom: 10px; vertical-align: middle; }
+	.Cat0FC a:visited { color: #585757; }
+	.Cat1FC { margin-bottom: 0; }
+	.Cat1FC a { color: #4a4949; display: block; line-height: 29px; padding-left: 5px; padding-top: 5px; padding-bottom: 10px; vertical-align: middle; }
+	.Cat1FC a:visited { color: #4a4949; }
+	.CatSeeMoreFC { padding-left: 25px; }
+	.CatSeeMoreFC a { font-size: .9rem; color: #eee; display: block; line-height: 29px; padding-top: 5px; padding-bottom: 10px; vertical-align: middle; }
+	.CatSeeMoreFC a:visited { color: #0a0c7b; }
+	.amp-nav { padding-left: 20px; padding-right: 20px; }
+	footer .amp-nav > a:nth-of-type(1) { border-top: 1px solid #ccc; }
+	.amp-nav > a:last-child { border-bottom: 0; }
+	.amp-nav a svg { margin-right: 10px; fill: #757576; }
+	.amp-nav a:visited { color: #444444; }
+	footer .amp-nav a:visited { color: #eee; }
