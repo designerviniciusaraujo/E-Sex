@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="Contact">
+    <div class="row">
+      <div class="c-xs-12 c-m-6 c-s-6 c-l-6">
+        <h3>Fale Conosco</h3>
+        <p>Entre em contato conosco através do formulário a seguir. Em breve responderemos à sua mensagem.</p>
+        <div class="Contact-phone">
+          <p>Ligue para nós:<br>
+            <span class="Contact-phone-num">11 5555-5555 </span>
+          </p>
+        </div>
+        <p class="par-smal">Envie um e-mail: <br></p>
+        <span class="Contact-email">contato@atracaosexshop.com.br</span>
+      </div>
+      <div class="c-xs-12 c-m-6 c-s-6 c-l-6">
+        <div class="Contact-forms">
+          <div id="formDest">
+            <form name=form method="POST" action="EnviaMail.asp" class="form-horizontal">
+              <input type=hidden name="NomePara" value='Atração'>
+              <input type=hidden name="EmailPara" value='contato@atracaosexshop.com.br'>
+              <input type=hidden name="Assunto" value='Contato - Loja Atração Sex-Shop'>
+              <input type=hidden name="URLRetorno" value='/custom.asp?IDLoja=<IDLoja>&arq=obrigado.html'>
+              <input type=hidden name="OrdemCampos" value='Nome,EmailDe,Mensagem'>
+              <p id="formSubject"></p>
+              <div class="form-group">
+                <input type="text" name="Nome" class="form-control" placeholder="Digite seu nome" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="EmailDe" class="form-control" placeholder="E-mail" required>
+              </div>
+              <div class="form-group">
+                <textarea name="Mensagem" class="form-control" placeholder="Mensagem" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" alt="Clique para enviar" value="Enviar" class="Contact-Submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
