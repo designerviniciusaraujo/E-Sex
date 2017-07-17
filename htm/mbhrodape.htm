@@ -1,10 +1,10 @@
 </section>
- 
-<!-- BEGIN: NEWS LETTER FOOTER --> 
+
+<!-- BEGIN: NEWS LETTER FOOTER -->
 <section>
 <div class="container news">
 	    <div class="news-style-image">
-	      <img alt="icon-silueta" class="news-image" src="../lojas/00010590/images/silueta.gif?cccfc=1"> 
+	     <img alt="icon-silueta" class="news-image" src="<PathTo file="images/silueta.gif?cccfc=1">">
 	    </div>
 	    <div class="news-low">
 	      <div class="row">
@@ -20,8 +20,8 @@
 	              <input type="hidden" name="Y" value="1630726197540">
 	              <input type="hidden" name="FormatoHTML" value="True">
 	              <input type="hidden" name="EnviarAssinante" value="Enviar">
-	              <input type="email" name="Email" class="FooterNewsletterInput" placeholder="Cadastre-se seu e-mail"> 
-	              <input type="submit" name="ok" value="Eu quero" class="advantages-newsletter-button"> 
+	              <input type="email" name="Email" class="FooterNewsletterInput" placeholder="Cadastre-se seu e-mail">
+	              <input type="submit" name="ok" value="Eu quero" class="advantages-newsletter-button">
 	            </form>
 	          </div>
 	        </div>
@@ -29,27 +29,27 @@
 	    </div>
 	  </div>
 </section>
-<!-- END: NEWS LETTER FOOTER --> 
-<!-- BEGIN: BANNERS FOOTER --> 
+<!-- END: NEWS LETTER FOOTER -->
+<!-- BEGIN: BANNERS FOOTER -->
 <div class="container banners">
   <div class="banners-footer">
     <div class="row">
       <div class="banners-footer-first">
-        <banner 5>
+        <banner 8>
       </div>
       <div class="banners-footer-second">
-        <banner 6>
-      </div>  
+        <banner 9>
+      </div>
     </div>
   </div>
 </div>
-<!-- END: BANNERS FOOTER -->  
+<!-- END: BANNERS FOOTER -->
 <footer>
 	<nav class="amp-nav">
 	  <a href="<PathAMP url="/">">Home</a>
 	    <section class="amp-accordion">
 	      <h4 class="amp-accordion-title" accordion><Categorias>
-	      	 <img class="ico-categ" width="10" height="10" src="<PathTo file="images/seta.svg">"> 
+	      	 <img class="ico-categ" width="10" height="10" src="<PathTo file="images/seta.svg">">
 	      </h4>
 	      <div class="amp-cats-accordion" accordion-content>
 	      	<ListPathCat out="13" id="-1">
@@ -72,7 +72,7 @@
 	     <div class="amp-social-share-facebook"><ShareFacebook></div>
 		</div>
 	</div>
-	
+
 	<div class="container amp-footer">
 		<div class="amp-footer-infos">
 		  <span><CompanyName></span>
@@ -88,8 +88,19 @@
 	</div>
 </footer>
 
+<!-- CHAMA FUNÇÃO SLIDE BANNERS 1, 2, 3 TIPOS SWIPER -->
 <script>
-	if(FC$.Page=="Checkout"){		
+  setTimeout(function(){
+
+    carousel.swipers.banners();
+		carousel.swipers.home();
+
+  },1500);
+</script>
+<!-- CHAMA FUNÇÃO SLIDE BANNERS 1, 2, 3 TIPOS SWIPER -->
+
+<script>
+	if(FC$.Page=="Checkout"){
 		FCLib$.loadAsyncCSS('<PathTo file="htm/mbhcheckout.css">');
 		function FuncChkRegisterEnd(){
       if(F$.Step==1 && (F$.FreightValue=='' || F$.FreightValue==null))F$.GetID("idChkPaymentFC").innerHTML="<div id=idChkPaymentIntFC class=EstChkDiv><div id=idTitPaymentFC class=EstTitCheckoutFC>Pagamento</div><p>As op&ccedil;&otilde;es de pagamento ser&atilde;o exibidas ap&oacute;s a etapa da escolha do frete.</p></div>";
@@ -100,7 +111,7 @@
 		}
 	}
 	plugins(document);
-              
+
 	fnInsertLinkWhatsApp();
 </script>
 
