@@ -1,104 +1,21 @@
 <p1>
+  <style media="screen">
+  </style>
   <div class="DivMenuPreview">
-    <button class="DivMenuPreview-btn flag">Em Destaque</button> 
-    <div class="DivHomeImagemProdDest">
-      <a href="<URLProd>">
-        <ImagemDet>
-      </a>
-    </div>
-     <button class="DivMenuPreview-btn">Eu quero</button> 
-  </div> 
-</p1>
-
-
-<p4>
-  <div class="DivHomeProd">
-    <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
-    <script type="text/javascript">
-      sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>", "<Destaque>")
-    </script>
-    <div class="DivHomeImagemProd">
-      <a href="<URLProd>">
-        <ImagemProd>
-      </a>
-    </div>
+    <!-- PRODUCT NAME -->
     <div class="DivHomeNomeProd">
-      <span class="HomeNomeProd font-16">
-        <a href="<URLProd>">
-          <NomeProd>
-        </a>
-      </span>
+      <a href="<URLProd>">
+        <NomeProd>
+      </a>
     </div>
-    <div class="DivHomePriceProd">
-      <div id="idProdPrice<IDProduto>">
-        <script>
-          sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>', <MaxParcelasProdNum>,<IDProduto>);
-        </script>
-      </div>
-      <div class="PriceAVistaLista">
-        <script>
-          sF$.fnShowParcels(<PrecoNum>,<MaxParcelasProdNum>);
-        </script><br>
-        <script>
-          sF$.fnMostraDescontoHome(<PrecoNum>);
-        </script>
-      </div>
-    </div>
-    <div class="line-brand"></div>
-    <a href="#" class="Club-link">
-      <div class="Club">
-        <span>Clube Atração paga R$ 85,00</span>
-        <button class="Club-Button">Saiba como funciona!</button>
-      </div>
-    </a>
-     <div class="line-brand"></div>
-    <div class="ProdOut-Buttons">
-      <a href="<URLProd>"><button class="ProdOut-Button">Ver mais</button></a>
-      <a href="<URLProd>"><button class="ProdOut-Button">Comprar</button></a>
-    </div>
-      <div class="line-brand"></div>
-    <div class="ProdOut-Cacategory">
-      <span>
-        + 
-        <NomeCat>
-      </span>
-    </div>
-  </div>
-</p4>
-
-<p2>
-  <div class="DivHomeProd">
-   <div onclick="location.href='<URLProd>'">
-    <!-- FLAG DE HIGHLIGHTS -->
-    <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
-    <script type="text/javascript">
-      sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>", "<Destaque>")
-    </script>
-    <!-- FLAG DE HIGHLIGHTS -->
+    <!-- PRODUCT NAME -->
     <!-- PRODUCT IMAGE -->
     <a href="<URLProd>">
-      <div class="DivHomeImagemProd">
+      <div class="PreviewImg">
         <ImagemProd>
       </div>
     </a>
-    <!-- PRODUCT IMAGE --> 
-    <!-- PRODUCT NAME --> 
-    <div class="DivHomeNomeProd">
-      <span class="HomeNomeProd font-16">
-        <a href="<URLProd>">
-          <NomeProd>
-        </a>
-      </span>
-    </div>
-    <!-- PRODUCT NAME --> 
-<style type="text/css">
-  .avista {
-    background: #eee;
-    height: 50px;
-    color: #fff;
-}
-</style>
-  
+    <!-- PRODUCT IMAGE -->
     <!-- PRODUCT PRICES -->
     <div class="DivHomePriceProd">
       <!-- PRICES -->
@@ -107,117 +24,113 @@
           sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>', <MaxParcelasProdNum>,<IDProduto>);
         </script>
       </div>
-      <!-- PRICES --> 
-      <!-- ECONOMY --> 
+      <!-- PRICES -->
+      <!-- ECONOMY -->
       <div>
         <p class="prod-price-home-discount">
           <script>sF$.fnShowEconomy(<PrecoNum>,<PrecoOri>)</script>
         </p>
       </div>
-      <!-- ECONOMY --> 
+      <!-- ECONOMY -->
     </div>
     <!-- PRODUCT PRICES -->
-    <!-- CLUB ATRAÇÃO --> 
+    <a href="<URLProd>"><button type="button" name="button" class="PreviewButton">Eu quero !</button></a>
+    <!-- PRODUCT PRICES -->
+  </div>
+</p1>
+<p2>
+  <style media="screen">
+    .teste {
+
+    }
+
+  </style>
+  <div class="DivHomeProd">
+    <div class="teste" onclick="location.href='<URLProd>'">
+      <!-- FLAG DE HIGHLIGHTS -->
+      <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
+      <script type="text/javascript">
+        sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>", "<Destaque>")
+      </script>
+      <!-- FLAG DE HIGHLIGHTS -->
+      <!-- PRODUCT IMAGE -->
+      <a href="<URLProd>">
+        <div class="DivHomeImagemProd">
+          <ImagemProd>
+        </div>
+      </a>
+      <!-- PRODUCT IMAGE -->
+      <!-- PRODUCT NAME -->
+      <div class="DivHomeNomeProd">
+        <span class="HomeNomeProd font-16">
+          <a href="<URLProd>">
+            <NomeProd>
+          </a>
+        </span>
+      </div>
+      <!-- PRODUCT NAME -->
+      <style type="text/css">
+        .avista {background: #eee; height: 50px; color: #fff;}
+        a.Club-link { margin: 0 auto; display: block; min-width: 100%; left: 0;}
+        .Prodout-display-First .more-category a {line-height: 4;}
+        .ProdOut-Cacategory a {display: block;width: 100%;margin: 0px !important; background: red}
+        .ProdOut-Buttons a { width: 50%;  margin: 0 0px;}
+        .more-category a:before { content: '+';  margin: 0 5px;}
+        .more-category { height: 35px; line-height: 3;}
+        .more-category a {display: block; color: #000;font-size: 12px;}
+      </style>
+      <!-- PRODUCT PRICES -->
+      <a href="<URLProd>">
+        <div class="DivHomePriceProd">
+          <!-- PRICES -->
+          <div id="idProdPrice<IDProduto>">
+            <script>
+              sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>', <MaxParcelasProdNum>,<IDProduto>);
+            </script>
+          </div>
+          <!-- PRICES -->
+          <!-- ECONOMY -->
+          <div>
+            <p class="prod-price-home-discount">
+              <script>sF$.fnShowEconomy(<PrecoNum>,<PrecoOri>)</script>
+            </p>
+          </div>
+          <!-- ECONOMY -->
+        </div>
+      </a>
+      <!-- PRODUCT PRICES -->
+      <!-- CLUB ATRAÇÃO-->
     </div>
-      <div class="line-brand"></div> 
- 
-        
-    <a href="#" class="Club-link">
+    <div class="line-brand"></div>
+    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos" target="_blank" class="Club-link">
       <div class="Club">
-        <span>Clube Atração paga  <script>
-          sF$.fnMostraDescontoHome(<PrecoNum>);
-        </script></span>
-        <button class="Club-Button">Saiba como funciona!</button>
+        <span>
+          Sócios do clube <script>
+            sF$.fnMostraDescontoHome(<PrecoNum>);
+          </script>
+        </span>
+        <button class="Club-Button">Saiba como funciona! </button>
       </div>
     </a>
-      <div class="line-brand"></div>
-    <!-- CLUB ATRAÇÃO --> 
-    <!-- BUTTONS URLPROD --> 
+    <div class="line-brand"></div>
+    <!-- BUTTONS URLPROD -->
+
     <div class="ProdOut-Buttons">
       <a href="<URLProd>"><button class="ProdOut-Button">Ver mais</button></a>
       <a href="#Spy" class="xs-hidden" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'>
-      <button class="ProdOut-Button">Comprar</button>
+        <button class="ProdOut-Button">Comprar</button>
       </a>
+
     </div>
-      <div class="line-brand"></div>
+
+    <div class="line-brand"></div>
     <!-- BUTTONS URLPROD -->
-    <!-- BUTTON CATEGORY --> 
-    <div class="ProdOut-Cacategory">
-      <span>
-        + 
-        <NomeCat>
-      </span>
+    <!-- BUTTON CATEGORY -->
+    <div class="more-category">
+         <NomeCat>
     </div>
-    <!-- BUTTON CATEGORY --> 
+
+    <!-- BUTTON CATEGORY -->
   </div>
   <!-- END: DIVHOMEPROD -->
 </p2>
-<p3>
-  <div class="DivHomeProd">
-    <!-- FLAG DE HIGHLIGHTS -->
-    <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
-    <script type="text/javascript">
-      sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>", "<Destaque>")
-    </script>
-    <!-- FLAG DE HIGHLIGHTS -->
-    <!-- PRODUCT IMAGE -->
-    <a href="<URLProd>">
-      <div class="DivHomeImagemProd">
-        <ImagemProd>
-      </div>
-    </a>
-    <!-- PRODUCT IMAGE --> 
-    <!-- PRODUCT NAME --> 
-    <div class="DivHomeNomeProd">
-      <span class="HomeNomeProd font-16">
-        <a href="<URLProd>">
-          <NomeProd>
-        </a>
-      </span>
-    </div>
-    <!-- PRODUCT NAME --> 
-    <!-- PRODUCT PRICES -->
-    <div class="DivHomePriceProd">
-      <!-- PRICES -->
-      <div id="idProdPrice<IDProduto>">
-        <script>
-          sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>', <MaxParcelasProdNum>,<IDProduto>);
-        </script>
-      </div>
-      <!-- PRICES --> 
-      <!-- ECONOMY --> 
-      <div>
-        <p class="prod-price-home-discount">
-          <script>sF$.fnShowEconomy(<PrecoNum>,<PrecoOri>)</script>
-        </p>
-      </div>
-      <!-- ECONOMY --> 
-    </div>
-    <!-- PRODUCT PRICES -->
-    <!-- CLUB ATRAÇÃO --> 
- 
-    
- 
-      <div class="line-brand"></div>
-    <!-- CLUB ATRAÇÃO --> 
-    <!-- BUTTONS URLPROD --> 
-    <div class="ProdOut-Buttons">
-      <a href="<URLProd>"><button class="ProdOut-Button">Ver mais</button></a>
-      <a href="#Spy" class="xs-hidden" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'>
-      <button class="ProdOut-Button">Comprar</button>
-      </a>
-    </div>
-      <div class="line-brand"></div>
-    <!-- BUTTONS URLPROD -->
-    <!-- BUTTON CATEGORY --> 
-    <div class="ProdOut-Cacategory">
-      <span>
-        + 
-        <NomeCat>
-      </span>
-    </div>
-    <!-- BUTTON CATEGORY --> 
-  </div>
-  <!-- END: DIVHOMEPROD -->
-</p3>
- 
