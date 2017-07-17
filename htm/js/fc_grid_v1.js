@@ -23,7 +23,7 @@ var FCGrid$ = function () {
     htmlFlagChecked : '<i class="FCCheckedGrid"></i>',
     imageProduct : 'cor',
     colorName : false,
-    colorImg : false,    
+    colorImg : false,
     colorImgFormat : '.gif',
     stock: false,
     btnSelectImg : 'botselecionegrid.svg',
@@ -67,7 +67,7 @@ var FCGrid$ = function () {
     },
 
     removeClass: function(elementHTML, classNameRemove){
-      var rxp = new RegExp( "\\s?\\b"+classNameRemove+"\\b", "g" );      
+      var rxp = new RegExp( "\\s?\\b"+classNameRemove+"\\b", "g" );
       if(typeof elementHTML.length != 'undefined' &&  typeof elementHTML.item != 'undefined' && typeof elementHTML === 'object'){
         for(var i=0; i< elementHTML.length; i++){
           var objClass=elementHTML[i];
@@ -75,7 +75,7 @@ var FCGrid$ = function () {
         }
       }else if(elementHTML && typeof elementHTML.length == 'undefined'){
         elementHTML.className = elementHTML.className.replace( rxp, '' );
-      } 
+      }
     },
 
     addClass: function(elementHTML, classNameAdd){
@@ -106,9 +106,9 @@ var FCGrid$ = function () {
       var sFlag = {'htmlLabel': '', 'classLabel': ''};
       if(oProd!==null){
         var bNivelAtualDisp = parseInt(iNivelAtual)+1 == (settings.descriptorsActive.length-1) ? true : false; //pega o último nível
-        if(oProd.length==1 || bNivelAtualDisp){ 
+        if(oProd.length==1 || bNivelAtualDisp){
           var oProdParse = JSON.parse(oProd), fPriceDisp = parseFloat(oProdParse.priceNum), iEstoqueDisp = parseInt(oProdParse.estoque), sContentText="";
-        
+
           if(iEstoqueDisp===0){ sContentText="x"; }else{ if(iEstoqueDisp>0 && fPriceDisp===0){ sContentText="!";}}
           if(sContentText!==""){
             sFlag.htmlLabel="<b class=\"FCFlagEsgotadoGrid\">"+ sContentText +"</b>";
@@ -175,7 +175,7 @@ var FCGrid$ = function () {
         if(i===0)
         {
           var oHTMLImgAltDefinicao="", oImgAltaDefinicao = document.getElementById("idDescrURLContent");
-          if(oImgAltaDefinicao)oHTMLImgAltDefinicao = "<span class=\"FCGridImgExterna\">"+oImgAltaDefinicao.innerHTML+"</span>"; 
+          if(oImgAltaDefinicao)oHTMLImgAltDefinicao = "<span class=\"FCGridImgExterna\">"+oImgAltaDefinicao.innerHTML+"</span>";
           imgDetMini=novoArray[i];
           imgAmpMini=novoArrayAmp[i];
           sHtmlZoom+="<a href="+imgAmpMini+" title=\""+ fn.getNameProduct() +"\" class=MagicZoomPlus id=zoom2 rel=\"selectors-class:active; zoom-width:350px; zoom-height:350px; selectors-change:mouseover;\"><img src="+ imgDetMini +"></a><br>"
@@ -210,26 +210,26 @@ var FCGrid$ = function () {
         return this.magicZoomFC('idDivGridImg', novoArray, novoArrayAmp, FC_MaxImages, refreshZoom);
       }
     },
-    */    
-  
+    */
+
     imgView: function(srcImgDet, srcImgAmp, refreshZoom){
       var imgDetAll = srcImgDet;
       var imgAmpAll = srcImgAmp;
       var aImgAll = [], aImgAllTypes = [], sTypeImg = "", sRex = "";
-      
+
       aImgAllTypes.push([".jpg", "_2.jpg", "_3.jpg", "_4.jpg"]);
       aImgAllTypes.push([".png", "_2.png", "_3.png", "_4.png"]);
       aImgAllTypes.push([".gif", "_2.gif", "_3.gif", "_4.gif"]);
-            
+
       if(imgAmpAll.indexOf(".jpg") != -1){sTypeImg = ".jpg"; sRex = /.jpg/gi;}
       else if(imgAmpAll.indexOf(".png") != -1){sTypeImg = ".png"; sRex = /.png/gi;}
       else if(imgAmpAll.indexOf(".png") != -1){sTypeImg = ".gif"; sRex = /.gif/gi;}
-      
+
       var sImgsAllAmp = "";
       for(var i=0; i < aImgAllTypes.length-1; i++)
       {
         if(aImgAllTypes[i][0] == sTypeImg){
-        
+
           sImgsAllAmp+=imgAmpAll;
           var a = aImgAllTypes[i];
           for(var j=0; j < a.length -1; j++)
@@ -238,10 +238,10 @@ var FCGrid$ = function () {
             var newImg = imgAtual.replace(sRex, a[j+1]);
             sImgsAllAmp += ","+ newImg.substring(newImg.indexOf('/prod/')+6, newImg.length);
           }
-          break;      
-        }      
-      }      
-      
+          break;
+        }
+      }
+
       var novoArray = sImgsAllAmp.split(',');
       var novoArrayAmp = sImgsAllAmp.split(',');
       var CountImgDet=novoArray.length;
@@ -303,7 +303,7 @@ var FCGrid$ = function () {
       if(parseFloat(product.priceNum) > 0 && oPositionPrice){
         var oMaxInstallments = fnMaxInstallmentsGrid(product.priceNum, product.maxInstallmentsNum);
         var oEconomyJS = (typeof fnShowEconomyGrid == 'function') ?  fnShowEconomyGrid(product.priceNum, product.priceOri) : "";
-        
+
         var oPositionTableDiscount = document.getElementById("idPriceAVista");
         if (iDescontoAvista && oPositionTableDiscount) { // verifica se existe desconto a vista e sua tabela para apresenta-lo
           if (product.priceNum > 0 || iDescontoAvista > 0) {
@@ -332,7 +332,7 @@ var FCGrid$ = function () {
         oBtnComprar.setAttribute("class", "FCBtnGrid FCBtnSelectedOption FCBtnSelecioneGrid");
         oBtnComprar.innerHTML="<img src=\""+ FC$.PathImg + options.btnSelectImg +"\">"
                              +"<div class=\"FCTooltipGrid Off\" id=\"idTooltipGridFC\" style=\"display:\">Selecione primeiro as opções do produto</div>";
-        oBtnComprar.onclick=function(a){        
+        oBtnComprar.onclick=function(a){
           if( fn.hasClass(document.getElementById("idTooltipGridFC"), "Off")){
             fn.removeClass(document.getElementById("idTooltipGridFC"), "Off");
             fn.addClass(document.getElementById("idTooltipGridFC"), "On");
@@ -364,23 +364,23 @@ var FCGrid$ = function () {
         }
         else{
           oBtnComprar.setAttribute("class", "FCBtnGrid FCBtnComprarGrid");
-          
-          var oImg = document.createElement('img');          
+
+          var oImg = document.createElement('img');
           oImg.src = FC$.PathImg + options.btnBuyImg ;
           oImg.alt ="Clique para adicionar ao carrinho";
           oImg.onclick=function(obj){
             fnBuyProdutct(this, false);
           };
           oBtnComprar.appendChild(oImg);
-          
+
           var oSpan = document.createElement('button');
           oSpan.className = "FCBtnComprarCartOnPage";
           oSpan.textContent = "Adicionar ao carrinho";
           oSpan.onclick=function(obj){
             fnBuyProdutct(this, true);
-          };                  
+          };
           oBtnComprar.appendChild(oSpan);
-          
+
           fn.getShippingView(true);
           if(options.incMultGrid)fn.qtyIncFieldDisabled(false, true);
         }
@@ -569,8 +569,8 @@ var FCGrid$ = function () {
             fn.consultUsAboutProduct(sParamsGrid);
           };
         }
-        else{  
-          var oImg = document.createElement('img');          
+        else{
+          var oImg = document.createElement('img');
           oImg.src = FC$.PathImg + options.btnBuyImg ;
           oImg.alt ="Clique para adicionar ao carrinho";
           oImg.onclick=function(obj){
@@ -578,16 +578,16 @@ var FCGrid$ = function () {
           };
           oButtonFloat.innerHTML = "";
           oButtonFloat.appendChild(oImg);
-        }  
-          
-        
+        }
+
+
         var oCodeProduct = document.getElementById('idCodProdGridFloat');
         if(oCodeProduct)oCodeProduct.innerHTML= product.codProd;
-      
+
         var oPositionPrice=document.getElementById("idPriceGridFCFloat");
         if(parseFloat(product.priceNum) > 0 && oPositionPrice){
           var oMaxInstallments = fnMaxInstallmentsGrid(product.priceNum, product.maxInstallmentsNum);
-          var oEconomyJS = (typeof fnShowEconomyGrid == 'function') ?  fnShowEconomyGrid(product.priceNum, product.priceOri) : "";        
+          var oEconomyJS = (typeof fnShowEconomyGrid == 'function') ?  fnShowEconomyGrid(product.priceNum, product.priceOri) : "";
           if(product.priceNum!=product.priceOri){
              return oPositionPrice.innerHTML= oMaxInstallments  +"<br> ou à vista de <strike>"+FCLib$.FormatPreco(FormatPrice(product.priceOri,FC$.Currency))+"</strike> por <b>"+FCLib$.FormatPreco(FormatPrice(product.priceNum,FC$.Currency))+"</b> " + oEconomyJS;
           }
@@ -595,15 +595,15 @@ var FCGrid$ = function () {
             return oPositionPrice.innerHTML= oMaxInstallments+ "ou à vista <b>"+FCLib$.FormatPreco(FormatPrice(product.priceNum,FC$.Currency))+"</b> ";
           }
         }else{return oPositionPrice.innerHTML="Preço sob consulta";}
-        
-        
+
+
       }
       /* produto não selecionado */
       else{
-        //oButtonFloat.innerHTML = "<img class=\"zFProdSeleciton\" alt=\"Selecione as opções acima\" src=\""+ FC$.PathImg +"botselecionegrid.svg\">";        
+        //oButtonFloat.innerHTML = "<img class=\"zFProdSeleciton\" alt=\"Selecione as opções acima\" src=\""+ FC$.PathImg +"botselecionegrid.svg\">";
         if(oButtonFloat){
           var oImg = document.createElement('img');
-          oImg.setAttribute("class", "zFProdSeleciton");      
+          oImg.setAttribute("class", "zFProdSeleciton");
           oImg.src = FC$.PathImg + "botselecionegrid.svg" ;
           oImg.alt ="Selecione as opções do produto";
           oImg.onclick=function(obj){
@@ -1039,7 +1039,7 @@ var FCGrid$ = function () {
       oDivButtonBuy.appendChild(oPassoBuy);
       oPositionHtml.appendChild(oDivButtonBuy);
     }
-    
+
 
     // selecione o primeiro subproduto automaticamente
     if(options.autoSelect){
@@ -1134,13 +1134,13 @@ var FCGrid$ = function () {
     if(this.myOptions)options = fn.marge(options, this.myOptions); //altera as configurações
 
     var aProductListGrid = aProductListGrid;
-    
+
     /* ordena por útimos produto sem estoque/ preço */
     var fn_verify_stock_product = function (){
-      var _isProductList=[], _notProductList=[];      
+      var _isProductList=[], _notProductList=[];
       for(var i=0; i < aProductListGrid.length; i++)
       {
-        var _product = JSON.parse(aProductListGrid[i]);      
+        var _product = JSON.parse(aProductListGrid[i]);
         if(parseInt(_product.estoque) > 0 && parseInt(_product.priceNum) > 0){
           _isProductList.push(aProductListGrid[i]);
         }
@@ -1151,9 +1151,9 @@ var FCGrid$ = function () {
       if(_notProductList.length > 0 && _notProductList != null){
         aProductListGrid = _isProductList.concat(_notProductList);
       }
-    }; 
+    };
     fn_verify_stock_product(); //exec func que ordena por útimos produto sem estoque/ preço
-    
+
     aProductOnlyOne= fn.convertCharAT(aProductOnlyOneGrid);
     aProductList= fn.convertCharAT(aProductListGrid);
 
