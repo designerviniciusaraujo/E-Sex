@@ -25,7 +25,7 @@ var sF$ = (function () {
 
   //Função para mostrar valor economizado em produtos em promoção
   function fnShowEconomy(ProdPrice, ProdPriceOri) {
-    if (ProdPrice != ProdPriceOri) document.write("<span class=FCfnShowEconomyStr> Economize&nbsp  <b>" + FormatPrice(ProdPriceOri - ProdPrice, FC$.Currency) + " </b> (" + fnFormatNumber(((ProdPriceOri - ProdPrice) / ProdPriceOri) * 100) + "%) </span>");
+    if (ProdPrice != ProdPriceOri) document.write("<span class=FCfnShowEconomyStr> Economize&nbsp  <b>" + FormatPrice(ProdPriceOri - ProdPrice, FC$.Currency) + "  (" + fnFormatNumber(((ProdPriceOri - ProdPrice) / ProdPriceOri) * 100) + "%) </b></span>");
   }
 
   function fnFormatNumber(num) {
@@ -82,7 +82,7 @@ var sF$ = (function () {
 
     if (Price != OriginalPrice) {
       sPrice += "<div class=\"prices\">";
-      sPrice += "  <div class=\"old-price\">De&nbsp; <span>" + FormatPrice(OriginalPrice, FC$.Currency) + "</span></div>";
+      sPrice += "  <div style=\"text-decoration: line-through;\" class=\"old-price\">De&nbsp; <span>" + FormatPrice(OriginalPrice, FC$.Currency) + "</span></div>";
       sPrice += "  <div class=\"price\"><span class=\"currency\">Por <strong>" + FC$.Currency + " </span><span class=\"int\">" + fnFormatNumber(iPriceInt) + "</span><span class=\"dec\">," + PriceDecimal + "</span></strong></div>";
       if (iMaxParcels > 1) sPrice += "  <div class=\"installments\"><strong><span class=\"installment-count\">" + iMaxParcels + "</span>x</strong> de <strong><span class=\"installment-price\">" + FormatPrice(CalculaParcelaJurosCompostos(Price, iMaxParcels), FC$.Currency) + "</span></strong>" + sInterest + "</div>";
       sPrice += "</div>";
@@ -332,7 +332,7 @@ var sF$ = (function () {
   function fnLoginUserName(NameUser, PicUser) {
     var oImgGlobalSign = document.getElementById("idImgGlobalSignFC");
     if (NameUser == "") {
-      jQuery('.loginInfo').html("<span class='c-s-6'></span> <span class='hide-small'>&nbsp; | </span> <span class='c-s-6'>  <a class='login' href='/cadastro.asp?idloja=" + FC$.IDLoja + "&pp=3&passo=1&sit=1'>&nbsp; Faça seu Login &nbsp;</a> </span>");
+      jQuery('.loginInfo').html("<span class='c-s-6'></span> <span class='hide-small'>&nbsp; | </span> <span class='c-s-6'>  <a class='login' href='/cadastro.asp?idloja=" + FC$.IDLoja + "&pp=3&passo=1&sit=1'>&nbsp; Minha conta &nbsp;</a> </span>");
       if (oImgGlobalSign) { oImgGlobalSign.style.display = ""; }
     }
     else {
@@ -367,7 +367,7 @@ var sF$ = (function () {
   else if(PrecoProd>=0.00){
   document.write("<span style=''>"+FormatPrecoReais(PrecoProd*0.90)+"</font></span>");
   }
-      
+
   }
 
   function fnMostraDescontoProdLista(PrecoProd) {
@@ -423,7 +423,7 @@ var sF$ = (function () {
                      +'<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">'
                      +'  <g id="Listagem-1024" transform="translate(-416.000000, -1093.000000)" fill="'+ sColorPolygon +'">'
                      +'    <circle id="Oval" cx="444" cy="1121" r="28">'
-                     +'      <text transform="matrix(1 0 0 1 7.2812 26.4634)" font-family="\'Arial\'" font-size="23.5368" style="font-weight:bold">'+ iPercentual +'</text>'            
+                     +'      <text transform="matrix(1 0 0 1 7.2812 26.4634)" font-family="\'Arial\'" font-size="23.5368" style="font-weight:bold">'+ iPercentual +'</text>'
                      +'      <g><text transform="matrix(1 0 0 1 35.2812 26.4634)" font-family="\'Arial\'" font-size="14.5368" style="font-weight:bold">%</text></g>'
                      +'      <g><text transform="matrix(1 0 0 1 49.2812 26.4634)" font-family="\'Arial\'" font-size="14.5368" style="font-weight:bold">off</text></g>'
                      +'    </circle>'
@@ -434,7 +434,7 @@ var sF$ = (function () {
       var sSVG = '<div class="circle" style="background:' + sColorPolygon + ';">'
         + '  <div class="valor">- ' + iPercentual + '%<br></div>'
         + '  <div class="flag-off">OFF</div>'
-        /*+'      <text transform="matrix(1 0 0 1 7.2812 26.4634)" font-family="\'Arial\'" font-size="23.5368" style="font-weight:bold;color:#FFF;position:relative:10;">'+ iPercentual +'</text>'            
+        /*+'      <text transform="matrix(1 0 0 1 7.2812 26.4634)" font-family="\'Arial\'" font-size="23.5368" style="font-weight:bold;color:#FFF;position:relative:10;">'+ iPercentual +'</text>'
         +'      <g><text transform="matrix(1 0 0 1 35.2812 26.4634)" font-family="\'Arial\'" font-size="14.5368" style="font-weight:bold;color:#FFF;position:relative:10;">%</text></g>'
         +'      <g><text transform="matrix(1 0 0 1 49.2812 26.4634)" font-family="\'Arial\'" font-size="14.5368" style="font-weight:bold;color:#FFF;position:relative;10;">off</text></g>'*/
         + '</div>'
@@ -531,7 +531,7 @@ function ShowCartOnPage(IDLoja, iErr, sMsg, sCartText, sCheckoutText, este) {
   sHTML += "<tr onclick=window.location.href='/addproduto.asp?idloja=" + IDLoja + "'><td id=idTDTitShowCartOnPageFC colspan=2 align=center style='background-color:#" + sBackColor + ";color:#ffffff;border-width:1px;border-color:#3b6e22;font-weight:bold;font-size:12px;cursor:pointer'><div style='padding:5px; line-height:" + iLH + "px;'>" + sMsg + "</div></td></tr>";
   if (iErr == 0) {
     sHTML += "<tr height=45>";
-    sHTML += "<td valign=top align=center style=cursor:pointer onclick=window.location.href='/addproduto.asp?idloja=" + IDLoja + "'><a href='/addproduto.asp?idloja=" + IDLoja + "' style='color:#444444;text-decoration:none;font-size:14px;font-weight:bold;'>Ir para o carrinho</a></td>";
+    sHTML += "<td valign=top align=center style=cursor:pointer onclick=window.location.href='/addproduto.asp?idloja=" + IDLoja + "'><a href='/addproduto.asp?idloja=" + IDLoja + "' style='color:#444444;text-decoration:none;font-size:14px;font-weight:bold;'>Finalizar compra</a></td>";
     sHTML += "<td align=left><img src='" + FC$.PathImg + "iconclose.svg?cccfc=1' width=20 height=20 hspace=5 style='cursor:pointer;margin-top:10px' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
     sHTML += "</tr>";
     sF$.fnUpdateCart(true, false);
@@ -817,13 +817,13 @@ function FormatNumber(num) {
 
 /*Função para mostrar valor economizado em produtos em promoção*/
 function fnShowEconomyGrid(ProdPrice, ProdPriceOri) {
-  if (ProdPrice != ProdPriceOri && typeof FormatNumber == 'function' && typeof FormatPrice == 'function') { 
+  if (ProdPrice != ProdPriceOri && typeof FormatNumber == 'function' && typeof FormatPrice == 'function') {
     return "<font class='economy' color=#52d04b> Economize <b>" + FormatPrice(ProdPriceOri - ProdPrice, FC$.Currency) + "</b> (" + FormatNumber(((ProdPriceOri - ProdPrice) / ProdPriceOri) * 100) + "%)</font>";
   } else { return ""; }
 }
 
 
-// ZipCode Grid FC - CEP - Begin 
+// ZipCode Grid FC - CEP - Begin
 function fnShowCEPGrid(IDProd) {
   if (FC$.TypeFrt == 3) {
     var sNumCEP = fnGetCookie('CEP' + FC$.IDLoja);
@@ -1020,7 +1020,7 @@ function userDontGo(oParam) {
 
  var carousel = function(){
 
-  var swipers = { 
+  var swipers = {
 
  banners: function(){
     var swiperlist  = new Swiper('.swiper-container-banners', {
@@ -1050,19 +1050,56 @@ function userDontGo(oParam) {
     });
     carousel.swipers.removeLazyLoad();
   },
-   
+
   removeLazyLoad: function(){
-    var allElemImg = document.querySelectorAll(".amp-prod-home-img a img");
+    var allElemImg = document.querySelectorAll(".swiper-slide a img");
     for(var i=0; i< allElemImg.length; i++){
       var oImg = allElemImg[i].getAttribute("data-src");
       if(oImg != null){ allElemImg[i].src= oImg;}
     }
   }
-} 
+}
   return {
     "swipers":swipers
   }
 
 }();
 
-
+//
+// /* Ancora */
+// var animate = {
+//   'time': 500,
+//   'randMin': 1000,
+//   'randMax': 1200
+// };
+// (function($) {
+//
+//   function rand(min, max) {
+//     return Math.floor((Math.random() * (max - min + 1)) + min);
+//   }
+//
+//   var defaults = {
+//     'randMin': 100,
+//     'randMax': 100,
+//     'time': 1000
+//   };
+//
+//   $(function() {
+//     var settings = $.extend(defaults, animate);
+//     $('a.animate').click(function(e) {
+//       e.preventDefault();
+//       var obj = $(this);
+//       var time = settings.time;
+//       if(obj.hasClass('rand')) {
+//         time = rand(settings.randMin, settings.randMax);
+//       } else {
+//         var result = /time[0-1]+/.exec(obj.attr('class'));
+//         if(result)
+//           time = parseInt(new String(result).replace('time', ''));
+//       }
+//       $('html, body').animate({
+//         scrollTop: $(obj.attr('href')).offset().top
+//       }, time);
+//     });
+//   });
+// })(jQuery);
