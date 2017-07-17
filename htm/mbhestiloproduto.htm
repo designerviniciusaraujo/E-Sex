@@ -1,25 +1,24 @@
 <!-- Fastcommerce - mbhestiloproduto.htm : Mobile -->
 <ProdTop>
-<div style="display:none;"><ListPathCatQt><ListAdic1Qt><ListAdic2Qt><ListAdic3Qt></div>
-<div id="ProductsFilterStore"></div>
-<script>
-function FuncProductsFilter(){
-  FCLib$.fnLoadScript("<PathTo file="htm/js/mbhproductsfilterstore.js">",false);
-}
+<link rel="stylesheet" href="<PathTo file="htm/css/buytogether.css?cccfc=1">">
+ <script>
+  function IndicaProd(IDProduto){document.write("<a href='javascript:MostraIndique(10590,"+IDProduto+")'>Recomende</a>");}
 </script>
+<!-- Script Filters -->
+<div class="zFSelectOrder">
+    <script>sF$.ProdListaSelect();</script>
+</div>
 </ProdTop>
 
 <ProdLista>
 <div class="amp-prod-list-container">
-
   <div class="swiper-container-prodlist">
     <div class="swiper-wrapper">
-
       <div class="swiper-slide">
         <div class="amp-prod-list container">
         <!-- FLAG DE HIGHLIGHTS -->
         <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
-        <script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>  
+        <script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>
         <!-- FLAG DE HIGHLIGHTS -->
           <div class="amp-prod-list-img">
             <div class="amp-prod-list-img"><ImagemProd></div>
@@ -44,7 +43,7 @@ function FuncProductsFilter(){
             <DescricaoCurta>
           </a>
            <a href="<URLProd>"><button class="amp-prod-home-btn">+ detalhes</button></a>
-           <a href="<URLProd>"><button class="amp-prod-home-btn blub">Clube atração 10% off</button></a> 
+           <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><button class="amp-prod-home-btn blub">Clube atração 10% off</button></a>
         </div>
       </div>
 
@@ -68,19 +67,7 @@ function FuncProductsFilter(){
     </ul>
   </div>
 <!-- Prod Det -->
-<!-- Begin: Share Prod -->
-<div class="zFContentSocialLinks"> 
-  <ul class="ProductStyleULFC">
-    <li id="idShareProd">
-      <span><a href="javascript:MostraIndique(<IDLoja>,<IDProduto>)"><img class="EstImgShareEmail" src="<baseloja>images/IconProdEmail.svg" width="20" height="20" border="0" alt="E-mail" title="Recomende este produto"></a></span>
-      <span><ShareGooglePlus></span>
-      <span><ShareFacebook></span>
-      <span><ShareTwitter></span>
-      <span class="ShareWhatsApp"><a href="whatsapp://send?text=Veja o produto '<NomeProd>'. Segue o link: http://lvfc.co/l<IDLojaNum>/p<IDProduto>" target="_blank"><img class="EstImgShareWtsApp" src="<BaseLoja>images/IcWhatsApp.svg" width="35" height="35" border="0" alt="Recomende este produto pelo WhatsApp" title="Recomende este produto pelo WhatsApp"></a></span>
-    </li>
-  </ul>
-  <div style="margin:15px;text-align:center;"><Facebook type="save"></div>
-</div>
+
 <!-- End: Description -->
 <!-- Begin: Product Name -->
 <div class="row">
@@ -89,10 +76,10 @@ function FuncProductsFilter(){
   <script>sF$.reviewProd(<IDProduto>,<OpiniaoQtd>,'<OpiniaoMedia>');</script>
 </div>
 <!-- End: Product Name -->
- 
+
 <!-- FLAG DE HIGHLIGHTS -->
 <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
-<script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>  
+<script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>
 <!-- FLAG DE HIGHLIGHTS -->
 
 <!-- Begin: Product Image -->
@@ -103,8 +90,8 @@ function FuncProductsFilter(){
     </div>
   </div>
 </div>
-<!-- End: Product Image --> 
- 
+<!-- End: Product Image -->
+
 <!-- Begin: Product Ref -->
 <div class="row">
   <div class="DivDetRef"><span class="prod-info" id="idCodProdGrid"><CodProd></span></div>
@@ -112,46 +99,39 @@ function FuncProductsFilter(){
 </div>
 <!-- End: Product Ref -->
 
+<!-- AVALIAÇÔES DO PRODUTO -->
+    <div class="ProdDet-Evaluation">
+      <ul class="avalia">
+        <li class="text-left ProdRating stars">
+          <script type="text/javascript">
+            iQtdOp=<OpiniaoQtd>;
+            if(iQtdOp==0){document.write("<div class='ProductStyleReviewOffBoxFC'><div class='NotaOpiniaoVazio NotaOpiniaoVazio1'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio2'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio3'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio4'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio5'></div> </div>")}
+            else {document.write("<div class='ProductStyleReviewOnBoxFC'><div class='ProductStyleReviewStarsOnFC'><OpiniaoMedia></div><div class='ProductStyleReviewQtyOnFC'>(<a href='#OP' style='text-decoration:none;'><OpiniaoQtd></a>)</div></div>")}
+          </script>
+        </li>
+        <li class="ProdRating font-14">
+          <a href="/Opiniao.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>">Avalie este produto</a> | <script>IndicaProd(<IDProduto>);</script>
+        </li>
+      </ul>
+
+    </div>
+    <!-- AVALIAÇÔES DO PRODUTO -->
+
 <style type="text/css">
-  button.ProdDet-Clu-button {
-    max-width: 310px;
-    width: 100%;
-    background: #e20b7c;
-    border: 0;
-    margin: 0px auto 10px;
-    border-radius: 5px;
-    height: 35px;
-    color: #ffffff;
-}
-.ProdDet-Club p {
-    color: #e20b7c;
-    font-weight: bold;
-    margin: 5px 5px 5px;
-    width: 101%;
-    font-size: 16px !important;
-    text-transform: uppercase;
-    text-align: center;
-}
-.ProdDet-Club-tittle {
-    display: flex;
-    margin: 0 auto 5px;
-}
-.ProdDet-Club-tittle span {
-    color: #1ec013;
-}
-.ProdDet-Club {
-    margin: 20px auto;
-        width: 270px;
-}
+button.ProdDet-Clu-button { max-width: 310px; width: 100%; background: #e20b7c; border: 0; margin: 0px auto 10px; border-radius: 5px; height: 35px; color: #ffffff; }
+.ProdDet-Club p { color: #e20b7c; font-weight: bold; margin: 5px 5px 5px; width: 101%; font-size: 16px !important; text-transform: uppercase; text-align: center; }
+.ProdDet-Club-tittle { display: flex; margin: 0 auto 5px; }
+.ProdDet-Club-tittle span { color: #1ec013; }
+.ProdDet-Club { margin: 20px auto; width: 270px; }
 </style>
 <!-- Begin: Product Price -->
 <div class="row">
   <div class="MainContainer">
     <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left ProductStyleDetprice">
        <p class="prod-price" id="idPriceGridFC">
-         <PrecoSimples>     
+         <PrecoSimples>
        </p>
-       <script>(function(){ var e=document.getElementById("idPriceGridFC"); if(e)e.innerHTML += fnMaxInstallmentsGrid(<PrecoNum>,<MaxParcelasProdNum>) + fnShowEconomyGrid(<PrecoNum>,<PrecoOri>); })(); </script>  
+       <script>(function(){ var e=document.getElementById("idPriceGridFC"); if(e)e.innerHTML += fnMaxInstallmentsGrid(<PrecoNum>,<MaxParcelasProdNum>) + fnShowEconomyGrid(<PrecoNum>,<PrecoOri>); })(); </script>
     </div>
   </div>
 </div>
@@ -179,12 +159,26 @@ function FuncProductsFilter(){
 <div class="ProdDet-Club">
   <div class="ProdDet-Club-tittle">
      <img src="<Baseloja>/images/coracao_icon.svg">
-    <p>Sócio do clube paga <script>sF$.fnMostraDescontoProdDet(<PrecoNum>);</script></p> 
+    <p>Sócios do clube <script>sF$.fnMostraDescontoProdDet(<PrecoNum>);</script></p>
   </div>
-  <button class="ProdDet-Clu-button">Conheça o clube da atração!</button>
+  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><button class="ProdDet-Clu-button">Conheça o clube da atração!</button></a>
 </div>
 
-<!-- Begin: Product ZipCode -->
+<!-- Begin: Share Prod -->
+<div class="zFContentSocialLinks">
+  <ul class="ProductStyleULFC">
+    <li id="idShareProd">
+      <span><a href="javascript:MostraIndique(<IDLoja>,<IDProduto>)"><img class="EstImgShareEmail" src="<baseloja>images/IconProdEmail.svg" width="20" height="20" border="0" alt="E-mail" title="Recomende este produto"></a></span>
+      <span><ShareGooglePlus></span>
+      <span><ShareFacebook></span>
+      <span><ShareTwitter></span>
+      <span class="ShareWhatsApp"><a href="whatsapp://send?text=Veja o produto '<NomeProd>'. Segue o link: http://lvfc.co/l<IDLojaNum>/p<IDProduto>" target="_blank"><img class="EstImgShareWtsApp" src="<BaseLoja>images/IcWhatsApp.svg" width="35" height="35" border="0" alt="Recomende este produto pelo WhatsApp" title="Recomende este produto pelo WhatsApp"></a></span>
+    </li>
+  </ul>
+  <div style="margin:15px;text-align:center;"><Facebook type="save"></div>
+</div>
+
+<!-- Begin: Product ZipCode
 <div class="row">
   <div class="MainContainer">
     <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left">
@@ -194,12 +188,52 @@ function FuncProductsFilter(){
 </div>
 <!-- End: Product ZipCode -->
 
+<!-- Begin: Description -->
 
-<div class="FullDoubleSpaceFC"></div>
+<div class="row">
+  <div class="MainContainer">
+      <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left descr-prod">
+
+        <div class="ProdDet-Desc-Short-Description" id="desc">
+          <div id="title" style="display: none;">Dica da Sexóloga</div>
+          <DescricaoCurta>
+        </div>
+        <script>
+            function MostraTituloDesc() {
+              if(document.getElementById('desc').innerText){
+                  document.getElementById('title').style.display = "block";
+              }else {
+                console.log('vazio');
+             }
+            }
+            MostraTituloDesc();
+        </script>
+        <div class="ProductStyleBoxDescriptionFC amp-prod-det-descr">
+         <div style="width:100%"class="line-brand"></div>
+         <h2 class="Proddet-tittle desc">Descrição</h2>
+         <Descricao>
+        </div>
+        <div class="ProductStyleBoxDescriptionFC">
+         <DescrHTM>
+        </div>
+        <div class="ProductStyleBoxDescriptionFC ProductStyleVideoFC">
+         <VideoProd>
+        </div>
+        <div class="ProductStyleBoxDescriptionFC">
+         <BarCode>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- End: Description -->
+
+
+
+
 
 <!-- Begin: Buy Together -->
 <div class="row">
-  <div class="MainContainer"> 
+  <div class="MainContainer">
   </div>
 </div>
 <div class="row">
@@ -213,43 +247,10 @@ function FuncProductsFilter(){
 </div>
 <!-- End: Buy Together -->
 
-<div class="FullDoubleSpaceFC"></div>
 
-<!-- Begin: Description -->
-<div class="row">
-  <div class="MainContainer">
-    <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 col-full-12 text-center">
-      <h2 class="GlobalTitleSepBG GlobalTitleSepDoubleLine"><span class="GlobalTitleSizeSep">DESCRIÇÃO</span></h2>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="MainContainer">
-      <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left descr-prod">
-        <div class="ProductStyleBoxDescriptionFC amp-prod-det-descr">
-         <Descricao>
-        </div>
-        <div class="ProductStyleBoxDescriptionFC">
-         <DescrHTM>
-        </div>
-        <div class="ProductStyleBoxDescriptionFC">
-         <DescrURL>
-        </div>
-        <div class="ProductStyleBoxDescriptionFC ProductStyleVideoFC">
-         <VideoProd>
-        </div>
-        <div class="ProductStyleBoxDescriptionFC">
-         <BarCode>
-        </div>
-      </div>
-  </div>
-</div>
-<!-- End: Description -->
-
-<div class="FullDoubleSpaceFC"></div>
 
 <!-- Begin: CrossSelling -->
- 
+
 <div class="row">
   <div class="MainContainer">
       <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left descr-prod">
@@ -326,16 +327,16 @@ FCGrid$.myOptions = {
   htmlFlagChecked : '<i class="FCCheckedGrid"></i>',
   imageProduct : 'cor',
   colorName : false,
-  colorImg : false, 
+  colorImg : false,
   colorImgFormat : '.gif',
   stock: false,
-  btnSelectImg : 'ampbotselecionegrid.svg', 
+  btnSelectImg : 'ampbotselecionegrid.svg',
   btnBuyImg : 'ampbotcarrinho.svg',
   btnContactUSImg : 'ampbotconsultegrid.svg',
-  btnSoldOut : 'ampbcarrinhoesgotado.svg', 
+  btnSoldOut : 'ampbcarrinhoesgotado.svg',
   textGrid : 'Selecione as opções abaixo',
   order : ['cor', 'adicional1', 'adicional2', 'adicional3', 'adicionalD1', 'adicionalD2', 'adicionalD3'],
-  nameDescriptor : { 
+  nameDescriptor : {
     cor : 'Cor',
     adicional1 : 'Descritor 1',
     adicional2 : 'Descritor 2',
