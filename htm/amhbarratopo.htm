@@ -1,26 +1,26 @@
-<!-- BARRA FIXA -->  
+<!-- BARRA FIXA -->
 <div class="amp-home-section top-Sect">
   <div class="Bar-top">
     <div class="amp-header-btn">
-      <button on='tap:sidebar.toggle' class="amp-sidebar-btn">
-        <amp-img layout="fill" src="<PathTo file="images/menu_icon.svg">"></amp-img>
-      </button>
+       <a href="/account.asp?idloja=<IDLoja>">
+         <button on='tap:sidebar.toggle' class="amp-sidebar-btn"><amp-img layout="fill" src="<PathTo file="images/menu_icon.svg">"></amp-img></button>
+       </a>
     </div>
-    <amp-accordion>
-      <section>
-        <h4>contato@atracaosexshop.com.br</h4>
-        <div>
-          <p>(99) 9 9999-999</p>
-          <p>(99) 9 9999-999</p>
-          <p>(99) 9 9999-999</p>
-        </div>
-      </section>
-    </amp-accordion>
+    <div class="amp-header-btn">
+      <a href="/account.asp?idloja=<IDLoja>">
+        <button><amp-img width="25" height="25" src="<PathTo file="images/user-icon.svg">"></amp-img></button>
+        <span>Minha Conta</span>
+      </a>
+      <a href="/ajuda.asp?idloja=<IDLoja>">
+        <button><amp-img  width="25" height="25" src="<PathTo file="images/help-icon.svg">"></amp-img></button>
+        <span>Ajuda</span>
+      </a>
+    </div>
   </div>
 </div>
-<!-- BARRA FIXA -->  
+<!-- BARRA FIXA -->
 
-<!-- MENU SIDEBAR -->  
+<!-- MENU SIDEBAR -->
 <amp-sidebar id='sidebar' layout="nodisplay"  side="left">
   <amp-img class='amp-close-image' src="<PathTo file="images/ampclose.svg">"
     width="20"
@@ -37,57 +37,124 @@
     <a href="<PathAMP url="/addProduto.asp?idloja=<IDLojaNum>">">Carrinho</amp-img></a>
     <a href="<PathAMP url="/">">Clube Atração</amp-img></a>
     <a href="<PathAMP url="/newsletter.asp?idloja=<IDLoja>">">Quer desconto ?</amp-img></a>
-
     <a href="<PathAMP url="/faleconosco.asp?idloja=<IDLoja>">">Fale Conosco</amp-img></a>
     <a href="<PathAMP url="/listaprodutos.asp?idloja=<idloja>&lancamento=true">">Lançamentos</a>
-   <a href="<PathAMP url="/listaprodutos.asp?idloja=<idloja>&promocao=true">">Promoções</amp-img></a>
-    <a href="/buscaavancada.asp?idloja=<idloja>">Busca detalhada</a></amp-img>   
+    <a href="<PathAMP url="/listaprodutos.asp?idloja=<idloja>&promocao=true">">Promoções</amp-img></a>
+    <a href="/buscaavancada.asp?idloja=<idloja>">Busca detalhada</a></amp-img>
   </nav>
-  <div class="amp-cats">
-    <a href="<PathAMP url="/categorias.asp?idloja=<idloja>"> "class="amp-link-cats">
-   	 <Categorias>
-    </a>
-    <ListPathCat out="13" id="-1">
-  </div>
-</amp-sidebar>
-<!-- MENU SIDEBAR -->  
 
-<!-- HEADER -->  
-<header> 
+</amp-sidebar>
+<!-- MENU SIDEBAR -->
+
+<!-- HEADER -->
+<header>
   <div class="amp-top-bar container">
     <div class="amp-header-container">
-      <!-- LOGO -->  
+      <!-- LOGO -->
       <div class=amp-header-logo>
         <a href="<PathAMP url="/">">
           <amp-img layout="fill" src="<PathTo file="images/logo-sexshop.svg">"></amp-img>
         </a>
       </div>
-      <!-- LOGO -->   
-      <!-- CARRINHO -->  
+      <!-- LOGO -->
+      <!-- CARRINHO -->
       <div class="amp-header-cart">
         <a href="/AddProduto.asp">
           <amp-img layout="fill" src="<PathTo file="images/cart-icon.svg">"></amp-img>
         </a>
       </div>
-     	<!-- CARRINHO -->   
+     	<!-- CARRINHO -->
     </div>
-    <!-- BUSCA -->  
+    <!-- BUSCA -->
     <div class="amp-search-container">
       <form name="TopSearchForm" method="GET" target="_top" action="/listaprodutos.asp" accept-charset="UTF-8">
         <input type="hidden" name="idloja" value="<IDLoja>">
         <input type="hidden" name="digitada" value="true">
         <input type="hidden" name="useamp" value="true">
-        <input type="text" value="<SearchText>" name="Texto" class="InputTextBusca amp-search-input" placeholder="Encontre produtos">
+        <input type="text" value="<SearchText>" name="Texto" class="InputTextBusca amp-search-input" placeholder="Encontre seu produto erótico">
         <button type="submit" class="amp-search-btn">
           <amp-img src="<BaseLoja>images/search-icon.svg" width="25" height="25" title="Buscar"></amp-img>
         </button>
       </form>
     </div>
-    <!-- BUSCA -->  
+    <!-- BUSCA -->
     <div class="amp-advanced-search"><a href="/buscaavancada.asp?idloja=<IDLoja>">Busca Avançada</a></div>
   </div>
-  <div class="line-brand Hidden-Home"></div>
-</header>
-<!-- HEADER -->  
 
+</header>
+<!-- HEADER -->
+
+ <div class="line-brand"></div>
+ <!-- SLIDER CATEGORIAS -->
+ <div class="amp-home-section categories">
+   <amp-carousel height="75" layout="fixed-height"  autoplay
+  delay="1000" type="carousel">
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261538">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/acessorios.svg">" width="35" height="35" alt="Acessórios"></amp-img>
+        <div class="amp-home-descr">Acessórios</div>
+      </a>
+    </div>
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/extensor_peniano.svg">" width="35" height="35" alt="Aumente Pênis"></amp-img>
+        <div class="amp-home-descr">Aumente seu Pênis</div>
+      </a>
+    </div>
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261540">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/sado.svg">" width="35" height="35" alt="Brincadeiras"></amp-img>
+        <div class="amp-home-descr">Brincadeiras</div>
+      </a>
+    </div>
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/gel.svg">" width="35" height="35" alt="Géis e Lubrificantes"></amp-img>
+        <div class="amp-home-descr">Géis e Lubrificantes</div>
+      </a>
+    </div>
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/kit_icon.svg">" width="35" height="35" alt="Kits"></amp-img>
+        <div class="amp-home-descr">Kits</div>
+      </a>
+    </div>
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261543">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/lingeries.svg">" width="35" height="35" alt="Lingeries Eróticas"></amp-img>
+        <div class="amp-home-descr">Lingeries Eróticas</div>
+      </a>
+    </div>
+     <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261546">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/preservativos.svg">" width="35" height="35" alt="Pênis e Próteses"></amp-img>
+        <div class="amp-home-descr">Pênis e Próteses</div>
+      </a>
+    </div>
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/cosmeticos.svg">" width="35" height="35" alt="Cosméticos"></amp-img>
+        <div class="amp-home-descr">Perfumes</div>
+      </a>
+    </div>
+
+    <div class="amp-home-banners">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261547">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/vibradores.svg">" width="35" height="35" alt="Vibradores"></amp-img>
+        <div class="amp-home-descr">Vibradores</div>
+      </a>
+    </div>
+
+
+
+    <div class="amp-home-banners">
+      <a href="/categorias.asp?idloja=<IDLoja>">
+        <amp-img class="amp-home-banners-img" src="<PathTo file="images/outros.svg">" width="35" height="35" alt="Outras Categorias"></amp-img>
+        <div class="amp-home-descr">Outras Categorias</div>
+      </a>
+    </div>
+    </amp-carousel>
+ </div>
+<div class="line-brand Hidden-Home"></div>
+<!-- SLIDER CATEGORIAS -->
 <section class="container amp-main">
