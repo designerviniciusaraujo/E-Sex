@@ -16,6 +16,7 @@ a,body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,hr,
 .radius{border-radius:4px;overflow:hidden;}
 .rounded{border-radius:10px;overflow:hidden;}
 
+
 /* Alignment */
 .text-center{text-align:center !important;}.text-left{text-align:left !important;}.text-right{text-align:right !important;}
 
@@ -58,10 +59,10 @@ a,body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,hr,
  .collapse > [class*='col-small-']{padding: 0px !important;}
  .col-small-1, .col-small-2, .col-small-3, .col-small-4, .col-small-5, .col-small-6, .col-small-7, .col-small-8, .col-small-9, .col-small-10, .col-small-11, .col-small-12 {float: left;}
  .col-small-12{width:100%}.col-small-11{width:91.66667%}.col-small-10{width:83.33333%}.col-small-9{width:75%}.col-small-8{width:66.66667%}.col-small-7{width:58.33333%}.col-small-6{width:50%}.col-small-5{width:41.66667%}.col-small-4{width:33.33333%}.col-small-3{width:25%}.col-small-2{width:16.66667%}.col-small-1{width:8.33333%}
-} 
+}
 
 /* Medium */
-@media only screen and (min-width:641px) { 
+@media only screen and (min-width:641px) {
  .MainContainer{width:100%;margin:0 auto;}
  body{background:transparent;}
 
@@ -77,10 +78,10 @@ a,body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,hr,
  .transparent > [class*='col-medium-']{background:transparent !important;}
  .col-medium-1, .col-medium-2, .col-medium-3, .col-medium-4, .col-medium-5, .col-medium-6, .col-medium-7, .col-medium-8, .col-medium-9, .col-medium-10, .col-medium-11, .col-medium-12 {float:left;}
  .col-medium-12{width:100%}.col-medium-11{width:91.66667%}.col-medium-10{width:83.33333%}.col-medium-9{width:75%}.col-medium-8{width:66.66667%}.col-medium-7{width:58.33333%}.col-medium-6{width:50%}.col-medium-5{width:41.66667%}.col-medium-4{width:33.33333%}.col-medium-3{width:25%}.col-medium-2{width:16.66667%}.col-medium-1{width:8.33333%}
-} 
+}
 
 /* Large */
-@media only screen and (min-width:1025px) { 
+@media only screen and (min-width:1025px) {
  .MainContainer{width:1008px;margin:0 auto;}
  body{background: transparent;}
 
@@ -106,7 +107,7 @@ a,body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,hr,
 
  /* Visibility */
  .hide-mlarge{display:none}.show-mlarge{display:block !important;}
- 
+
   /* Checkout */
  #idCheckoutFC .EstTitCheckoutFC{font-size:1em !important;}
 
@@ -128,7 +129,7 @@ a,body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,hr,
 
  /* Visibility */
  .hide-xlarge{display:none}.show-xlarge{display:block !important;}
- 
+
  /* Checkout */
  #idCheckoutFC .EstTitCheckoutFC{font-size:1.3em !important;}
 
@@ -156,8 +157,8 @@ select{min-height:27px;}
 #idChkRegisterFC input[type='text'], #idChkRegisterFC input[type='password']{margin: 5px 0 5px 0;  border-radius: 5px!important;  height: 45px;}
 .idTxtTrackConfFC p a,div#idShowOrderDetailsFC p a { color: #fff;  background: #e3037d;  padding: 3px 5px;border-radius: 5px;}
 #idTabLoginFC #SenhaAtual {
- 
- 
+
+
     min-height: 40px !important;
     border-radius: 5px !important;
 }
@@ -169,7 +170,7 @@ select{min-height:27px;}
 #idTabLoginFC #Email{width:100%;}
 #idChkLoginIntFC .EstChkNomeCampo{vertical-align:middle;}
 #idChkOrderConfirmationFloat, #idDivLinkContinueFC{width:200px !important;border-radius:3px !important;border:0;margin: 0 auto;}
-#idCheckoutFC a #idTxtLinkContinueFC{background-color:#19ce3f;padding:10px;cursor:pointer;border-radius:3px !important;color:#FFFFFF;font-weight:bold;text-align:center;clear: both;}
+#idCheckoutFC a #idTxtLinkContinueFC { background-color: #19ce3f;  padding: 10px;  cursor: pointer;  border-radius: 3px !important;  color: #FFFFFF; font-weight: bold;text-align: center; clear: both; position: fixed; z-index: 99999; top: 270px; right: 15px;}
 #idChkTabResellerFC{margin:0 auto;}
 #SenhaAtual{margin:0 0 0 5px;width:65% !important;}
 .EstChkOptSit, .EstChkRadioOptSit{vertical-align:middle;}
@@ -186,6 +187,7 @@ select{min-height:27px;}
 #idChkCCIntFC{width:97%;clear:both;}
 #idTRccSegFC a{clear:both;display:inline;margin:5px 0 0 0;}
 #idTRccSegFC #P2ccSeg{width:40px !important;}
+tr#idOccupationFC {  display: none;}
 .FCChkOrderConfirmationFloat{width:268px;height:87px;position:relative;float:right;}
 
 /* REGISTER DIV */
@@ -204,10 +206,10 @@ select{min-height:27px;}
 @media only screen and (max-width:1024px){
  #idFCContent{max-width:600px!important;margin:0px auto;}
  /* CHECKOUT *//* ORDER CONFIMATION FLOAT */
- 
+
  #idChkAllFC {width:600px!important;}
  .FCCheckoutMain{width:600px;}
- .FCChkOrderConfirmationFloat{ } 
+ .FCChkOrderConfirmationFloat{ }
 
  /* REGISTER */
  .FCRegisterChk{width:295px!important;}
@@ -239,7 +241,7 @@ select{min-height:27px;}
  /* CHECKOUT *//* ORDER CONFIMATION FLOAT */
  #idChkAllFC {width:100%!important;}
  .FCCheckoutMain{width:90%;}
- .FCChkOrderConfirmationFloat{ } 
+ .FCChkOrderConfirmationFloat{ }
 
  /* REGISTER */
  .FCRegisterChk{width:100%!important;}
@@ -267,7 +269,7 @@ select{min-height:27px;}
  #idChkRegisterIntFC{width:100%!important;max-width:310px!important;}
  #idChkFreightIntFC{width:310px!important;max-width:310px!important;}
  #idChkPaymentIntFC{width:100%!important;max-width:310px!important;}
- #idChkCartIntFC{width:100%!important;min-width:335px!important;}		
+ #idChkCartIntFC{width:100%!important;min-width:335px!important;}
 }
 
 @media only screen and (min-width: 1366px){
