@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-<!-- TOPO FIXO -->
+<!-- TOPO FIXO  -->
 <div class="amp-home-section top-Sect">
   <div class="Bar-top">
     <div class="amp-header-btn">
@@ -11,10 +11,10 @@
     <div class="Home-Cat fones">
       <ul class="MegaMenu">
         <li>
-           <a href="/account.asp?idloja=<IDLoja>"><img alt="icone-login" class="icone-login" src="<PathTo file="images/user-icon.svg?cccfc=1">">Minha Conta</a>
+           <a href="/account.asp?idloja=<IDLoja>"><img alt="icone-login" class="icone-login" src="<PathTo file="images/user-icon.svg">">Minha Conta</a>
         </li>
         <li>
-           <a href="/ajuda.asp?idloja=<IDLoja>"><img alt="icone-Ajuda" class="icone-ajuda" src="<PathTo file="images/help-icon.svg?cccfc=1">">Ajuda</a>
+           <a href="/ajuda.asp?idloja=<IDLoja>"><img alt="icone-Ajuda" class="icone-ajuda" src="<PathTo file="images/help-icon.svg">">Ajuda</a>
         </li>
         <div onclick="drop_close()" class="Menu-overlay"></div>
       </ul>
@@ -49,27 +49,7 @@
 <script src='<PathTo file="htm/mbhlojalib.js">'></script>
 <script src='<PathTo file="htm/jurosparcelas.js">'></script>
 <!-- Includes Javascript -->
-<style media="screen">
-.HeaderCartMainItemTotalFC {
-  background: #e3037d;
-  left: 21px;
-  position: relative;
-  bottom: 50px;
-  border-radius: 50%;
-  padding: 0;
-  width: 28px;
-  height: 28px;
-  text-align: center;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #fff;
-}
-div#HeaderCartTotalFC {
-    display: none;
-}
-</style>
+
 <!-- HEADER -->
 <header>
   <div class="amp-top-bar container">
@@ -80,7 +60,7 @@ div#HeaderCartTotalFC {
       <div class="amp-header-cart">
 
           <a href="/addProduto.asp?idloja=<IDLojaNum>" class="CartItens">
-          <img alt="Carrinho Compra" src="<PathTo file="images/cart-icon.svg?cccfc=1">">
+          <img alt="Carrinho Compra" src="<PathTo file="images/cart-icon.svg">">
             <div class="HeaderCartMainItemTotalFC">
               <div id="HeaderCartItemFC"><span id="idCartItemsTop"></span></div>
               <div id="HeaderCartTotalFC"><span id="idCartTotalTop"></span></div>
@@ -90,7 +70,7 @@ div#HeaderCartTotalFC {
       </div>
     </div>
     <div class="amp-search-container">
-      <form name="TopSearchForm" method="GET" target="_top" action="/listaprodutos.asp" accept-charset="UTF-8">
+      <form class="firstform" name="TopSearchForm" method="GET" target="_top" action="/listaprodutos.asp" accept-charset="UTF-8">
         <input type="hidden" name="idloja" value="<IDLoja>">
         <input type="hidden" name="digitada" value="true">
         <input type="text" value="<SearchText>" name="Texto" class="InputTextBusca amp-search-input" placeholder="Encontre seu produto erótico">
@@ -184,7 +164,7 @@ div#HeaderCartTotalFC {
       </div>
       <div class="swiper-slide">
         <div class="amp-home-banners">
-          <a href="/categorias.asp?idloja=<IDLoja>">
+          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261544">
             <img class="amp-home-banners-img" src="<PathTo file="images/outros.svg">"   width="55"    height="55"    alt="a sample image">
             <div class="amp-home-descr">Outras Categorias</div>
           </a>
