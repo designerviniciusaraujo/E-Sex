@@ -1,12 +1,10 @@
 /* PopNews*/
-#FullBackground{position: absolute; min-width: 100%; min-height: 100%; background: #000; z-index: 99999999; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; opacity: 0.55; display: none;}
-#popupNews{ /*background-image: url('<Baseloja>images/atracao-girl.png');*/ position: absolute;  z-index: 999999991; background-color:#fff; width: 735px; min-height: 315px; border-radius: 5px; box-shadow: 0 0 5px 0 black; text-align: center; padding:5px 10px; display: none;}
+#FullBackground{position: absolute; min-width: 100%; min-height: 100%; background: #000; z-index: 99999999; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; opacity: 0.55; display: none;} 
 #popupNews h1{color:#0574c9; top:0px; left:2px;}
-#popupNews span{color:#e3037d;font-size:38px;font-weight:bold;display:block;text-align:left;line-height:0.9;margin:15px auto;padding:0 15px} 
+#popupNews span{color:#e3037d;font-size:38px;font-weight:bold;display:block;text-align:left;line-height:0.9;margin:15px auto;padding:0 15px}
 div#popupNews p{display:block;text-align:left;padding:0 17px;font-size:25px!important;font-weight:bold;margin:25px auto 10px}
 .btnClose{width: auto; height:auto; display: block; padding:10px 3px 0 0; float: right; }
- .Newspopup input[type="text"],input[type="email"]{background:#fff;border-radius:5px;box-shadow:0;padding:5px 5px;width:210px;color:#000;border:0;height:47px;border:1px solid #979797; font-size: 1.1em} 
 .popnews-down{display:flex}
 .formNews{display:flex;justify-content:space-around;width:80%;margin:0 15px}
 button.btn-popnews{display:flex;margin:90px 10px 0;background:transparent;border:0;font-weight:bold;color:#b1b1b1;font-size:0.9em;text-decoration:underline}
-.btnSubPop{background-color:#19ce3f;border-radius:5px;height:45px;font-weight:bold;outline:none;border: 0px; background: url('<Baseloja>images/btnSubPop.png') no-repeat; width: 138px; color:#ffffff; text-transform:uppercase;height: 47px; cursor:pointer; background: red; background-color: #19ce3f; }
+.btnSubPop{text-align: center;background-color:#19ce3f;border-radius:5px;height:45px;font-weight:bold;outline:none;border: 0px; background: url('<Baseloja>images/btnSubPop.png') no-repeat; width: 138px; color:#ffffff; text-transform:uppercase;height: 47px; cursor:pointer; background: red; background-color: #19ce3f; }
