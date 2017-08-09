@@ -1,0 +1,23 @@
+<div class="modal-wrap" aria-hidden="true" role="dialog">
+  <label class="modal-overlay" for="modal-one"></label>
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3>Cadastre-se e receba seu código de desconto!</h3>
+      <label class="btn-close" for="modal-one" aria-hidden="true">×</label>
+    </div>
+    <div class="modal-body">
+      <form class="Modalform" id="formPopup" name=FormNewsletter method=GET action="Newsletter.asp" onSubmit="return ValidaNew();"/>
+        <input type=hidden name=IDLoja value="<idloja>">
+        <input type=hidden name=Y value="<Y>">
+        <input type=hidden name=FormatoHTML value="True">
+        <input type=hidden name=EnviarAssinante value="Enviar">
+        <input type="text" id="Asname" class="Iname" required name="NomeAssinante" placeholder="Insira seu nome">
+        <input type="email" id="Asmail" class="Iemail" required name=Email placeholder="Insira seu e-mail"><br><br>
+        <input type="submit" class="bt_news btnSubPop MdSubmit" name="ok" value="Enviar" />
+      </form>
+    </div>
+    <div class="modal-footer">
+      <label class="btn btn-primary" for="modal-one">Fechar</label>
+    </div>
+  </div>
+</div>
