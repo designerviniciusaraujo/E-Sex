@@ -3,7 +3,7 @@
 var iQtdProds = 0;
 var iItensCesta = 0;
 var iDescontoAvista = 0;
-ImgLoadingFC = FC$.PathImg + "loading.gif?cccfc=1";
+ImgLoadingFC = FC$.PathImg + "loading.gif";
 ImgOnError = FC$.PathImg + "nd";
 
 var sF$ = (function () {
@@ -13,7 +13,33 @@ var sF$ = (function () {
     return document.getElementById(id);
   }
 
+  function CupomDesconto(){
+    if (FC$.Page=="Newsletter"){
+      document.getElementById('EnviarAssinante').onclick = function(){
+        var NomeAss=(document.getElementById('NomeAssinante').value);
+        var EmailAss=(document.getElementById('Email').value);
+        var CodeDesc = " PRAZER10 "
+        localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!");
+      }
 
+    }
+
+    if (FC$.Page=="Newsletter" || localStorage.getItem("NomeAssinante")==null) {
+    }  else {
+        document.getElementById("ExibeMsgCode").innerHTML = (localStorage.getItem("NomeAssinante"));
+        document.querySelector(".ZFBg-MostraCod").style.display = "block";
+        document.querySelector(".ZFBox-MostraCod").style.bottom = "0em";
+        document.querySelector(".ZFBox-MostraCod").style.transition = "0.3s";
+        document.getElementById('ZFPopClose').onclick = function() {
+          document.querySelector(".ZFBg-MostraCod").style.display = "none";
+          localStorage.removeItem("NomeAssinante");
+        }
+        document.getElementById('closeTopCode').onclick = function() {
+          document.querySelector(".ZFBg-MostraCod").style.display = "none";
+          localStorage.removeItem("NomeAssinante");
+        };
+      }
+   }
   //Função que faz pré-load das imagens
   function fnPreloadImages() { //v3.0
     var d = document; if (d.images) {
@@ -49,8 +75,7 @@ var sF$ = (function () {
   }
 
   var iPL = 0;
-
-  function fnShowPrice(Price, OriginalPrice, Cod, iMaxParcels, ProductID) {
+   function fnShowPrice(Price, OriginalPrice, Cod, iMaxParcels, ProductID) {
     iPL++;
     //console.log(ProductID+ " iPL="+ iPL +" Price="+Price +" OriginalPrice="+ OriginalPrice +" Cod="+ Cod);
     var idPrice = fnGetID("idProdPrice" + ProductID);
@@ -99,6 +124,55 @@ var sF$ = (function () {
 
   }
 
+  function fnPriceTop(Price, OriginalPrice, Cod, iMaxParcels, ProductID) {
+   iPL++;
+   //console.log(ProductID+ " iPL="+ iPL +" Price="+Price +" OriginalPrice="+ OriginalPrice +" Cod="+ Cod);
+   var idPrice = fnGetID("idPriceTwo" + ProductID);
+   var sPrice = "";
+   if (Price == 0 && OriginalPrice == 0) {
+     if (idPrice) idPrice.innerHTML = "<div class=\"prices\"><br><div class=price><div class=currency><a href='/faleconosco.asp?idloja=" + FC$.IDLoja + "&assunto=Consulta%20sobre%20produto%20(Código%20" + Cod + ")' target='_top' >Consulte-nos</a></div></div></div>";
+     return void (0);
+   }
+   var iPrice = Price.toString().split(".");
+   if (iPrice.length == 2) {
+     var iPriceInt = iPrice[0];
+     var PriceDecimal = iPrice[1];
+     if (PriceDecimal.length == 1) PriceDecimal += "0";
+   }
+   else {
+     var iPriceInt = iPrice;
+     var PriceDecimal = "00";
+   }
+
+   var sInterest;
+
+   if (typeof Juros != "undefined") {
+     if (iMaxParcels == 0 || iMaxParcels > Juros.length) iMaxParcels = Juros.length;
+     if (Juros[iMaxParcels - 1] > 0) sInterest = ""; else sInterest = " sem juros";
+   }
+   else {
+     iMaxParcels = 0;
+   }
+
+   if (Price != OriginalPrice) {
+     sPrice += "<div class=\"prices\">";
+     sPrice += "  <div style=\"text-decoration: line-through;\" class=\"old-price\">De&nbsp; <span>" + FormatPrice(OriginalPrice, FC$.Currency) + "</span></div>";
+     sPrice += "  <div class=\"price\"><span class=\"currency\">Por <strong>" + FC$.Currency + " </span><span class=\"int\">" + fnFormatNumber(iPriceInt) + "</span><span class=\"dec\">," + PriceDecimal + "</span></strong></div>";
+     if (iMaxParcels > 1) sPrice += "  <div class=\"installments\"><strong><span class=\"installment-count\">" + iMaxParcels + "</span>x</strong> de <strong><span class=\"installment-price\">" + FormatPrice(CalculaParcelaJurosCompostos(Price, iMaxParcels), FC$.Currency) + "</span></strong>" + sInterest + "</div>";
+     sPrice += "</div>";
+   }
+   else {
+     sPrice += "<div class=\"prices\">";
+     sPrice += " <div class=\"old-price\"><span>&nbsp;</span></div>";
+     sPrice += " <div class=\"price\"><span class=\"currency\">Por <strong>" + FC$.Currency + " </span><span class=\"int\">" + fnFormatNumber(iPriceInt) + "</span><span class=\"dec\">," + PriceDecimal + "</span></strong></div>";
+     if (iMaxParcels > 1) sPrice += "  <div class=\"installments\"><strong><span class=\"installment-count\">" + iMaxParcels + "</span>x</strong> de <strong><span class=\"installment-price\">" + FormatPrice(CalculaParcelaJurosCompostos(Price, iMaxParcels), FC$.Currency) + "</span></strong>" + sInterest + "</div>";
+     sPrice += "</div>";
+   }
+
+   if (idPrice) idPrice.innerHTML = sPrice;
+
+ }
+
   function fnShowParcels(Price, iMaxParcels, ProductID) {
     var idParcelsProd = fnGetID("idProdParcels" + ProductID);
     var sPrice = "";
@@ -121,10 +195,10 @@ var sF$ = (function () {
 
     if (idButton) {
       if (Estoque == 0) {
-        idButton.setAttribute('src', '' + FC$.PathImg + 'botcarrinhoesgotado.svg?cccfc=1');
+        idButton.setAttribute('src', '' + FC$.PathImg + 'botcarrinhoesgotado.svg');
         idAviso.innerHTML = avisoDisp;
       } else {
-        idButton.setAttribute('src', '' + FC$.PathImg + 'botcarrinho.svg?cccfc=1');
+        idButton.setAttribute('src', '' + FC$.PathImg + 'botcarrinho.svg');
       }
     }
   }
@@ -177,40 +251,40 @@ var sF$ = (function () {
       for (var i = 0; i < aImgsShare.length; i++) {
         if (isProd) {
           if (aImgsShare[i].className == 'EstImgShareFacebook') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_prodfacebook.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'det_prodfacebook.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_prodfacebook.svg');
+            aImgsShare[i].src = FC$.PathImg + 'det_prodfacebook.svg';
           }
           else if (aImgsShare[i].className == 'EstImgShareTwitter') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_twitter.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'det_twitter.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_twitter.svg');
+            aImgsShare[i].src = FC$.PathImg + 'det_twitter.svg';
           }
           else if (aImgsShare[i].className == 'EstImgShareGooglePlus') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_googleplus.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'det_googleplus.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_googleplus.svg');
+            aImgsShare[i].src = FC$.PathImg + 'det_googleplus.svg';
           }
           else if (aImgsShare[i].className == 'EstImgSharePinterest') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_pinterest.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'det_pinterest.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'det_pinterest.svg');
+            aImgsShare[i].src = FC$.PathImg + 'det_pinterest.svg';
           }
           aImgsShare[i].style.width = "30px";
           aImgsShare[i].style.height = "30px";
         }
         else {
           if (aImgsShare[i].className == 'EstImgShareFacebook') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodfacebook.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'iconprodfacebook.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodfacebook.svg');
+            aImgsShare[i].src = FC$.PathImg + 'iconprodfacebook.svg';
           }
           else if (aImgsShare[i].className == 'EstImgShareTwitter') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodtwitter.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'iconprodtwitter.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodtwitter.svg');
+            aImgsShare[i].src = FC$.PathImg + 'iconprodtwitter.svg';
           }
           else if (aImgsShare[i].className == 'EstImgShareGooglePlus') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodgoogleplus.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'iconprodgoogleplus.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodgoogleplus.svg');
+            aImgsShare[i].src = FC$.PathImg + 'iconprodgoogleplus.svg';
           }
           else if (aImgsShare[i].className == 'EstImgSharePinterest') {
-            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodpinterest.svg?cccfc=1');
-            aImgsShare[i].src = FC$.PathImg + 'iconprodpinterest.svg?cccfc=1';
+            aImgsShare[i].setAttribute('data-src', FC$.PathImg + 'iconprodpinterest.svg');
+            aImgsShare[i].src = FC$.PathImg + 'iconprodpinterest.svg';
           }
           aImgsShare[i].style.width = "30px";
           aImgsShare[i].style.height = "30px";
@@ -286,7 +360,7 @@ var sF$ = (function () {
       var sPageHistory = "";
       try { var sBar = (oHistoryPages[0].getElementsByTagName("title")[0].childNodes[0].nodeValue); }
       catch (e) { var sBar = ""; }
-      if (sBar != "") { sPageHistory += "<div class='FooterSepFC col-xlarge-12'><img src='" + FC$.PathImg + "footersep.png?cccfc=1'></div><div id='idDivPageHistory'><div id='idPageHistoryFC'><div id='idTitPageHistory'>Páginas Visitadas:</div><ul id='idListPageHistoryFC'>"; }
+      if (sBar != "") { sPageHistory += "<div class='FooterSepFC col-xlarge-12'><img src='" + FC$.PathImg + "footersep.png'></div><div id='idDivPageHistory'><div id='idPageHistoryFC'><div id='idTitPageHistory'>Páginas Visitadas:</div><ul id='idListPageHistoryFC'>"; }
       for (i = 0; i < oHistoryPages.length; i++) {
         sTitleProd = oHistoryPages[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
         sLinkProd = oHistoryPages[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
@@ -471,7 +545,9 @@ var sF$ = (function () {
     fnShowEconomy: fnShowEconomy,
     fnBadgeProdZF: fnBadgeProdZF,
     fnLogout: fnLogout,
+    CupomDesconto:CupomDesconto,
     fnShowPrice: fnShowPrice,
+    fnPriceTop:fnPriceTop,
     fnShowParcels: fnShowParcels,
     fnShowButtonCart: fnShowButtonCart,
     MostraParcelaPagSeguroHome: MostraParcelaPagSeguroHome,
@@ -532,13 +608,13 @@ function ShowCartOnPage(IDLoja, iErr, sMsg, sCartText, sCheckoutText, este) {
   if (iErr == 0) {
     sHTML += "<tr height=45>";
     sHTML += "<td valign=top align=center style=cursor:pointer onclick=window.location.href='/addproduto.asp?idloja=" + IDLoja + "'><a href='/addproduto.asp?idloja=" + IDLoja + "' style='color:#444444;text-decoration:none;font-size:14px;font-weight:bold;'>Finalizar compra</a></td>";
-    sHTML += "<td align=left><img src='" + FC$.PathImg + "iconclose.svg?cccfc=1' width=20 height=20 hspace=5 style='cursor:pointer;margin-top:10px' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
+    sHTML += "<td align=left><img src='" + FC$.PathImg + "iconclose.svg' width=20 height=20 hspace=5 style='cursor:pointer;margin-top:10px' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
     sHTML += "</tr>";
     sF$.fnUpdateCart(true, false);
   }
   else {
     sHTML += "<tr height=25>";
-    sHTML += "<td colspan=2 align=center><img src='" + FC$.PathImg + "iconclose.svg?cccfc=1' width=20 height=20 hspace=5 style='cursor:pointer;margin:10px;' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
+    sHTML += "<td colspan=2 align=center><img src='" + FC$.PathImg + "iconclose.svg' width=20 height=20 hspace=5 style='cursor:pointer;margin:10px;' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
     sHTML += "</tr>";
   }
   sHTML += "</table>";
@@ -556,19 +632,19 @@ function fnShowCEP(IDProd) {
     var sNumCEP = fnGetCookie('CEP' + FC$.IDLoja);
     if (sNumCEP == null) sNumCEP = "";
     sCEP = "<div id='idDivCEPFC'>";
-    sCEP += "  <div id='idDivTitCEP'><img src='" + FC$.PathImg + "iconziptruck.svg?cccfc=1' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>";
+    sCEP += "  <div id='idDivTitCEP'><img src='" + FC$.PathImg + "iconziptruck.svg' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>";
     sCEP += "  <div id='idDivContentCEP'>";
     sCEP += "    <div id='idDivContentFieldsCEP'>";
     sCEP += "      <div id='idDivCEPCalc'>";
     sCEP += "        <div class='FieldCEP FieldCEPQty'><label>Qtd.</label><input type='number' id='idQtdZip" + IDProd + "' value='1' maxlength='4'></div>";
     sCEP += "        <div class='FieldCEP FieldCEPNum'><input type='text' placeholder='CEP' id='idZip" + IDProd + "' value='" + sNumCEP + "' maxlength='9'></div>";
-    sCEP += "        <img src='" + FC$.PathImg + "iconnewsletter.svg?cccfc=1' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProd(" + IDProd + ")'>";
+    sCEP += "        <img src='" + FC$.PathImg + "iconnewsletter.svg' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProd(" + IDProd + ")'>";
     sCEP += "      </div>";
     sCEP += "    </div>";
-    sCEP += "    <div id='idDivImgLoadingCEPFC'><img src='" + FC$.PathImg + "loadingcep.gif?cccfc=1' vspace=3 style='display:none;' id=ImgLoadingCEP></div>";
+    sCEP += "    <div id='idDivImgLoadingCEPFC'><img src='" + FC$.PathImg + "loadingcep.gif' vspace=3 style='display:none;' id=ImgLoadingCEP></div>";
     sCEP += "    <div id='idShippingValues" + IDProd + "'></div></div>";
     sCEP += "  </div>";
-    if (FC$.TypeFrt == 4) sCEP += "<div class='FreightTxtOnlyBR'><img src='" + FC$.PathImg + "icexclamation.svg?cccfc=1'>Simulação apenas para o Brasil</div>";
+    if (FC$.TypeFrt == 4) sCEP += "<div class='FreightTxtOnlyBR'><img src='" + FC$.PathImg + "icexclamation.svg'>Simulação apenas para o Brasil</div>";
     sCEP += "</div>";
     var oShowCEP = document.getElementById("ShowCEP" + IDProd);
     if (oShowCEP) oShowCEP.innerHTML = sCEP;
@@ -682,7 +758,7 @@ function fnFooter() {
       var oScript = document.createElement('script');
       oScript.type = 'text/javascript';
       oScript.async = true;
-      oScript.src = FC$.PathHtm + 'IncPaginacaoOrder.js?cccfc=1';
+      oScript.src = FC$.PathHtm + 'IncPaginacaoOrder.js';
       var sAddScript = document.getElementsByTagName('script')[0];
       sAddScript.parentNode.insertBefore(oScript, sAddScript);
     }
@@ -829,16 +905,16 @@ function fnShowCEPGrid(IDProd) {
     var sNumCEP = fnGetCookie('CEP' + FC$.IDLoja);
     if (sNumCEP == null) sNumCEP = "";
     sCEP = "<div id='idDivCEPFC'>";
-    sCEP += "  <div id='idDivTitCEP'><img src='" + FC$.PathImg + "iconziptruck.svg?cccfc=1' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>";
+    sCEP += "  <div id='idDivTitCEP'><img src='" + FC$.PathImg + "iconziptruck.svg' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>";
     sCEP += "  <div id='idDivContentCEP'>";
     sCEP += "    <div id='idDivContentFieldsCEP'>";
     sCEP += "      <div id='idDivCEPCalc'>";
     sCEP += "        <div class='FieldCEP FieldCEPQty'><label>Qtd.</label><input type='number' id='idQtdZip" + IDProd + "' value='1' maxlength='4'></div>";
     sCEP += "        <div class='FieldCEP FieldCEPNum'><input type='text' placeholder='CEP' id='idZip" + IDProd + "' value='" + sNumCEP + "' maxlength='9'></div>";
-    sCEP += "        <img src='" + FC$.PathImg + "iconcep.svg?cccfc=1' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProdGrid(" + IDProd + ")'>";
+    sCEP += "        <img src='" + FC$.PathImg + "iconcep.svg' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProdGrid(" + IDProd + ")'>";
     sCEP += "      </div>";
     sCEP += "     </div>";
-    sCEP += "    <div id='idDivImgLoadingCEPFC'><img src='" + FC$.PathImg + "loadingcep.gif?cccfc=1' vspace=3 style='display:none;' id=ImgLoadingCEP></div>";
+    sCEP += "    <div id='idDivImgLoadingCEPFC'><img src='" + FC$.PathImg + "loadingcep.gif' vspace=3 style='display:none;' id=ImgLoadingCEP></div>";
     sCEP += "    <div id='idShippingValues" + IDProd + "'></div></div>";
     sCEP += "  </div>";
     sCEP += "</div>";
@@ -991,12 +1067,12 @@ FCLib$.onReady(function () {
     preLoadingDontGoBanner.onload = function () {
       document.getElementById('idImgDontGo').src = preLoadingDontGoBanner.src;
     };
-    preLoadingDontGoBanner.src = FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1";
+    preLoadingDontGoBanner.src = FC$.PathImg + "bannerpopupdontgo.jpg";
 
     //Show Don't Go Popup
     FCLib$.fnDontGo(userDontGo, {
-      DontGoBtnClose: FC$.PathImg + "botdontgoclose.svg?cccfc=1", //Close button
-      DontGoBanner: FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1", //Banner
+      DontGoBtnClose: FC$.PathImg + "botdontgoclose.svg", //Close button
+      DontGoBanner: FC$.PathImg + "bannerpopupdontgo.jpg", //Banner
       DontGoLink: "/prod,idloja," + FC$.IDLoja + ",promocao,1,ofertas.htm", //Link
       DontGoAltParam: "UM DESCONTO ESPECIAL PARA VOCÊ!"
     }, //Alt Param
@@ -1024,6 +1100,7 @@ function userDontGo(oParam) {
 
  banners: function(){
     var swiperlist  = new Swiper('.swiper-container-banners', {
+        pagination: '.swiper-pagination',
         paginationClickable: true,
         slidesPerView: 1,
         spaceBetween: 15,
@@ -1064,42 +1141,3 @@ function userDontGo(oParam) {
   }
 
 }();
-
-//
-// /* Ancora */
-// var animate = {
-//   'time': 500,
-//   'randMin': 1000,
-//   'randMax': 1200
-// };
-// (function($) {
-//
-//   function rand(min, max) {
-//     return Math.floor((Math.random() * (max - min + 1)) + min);
-//   }
-//
-//   var defaults = {
-//     'randMin': 100,
-//     'randMax': 100,
-//     'time': 1000
-//   };
-//
-//   $(function() {
-//     var settings = $.extend(defaults, animate);
-//     $('a.animate').click(function(e) {
-//       e.preventDefault();
-//       var obj = $(this);
-//       var time = settings.time;
-//       if(obj.hasClass('rand')) {
-//         time = rand(settings.randMin, settings.randMax);
-//       } else {
-//         var result = /time[0-1]+/.exec(obj.attr('class'));
-//         if(result)
-//           time = parseInt(new String(result).replace('time', ''));
-//       }
-//       $('html, body').animate({
-//         scrollTop: $(obj.attr('href')).offset().top
-//       }, time);
-//     });
-//   });
-// })(jQuery);
