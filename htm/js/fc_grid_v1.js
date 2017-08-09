@@ -217,9 +217,9 @@ var FCGrid$ = function () {
       var imgAmpAll = srcImgAmp;
       var aImgAll = [], aImgAllTypes = [], sTypeImg = "", sRex = "";
 
-      aImgAllTypes.push([".jpg", "_2.jpg", "_3.jpg", "_4.jpg"]);
-      aImgAllTypes.push([".png", "_2.png", "_3.png", "_4.png"]);
-      aImgAllTypes.push([".gif", "_2.gif", "_3.gif", "_4.gif"]);
+      aImgAllTypes.push([".jpg"]);
+      aImgAllTypes.push([".png"]);
+      aImgAllTypes.push([".gif"]);
 
       if(imgAmpAll.indexOf(".jpg") != -1){sTypeImg = ".jpg"; sRex = /.jpg/gi;}
       else if(imgAmpAll.indexOf(".png") != -1){sTypeImg = ".png"; sRex = /.png/gi;}
