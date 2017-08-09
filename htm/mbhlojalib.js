@@ -4,8 +4,35 @@
 var iQtdProds=0;
 var iItensCesta=0;
 var iDescontoAvista=0;
-ImgLoadingFC=FC$.PathImg+"loading.gif?cccfc=1";
+ImgLoadingFC=FC$.PathImg+"loading.gif";
 ImgOnError=FC$.PathImg+"nd";
+
+
+function CupomDesconto(){
+  if (FC$.Page=="Newsletter"){
+    var NomeAss=(document.getElementById('NomeAssinante').value);
+    var EmailAss=(document.getElementById('Email').value);
+    var CodeDesc = " PRAZER10 "
+    //localStorage.setItem("Email", "Meu e-mail é: "+EmailAss);
+    localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+" use o código de desconto: " +CodeDesc+" em suas compras!");
+  }
+
+  if (FC$.Page=="Newsletter" || localStorage.getItem("NomeAssinante")==null) {
+  }  else {
+      document.getElementById("ExibeMsgCode").innerHTML = (localStorage.getItem("NomeAssinante"));
+      document.querySelector(".ZFBg-MostraCod").style.display = "block";
+      document.querySelector(".ZFBox-MostraCod").style.bottom = "0em";
+      document.querySelector(".ZFBox-MostraCod").style.transition = "0.3s";
+      document.getElementById('ZFPopClose').onclick = function() {
+        document.querySelector(".ZFBg-MostraCod").style.display = "none";
+        localStorage.removeItem("NomeAssinante");
+      }
+      document.getElementById('closeTopCode').onclick = function() {
+        document.querySelector(".ZFBg-MostraCod").style.display = "none";
+        localStorage.removeItem("NomeAssinante");
+      };
+    }
+ }
 
 var sF$=(function(){
 
@@ -120,10 +147,10 @@ var sF$=(function(){
 
     if (idButton){
       if(Estoque==0){
-        idButton.setAttribute('src',''+FC$.PathImg+'botcarrinhoesgotado.svg?cccfc=1');
+        idButton.setAttribute('src',''+FC$.PathImg+'botcarrinhoesgotado.svg');
         idAviso.innerHTML=avisoDisp;
       }else{
-        idButton.setAttribute('src',''+FC$.PathImg+'botcarrinho.svg?cccfc=1');
+        idButton.setAttribute('src',''+FC$.PathImg+'botcarrinho.svg');
       }
     }
   }
@@ -170,20 +197,20 @@ var sF$=(function(){
     if(aImgsShare)
       for(var i=0;i<aImgsShare.length;i++){
         if(aImgsShare[i].className=='EstImgShareFacebook'){
-          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'det_prodfacebook.svg?cccfc=1');
-          aImgsShare[i].src=FC$.PathImg +'det_prodfacebook.svg?cccfc=1';
+          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'det_prodfacebook.svg');
+          aImgsShare[i].src=FC$.PathImg +'det_prodfacebook.svg';
         }
         else if(aImgsShare[i].className=='EstImgShareTwitter'){
-          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'det_twitter.svg?cccfc=1');
-          aImgsShare[i].src=FC$.PathImg+ 'det_twitter.svg?cccfc=1';
+          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'det_twitter.svg');
+          aImgsShare[i].src=FC$.PathImg+ 'det_twitter.svg';
         }
         else if(aImgsShare[i].className=='EstImgShareGooglePlus'){
-          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'det_googleplus.svg?cccfc=1');
-          aImgsShare[i].src=FC$.PathImg+ 'det_googleplus.svg?cccfc=1';
+          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'det_googleplus.svg');
+          aImgsShare[i].src=FC$.PathImg+ 'det_googleplus.svg';
         }
         else if(aImgsShare[i].className=='EstImgSharePinterest'){
-          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'iconprodpinterest.svg?cccfc=1');
-          aImgsShare[i].src=FC$.PathImg+ 'iconprodpinterest.svg?cccfc=1';
+          aImgsShare[i].setAttribute('data-src',FC$.PathImg +'iconprodpinterest.svg');
+          aImgsShare[i].src=FC$.PathImg+ 'iconprodpinterest.svg';
         }
         if(isProd){ //produto
           aImgsShare[i].style.width="25px";
@@ -412,6 +439,7 @@ var sF$=(function(){
     fnCustomizeIconsSocialNetworks:fnCustomizeIconsSocialNetworks,
     fnPreloadImages:fnPreloadImages,
     fnShowEconomy:fnShowEconomy,
+    CupomDesconto:CupomDesconto,
     fnBadgeProdZF: fnBadgeProdZF,
     fnLogout:fnLogout,
     fnShowPrice:fnShowPrice,
@@ -473,13 +501,13 @@ function ShowCartOnPage(IDLoja,iErr,sMsg,sCartText,sCheckoutText,este){
      if(iErr==0){
        sHTML+="<tr height=45>";
        sHTML+="<td valign=middle align=center style=cursor:pointer onclick=window.location.href='/addproduto.asp?idloja="+ IDLoja +"'><a href='addproduto.asp?idloja="+ IDLoja +"' style='color:#444444;text-decoration:none;font-size:14px;font-weight:bold;'>Ir para o carrinho</a></td>";
-       sHTML+="<td align=left><img src='"+ FC$.PathImg +"ampiconclose.svg?cccfc=1' width=20 height=20 hspace=5 style='cursor:pointer;margin-top:10px' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
+       sHTML+="<td align=left><img src='"+ FC$.PathImg +"ampiconclose.svg' width=20 height=20 hspace=5 style='cursor:pointer;margin-top:10px' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
        sHTML+="</tr>";
        sF$.fnUpdateCart(true,false);
      }
      else{
        sHTML+="<tr height=25>";
-       sHTML+="<td colspan=2 align=center><img src='"+ FC$.PathImg +"ampiconclose.svg?cccfc=1' width=20 height=20 hspace=5 style='cursor:pointer;margin:10px;' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
+       sHTML+="<td colspan=2 align=center><img src='"+ FC$.PathImg +"ampiconclose.svg' width=20 height=20 hspace=5 style='cursor:pointer;margin:10px;' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
        sHTML+="</tr>";
      }
      sHTML+="</table>";
@@ -501,7 +529,7 @@ function fnFooter(){
       var oScript=document.createElement('script');
       oScript.type='text/javascript';
       oScript.async=true;
-      oScript.src=FC$.PathHtm+'MbhIncPaginacaoOrder.js?cccfc=1';
+      oScript.src=FC$.PathHtm+'MbhIncPaginacaoOrder.js';
       var sAddScript=document.getElementsByTagName('script')[0];
       sAddScript.parentNode.insertBefore(oScript,sAddScript);
     }
@@ -631,16 +659,16 @@ function fnShowCEPGrid(IDProd){
     var sNumCEP=fnGetCookie('CEP'+FC$.IDLoja);
     if(sNumCEP==null)sNumCEP="";
     var sCEP="<div id='idDivCEPFC'>";
-    sCEP+="  <div id='idDivTitCEP'><img src='"+ FC$.PathImg +"ampiconziptruck.svg?cccfc=1' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>";
+    sCEP+="  <div id='idDivTitCEP'><img src='"+ FC$.PathImg +"ampiconziptruck.svg' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>";
     sCEP+="  <div id='idDivContentCEP'>";
     sCEP+="    <div id='idDivContentFieldsCEP'>";
     sCEP+="      <div id='idDivCEPCalc'>";
     sCEP+="        <div class='FieldCEP FieldCEPQty'><label>Qtd.</label><input type='number' id='idQtdZip"+ IDProd +"' value='1' maxlength='4'></div>";
     sCEP+="        <div class='FieldCEP FieldCEPNum'><input type='text' placeholder='CEP' id='idZip"+ IDProd +"' value='"+ sNumCEP +"' maxlength='8' onkeyup='this.value=this.value.replace(/[^\\d]+/g,\"\");if(this.value.length >= 8)document.getElementById(\"idCEPButton\").click()'></div>";
-    sCEP+="        <img src='"+ FC$.PathImg +"ampiconnewsletter.svg?cccfc=1' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProdGrid("+ IDProd +")'>";
+    sCEP+="        <img src='"+ FC$.PathImg +"ampiconnewsletter.svg' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProdGrid("+ IDProd +")'>";
     sCEP+="      </div>";
     sCEP+="    </div>";
-    sCEP+="    <div id='idDivImgLoadingCEPFC'><img src='"+ FC$.PathImg +"mbbloadingcep.gif?cccfc=1' vspace=3 style='display:none;' id=ImgLoadingCEP></div>";
+    sCEP+="    <div id='idDivImgLoadingCEPFC'><img src='"+ FC$.PathImg +"mbbloadingcep.gif' vspace=3 style='display:none;' id=ImgLoadingCEP></div>";
     sCEP+="    <div id='idShippingValues"+ IDProd +"'></div></div>";
     sCEP+="  </div>";
     sCEP+="</div>";
