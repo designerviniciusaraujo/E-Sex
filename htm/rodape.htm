@@ -1,8 +1,9 @@
+  </div>
 </div>
-</div>
+<!-- MOSTRA CODIGO DE DESCONTO APÓS CADASTRO DE NEWS LETTER-->
+  <script>sF$.CupomDesconto();</script>
+
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-
 <footer>
   <!-- Begin Page History -->
   <div class="container history">
@@ -18,7 +19,7 @@
 	 <!-- BEGIN: NEWS LOW -->
 	  <div class="container news">
 	    <div class="news-style-image">
-	      <img alt="icon-silueta" class="news-image" src="<PathTo file="images/silueta.gif?cccfc=1">">
+	      <img alt="icon-silueta" class="news-image" src="<PathTo file="images/silueta.gif">">
 	    </div>
 	    <div class="news-low">
 	      <div class="row">
@@ -61,7 +62,7 @@
       </div>
     </div>
     <!-- END: BANNERS FOOTER -->
-    
+
   <div class="footer">
     <div class="container footer">
       <div class="row">
@@ -139,13 +140,7 @@
               <span>
                 <a href="#" onclick="Insta()"><img src="<BaseLoja>/images/instagram_ic.svg"></a>
               </span>
-              <script>
-              function Insta() {
-                  alert("Aguarde conta instagram da Atração");
-              }
-              </script>
-
-
+              <script>function Insta() {alert("Aguarde conta instagram da Atração");}</script>
             </li>
           </ul>
         </div>
@@ -164,24 +159,7 @@
             <li>
               <tag-FCFooterAboutUsCompanyPhone>
             </li>
-            <li><a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" class="footer-logo" src="<PathTo file="images/footer_atracao_sexshop.svg?cccfc=1">"></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="c-xs-12 c-s-6 c-m-3 c-l-6 footer-Payments">
-          <span class="footer-title">Formas de Pagamento</span>
-          <ul class="FooterULPaymentFC">
-            <li><img src="<BaseLoja>images/pag_pagseguro.svg" alt="PagSeguro"></li>
-            <li><img src="<BaseLoja>images/pag_visa.svg" alt="Cartões Visa"></li>
-            <li><img src="<BaseLoja>images/pag_mastercard.svg" alt="Cartões Master Card"></li>
-            <li><img src="<BaseLoja>images/pag_boleto.svg" alt="Boleto bancario"></li>
-          </ul>
-        </div>
-        <div class="c-xs-12 c-s-6 c-m-3 c-l-6">
-          <span class="footer-title">Segurança</span>
-          <ul class="FooterULSecurityFC">
-            <li><a href="/ajuda.asp?idloja=<IDLojaNum>#Seguranca"><img src="<BaseLoja>images/ssl.svg" alt="Boleto bancario"></a></li>
+            <li><a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" class="footer-logo" src="<PathTo file="images/footer_atracao_sexshop.svg">"></a></li>
           </ul>
         </div>
       </div>
@@ -189,6 +167,29 @@
   </div>
   <div class="footer-TecBoxFC">
     <div class="container">
+      <div class="row colun">
+        <div class="c-xs-12 c-s-6 c-m-6 c-l-6 footer-Payments">
+          <span class="footer-title-off">Formas de Pagamento</span>
+          <ul class="FooterULPaymentFC">
+            <li><img src="<BaseLoja>images/pag_pagseguro.svg" alt="PagSeguro"></li>
+            <li><img src="<BaseLoja>images/pag_visa.svg" alt="Cartões Visa"></li>
+            <li><img src="<BaseLoja>images/pag_mastercard.svg" alt="Cartões Master Card"></li>
+            <li><img src="<BaseLoja>images/pag_boleto.svg" alt="Boleto bancario"></li>
+          </ul>
+        </div>
+        <div class="c-xs-12 c-s-3 c-m-3 c-l-3 footer-Security">
+          <span class="footer-title-off">Segurança</span>
+          <ul class="FooterULSecurityFC">
+            <li><a href="/ajuda.asp?idloja=<IDLoja>/#inicio" class="ancora_menu"><img class="ico-https" src="<BaseLoja>images/100_https.svg" alt="https"></a></li>
+            <li><a href="https://www.google.com/transparencyreport/safebrowsing/diagnostic/?hl=pt-BR#url=<StoreDomain>" target=_blank><img src="<BaseLoja>images/google_safe.svg" class="gsafe" height=50 alt="Seu pedido com Segurança" title="Site Seguro"></a></li>
+            <li><img src="/images/LetsEncrypt.svg" height=50 alt="Seu pedido com Segurança" title="Site Seguro"></li>
+          </ul>
+        </div>
+        <div class="c-xs-12 c-s-3 c-m-3 c-l-3 zfast">
+          <li><a href="https://www.zfast.com.br/" target="_blank"><img src="<BaseLoja>images/LogoDesignZFast.svg" height=50 alt="Agência Zfast" title="Site Seguro"></a></li>
+        </div>
+      </div>
+      <hr>
       <div class="row">
         <div class="c-xs-12 c-s-6 c-m-3 c-l-6">
           <div class="footer-TecBoxFC link-first">
@@ -217,5 +218,4 @@
   if (FC$.Page == "News") {
    $("span#idTitTextoFC").replaceWith( "<h2>Blog Atração</h2>" );
  }
-
 </script>
