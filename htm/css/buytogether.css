@@ -4,7 +4,7 @@
 #bTContainer{width:100%;float:left;min-height:1px;margin:25px 0 0px;}
 #bTEconomyItemConj{display:none;}
 .bTItem{margin:0px;padding:10px;text-align:center;position:relative; }
- .bTItem:after{content: " ";background:url("/images/plus.svg?cccfc=1") no-repeat;background-size: contain;
+ .bTItem:after{content: " ";background:url("/images/plus.svg") no-repeat;background-size: contain;
     width: 100%;
     height: 18px;
     position: relative;
@@ -14,7 +14,7 @@
 .bTTotalBuy{float:left;}
 p.bTText{font-size:1.5em!important;font-weight:bold;margin:10px auto;text-align:left;color:#333333;text-align:center;line-height:0.9;margin:50px auto 35px;}
 .bTTotalsPrices{position:relative;padding:10px;}
-.bTTotalBuy:before{content:" ";background:url("/images/equal.svg"?cccfc=1) no-repeat;background-size:100%;width:18px;height:18px;position:absolute;left:-20px;top:85px;}
+.bTTotalBuy:before{content:" ";background:url("/images/equal.svg") no-repeat;background-size:100%;width:18px;height:18px;position:absolute;left:-20px;top:85px;}
 .bTProdSelectName{width:100%;clear:both;padding:5px 0;position:relative;}
 .bTProdSelectName label{font-size:13px;}
 .bTText{font-family: 'Roboto'; color: #18c1c6;float:left;width:100%;clear:both;font-weight:bold;display:block;margin:0 0 5px 0;}
