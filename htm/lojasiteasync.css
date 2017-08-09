@@ -9,6 +9,10 @@
   .ProdDet-Club-tittle {display: flex;    margin: 0 auto 5px;}
   .ProdDet-Club-tittle img { margin-right: 5px;width: 30px;   height: 28px}
 
+  /*Modals library*/
+   @media (max-width:$screen-xs-max){}@media (min-width:$screen-sm){}@media (min-width:$screen-sm){}.modal .btn-close{color:#aaa;cursor:pointer;font-size:2rem;position:absolute;top:0;right:5px;text-decoration:none}.modal .btn-close:hover,.modal .btn-close:focus{color:#999}.modal-wrap:before{content:'';display:none;background:rgba(0,0,0,0.6);position:fixed;top:0;right:0;bottom:0;left:0;z-index:101}.modal-overlay{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:102}.modal-open:checked ~ .modal-wrap:before,.modal-open:checked ~ .modal-wrap .modal-overlay{display:block}.modal-open:checked ~ .modal-wrap .modal-dialog{transform:translate(-50%,-50%);position:fixed;top:40%}.modal-dialog{background:#fefefe;border:#555 solid 1px;border-radius:5px;position:fixed;left:50%;top:-100%;transform:translate(-50%,-150%);transition:transform .6s ease-in-out;width:80%;max-width:600px;z-index:103}.modal-body{padding:20px}.modal-body p{margin:0}.modal-header,.modal-footer{padding:20px 20px}.modal-header{border-bottom:#eaeaea solid 1px}.modal-header h2{font-size:2rem;margin:0}.modal-footer{border-top:#eaeaea solid 1px;text-align:right}
+  /*Modals library*/
+
   /* History */
   #idPageHistory { width: 100%; margin-top: 30px; color: <tag-FCCSSMainColor>; }
   #idDivPageHistory { max-width: 1200px; margin: 0 auto; }
@@ -20,7 +24,7 @@
   .EstImagePageHistory { text-align: center; margin: 5px; min-height: 100px; background-color: transparent; border: 0 solid <tag-FCCSSColor2>; }
   .EstImagePageHistory .EstFotoPageHistory { max-width: 100px; max-height: 100px; margin: 2px 0 0 2px; }
   .EstNamePageHistory { text-align: center; margin: 0 0 10px 0; font-family: 'Open Sans', verdana, arial; font-weight: 400; line-height: 1; }
-  .EstNamePageHistory a { height: 40px; font-size: 14px; text-decoration: none; background-color: <tag-FCCSSColor8>; border: 0 solid <tag-FCCSSColor2>; color: <tag-FCCSSColor22>; }
+  3.EstNamePageHistory a { height: 40px; font-size: 14px; text-decoration: none; background-color: <tag-FCCSSColor8>; border: 0 solid <tag-FCCSSColor2>; color: <tag-FCCSSColor22>; }
   .EstPricePageHistory { text-align: center; margin: 0; font-size: 14px; font-weight: 600; background-color: transparent; border: 0 solid #999999; color: #292723; }
   .EstNamePageHistory a { color: black !important; font-weight: bold; font-size: 0.9em; text-align: center; }
 
@@ -107,11 +111,16 @@
   .EstNomeCampo {color:black;font-size:8pt;font-family:tahoma,verdana;font-weight:bold}
   .EstCampo {font-size:8pt;font-family:tahoma,verdana}
 
-  /* EM USO ATRAÇÃO SEXSHOP */
+  /* EM USO ATRAǇÃO SEXSHOP */
+  .EstLinkASEnews { display: none;}ul#idUlPathSearchFC a { color: #e3037d;}
+  button.buttonAddSearch {display: none;}
+  body.FCNews h2 {font-size: 15px !important;  margin: 40px auto 0 !important;}
+  body.FCNews h1 {left: 0;}
+  span#idTitNewsFC { font-size: 36px !important;  width: 100% !important;   display: block; }
   #idTitProdCrossFC { font-size: 1.5em; font-weight: bold; margin: 50px auto 35px; text-align: left; color: #333333; text-align: center; font-family: 'Roboto'; line-height: 0.9; }
   a.EstOpiniaoEmail { color: #e3037d;}
   td#idCommentsClickFC a{color:#fff;background:#e3037d;padding:5px 5px;border-radius:5px}
-  /* EM USO ATRA��O SEXSHOP */
+  /* EM USO ATRAǇÃO SEXSHOP */
   .EstQtdInv td { background: #ffe6e6 !important }
   .EstQtdInv .FCCartQtyInput { background: #fff; border: 1px solid red; }
 
@@ -124,25 +133,33 @@
   button.PreviewButton {transition: 0.02s; cursor: pointer;    box-shadow: 1px 2px 7px #888888; display: block;  margin: 0 auto;  background: #e61c8a;  border: 0;  color: #fff;  font-family: 'Roboto';  text-transform: uppercase; border-radius: 3px;width: 150px; height: 30px;}
   button.PreviewButton:hover {transition: 0.05s;     box-shadow: 1px 0px 7px #888888;}
   .Dest .prices {width: 150px;}
-  /* FOOTER ATRA��O SEXSHOP */
+
+  /* FOOTER ATRAǇÃO SEXSHOP */
+  .xs-hidden.s-hidden.c-m-3.c-l-3.Banner-First a { display: block;}
+  span.footer-title-off { color: #424242;}
+  .footer-TecBoxFC hr { border-color: whitesmoke;  border: 0;  border: 1px solid #f3f1f1;}
+  ul.FooterULSecurityFC {display: flex; display: -ms-flexbox; display: -webkit-flex; justify-content: space-between; -webkit-justify-content: space-between; -ms-justify-content: space-between;  width: 45%; align-items:center; -webkit-align-itens:center; -ms-align-itens:center;}
   .footer li, h3 { list-style: none; color: #ffffff; }
   .tinynav { display: block; width: 100%; height: 50px; font-size: 16px; font-weight: bold; font-weight: 400; padding: 0 0 0 10px; color: #424242; border-radius: 5px; background: #d8d8d8; margin: 0px auto 20px; }
-  .footer-title { color: #ffffff; font-size: 1.1em; font-weight: bold; font-family: 'Roboto'; margin: 5px auto; display: block; }
+  .footer-title { color: #ffffff; }
+  .footer-title,.footer-title-off {text-align: left; font-size: 18px; font-weight: bold; font-family: 'Roboto'; margin: 5px auto; display: block; }
   span .FooterNewsletterInput { height: 38px; font-size: 14px; border: 1px solid #ffffff !important; padding: 0 0 0 10px; width: 170px; background: #fff; border-radius: 5px; }
   .FooterInputBtnPosition { margin: 0 0 0 -5px !important; }
   button.btnicon { cursor: pointer;  transition: 0.2s; background: transparent; color: #d4d4d4; border: 0; padding: 0px; margin: 3px auto; font-size: 0.8em; outline: none;}
   button.btnicon:hover {color: #fff; transition: 0.2s}
+
   /*Seletor Pag login*/
   input[type="image"] { width: 50px; }
   .EstNomeProd a:visited{color:#2f2f2f !important}.EstNomeProd{color:#2f2f2f!important}
   /*Seletor Pag login*/
+
   ul.FooterAddressFC.FooterULMenuFC { display: block; }
   ul.FooterAddressFC.FooterULMenuFC { font-size: 0.8em; margin: 0 0 15px; }
   ul.FooterULPaymentFC { display: flex; justify-content: flex-start; }
   ul.FooterULPaymentFC img { padding: 0 1px }
   .footer-TecBoxFC { text-align: center; font-size: 0.7em; margin: 5px auto; }
 
-  /* FOOTER ATRA��O SEXSHOP */
+  /* FOOTER ATRAǇÃO SEXSHOP */
 
   /* PRODDET */
   div#title { font-size: 25px;   font-weight: bold;    margin: 5px auto 20px;}
@@ -171,7 +188,6 @@
   span.CompanyAddressLine2 { display: block; }
   img.footer-logo { padding: 7px 0 0; width: 71%; max-width: 200px; margin: 10px auto 12px; }
   .footer-TecBoxFC.link-first a { color: #424242; text-decoration: none; }
-/*  .c-xs-12.c-s-5.c-m-3.c-l-3.footer-information { margin: 0; }*/
   ul.ProductStyleULFC.FooterSocialIcons { margin: 10px auto 0; }
   ul.FooterAddressFC.FooterULMenuFC li { padding: 3px 0; }
   .FooterULMenuFC li a { color: #fff; font-size: 20px; font-family: 'Roboto'; }
@@ -185,8 +201,46 @@
   .FCCart .container.history { display: none; }
   .FCNewsletter .container.history { display: none; }
 
+  /*modals and forms-modals*/
+  .advantages-newsletter .btn {font-size: 17px;text-align: left;line-height: 1.8;color: #a9a9a9;}
+  .modal-header h3 { color: #e20b7c;  font-size: 21px;}
+  label.btn.btn-primary { cursor: pointer;}
+  .modal-body { padding: 20px;  display: flex; justify-content: space-around;flex-direction: column; }
+  input.Iname,.Imail {padding: 0px 5px; margin: 10px auto; width: 100%; height: 40px; border: 0; border: 1px solid #979797 !important;  border-radius: 5px;  height: 50px !important;}
+  input.Iemail { width: 100%; height: 50px;}
+
+  /*modals and forms-modals*/
+
+  /*BOX MOSTRA DESCONTO HOME*/
+  .ZFBg-MostraCod { background: #522a40; width: 100%; position: absolute; height: 100%; top: 0px; left: 0; z-index: 999999; padding: 10em 0em; display: none; background: rgba(0, 0, 0, 0.6); }
+  .ZFBox-MostraCod { background: #e3037d; color: #fff; text-align: center; position: relative; height: 200px; padding: 33px; border-radius: 5px; bottom: 23em; transition: 0.3s; margin: 0 auto; width: 300px; }
+  button#ZFPopClose { border: 0; background: #19ce3f; color: #fff; border-radius: 5px; width: 120px; height: 30px; text-transform: uppercase; font-family: "Roboto"; font-weight: bold; margin: 20px auto; cursor: pointer; box-shadow: 1px 2px 7px #888888; }
+  #closeTopCode {cursor: pointer;display: block; float: right; position: relative; bottom: 20px; left: 20px; }
+  /*BOX MOSTRA DESCONTO HOME*/
+
+
+  .FooterULSecurityFC li img {max-width: 100%; max-height:100%;}
+  img.gsafe { width: 120px; max-height: 50px !important;}
+  img.ico-htttps {max-width: 40px; display: block}
+  .c-xs-12.c-s-3.c-m-3.c-l-3.zfast {padding: 25px 0 0;}
+  .row.colun { margin: 20px auto;}
+
   /* BEGIN: FOOTER */
+  @media (max-width:767px) {
+    .c-xs-12.c-s-6.c-m-6.c-l-6.footer-Payments,.footer-Security {margin: 20px auto;}
+    .FooterULSecurityFC li { margin-right: 10px;}
+
+  }
   @media (min-width:768px) {
+  .FooterULSecurityFC li { margin-right: 2px;}
+  ul.FooterULSecurityFC { width: 85%; }
+  ul.FooterULSecurityFC img {display: block}
+  .Modalform { display: flex;  align-items: center;justify-content: center; }
+  input.Iname, .Imail {margin: 5px;}
+  .MdSubmit { height: 50px; position: relative;  left: 5px;  width: 50%;}
+  /*modals and forms-modals*/
+  .modal-body { padding: 20px;  display: flex; justify-content: space-around;    flex-direction: inherit;}
+  /*modals and forms-modals*/
 
   select.tinynav { display: none; }
   .FooterULMenuFC { margin: 0px 0 0px; }
