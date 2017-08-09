@@ -292,11 +292,11 @@ tr#idOccupationFC {  display: none;}
  #idChkCartIntFC{ min-width:420px !important;width:100% !important;}
 }
 #idChkRegisterIntFC,#idTitFreightFC,#idTitPaymentFC,#idTitCartFC {display: flex;align-items: center;}
-#idChkRegisterIntFC .EstTitCheckoutFC{background:transparent url('../images/01.svg?cccfc=1') no-repeat 0px 6px;-ms-background-position-x:-136px;min-height:55px;padding-left:50px;text-align:left !important;text-transform:uppercase;color:#000 !important;align-items: center;
+#idChkRegisterIntFC .EstTitCheckoutFC{background:transparent url('../images/01.svg') no-repeat 0px 6px;-ms-background-position-x:-136px;min-height:55px;padding-left:50px;text-align:left !important;text-transform:uppercase;color:#000 !important;align-items: center;
     display: flex;}
-#idTitFreightFC{background:transparent url('../images/02.svg?cccfc=1') no-repeat 0px 6px;-ms-background-position-x:-122px;min-height:55px;padding-left:51px;text-align:left !important;text-transform:uppercase;color:#000 !important;}
-#idTitPaymentFC{background:transparent url('../images/03.svg?cccfc=1') no-repeat 0px 6px;-ms-background-position-x:-122px;min-height:55px;padding-left:51px;text-align:left !important;text-transform:uppercase;color:#000 !important;}
-#idTitCartFC{background:transparent url('../images/04.svg?cccfc=1') no-repeat 0px 6px;-ms-background-position-x:-122px;min-height:55px;padding-left:51px;text-align:left !important;text-transform:uppercase;color:#000;}
+#idTitFreightFC{background:transparent url('../images/02.svg') no-repeat 0px 6px;-ms-background-position-x:-122px;min-height:55px;padding-left:51px;text-align:left !important;text-transform:uppercase;color:#000 !important;}
+#idTitPaymentFC{background:transparent url('../images/03.svg') no-repeat 0px 6px;-ms-background-position-x:-122px;min-height:55px;padding-left:51px;text-align:left !important;text-transform:uppercase;color:#000 !important;}
+#idTitCartFC{background:transparent url('../images/04.svg') no-repeat 0px 6px;-ms-background-position-x:-122px;min-height:55px;padding-left:51px;text-align:left !important;text-transform:uppercase;color:#000;}
 
 #idCheckoutFC .EstTitCheckoutFC {font-size: 17px !important;font-family: 'Roboto'!important;}
 .EstChkRequiredField {color: #444444!important;}
