@@ -1,43 +1,179 @@
+  <link rel="stylesheet" href="<PathTo file="htm/css/flexgrid.css">">
+  <link rel="stylesheet" href="<PathTo file="htm/css/lojasite.css">">
+  <link rel="stylesheet" type="text/css" href="/js/MagicToolbox/MagicScrollV2/magicscroll.css"/>
+  <link rel="stylesheet" href="<BaseLoja>htm/css/jquery_ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src='<PathTo file="htm/jurosparcelas.js">'></script>
+  <script type="text/javascript" src="<BaseLoja>htm/LojaLib.js"></script>
+  <script src="/js/magictoolbox/magiczoomplusv1/magiczoomplus.js"></script>
+  <script type="text/javascript" src="/js/MagicToolbox/MagicScrollV2/magicscroll.js"></script>
+  <script language="JavaScript" src="/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="<BaseLoja>htm/popnews/jQueryCookie.js"></script>
+  <script type="text/javascript" src="<BaseLoja>htm/autosuggest.js"></script>
 
-<link rel="stylesheet" href="<PathTo file="htm/css/flexgrid.css?cccfc=1">">
-<link rel="stylesheet" href="<PathTo file="htm/css/lojasite.css?cccfc=1">">
-<link rel="stylesheet" type="text/css" href="/js/MagicToolbox/MagicScrollV2/magicscroll.css"/>
-<link rel="stylesheet" href="<BaseLoja>htm/css/jquery_ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src='<PathTo file="htm/jurosparcelas.js">'></script>
-<script type="text/javascript" src="<BaseLoja>htm/LojaLib.js"></script>
-<script src="/js/magictoolbox/magiczoomplusv1/magiczoomplus.js?cccfc=1"></script>
-<script type="text/javascript" src="/js/MagicToolbox/MagicScrollV2/magicscroll.js"></script>
-<script language="JavaScript" src="/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="<BaseLoja>htm/popnews/jQueryCookie.js"></script>
-<script type="text/javascript" src="<BaseLoja>htm/autosuggest.js"></script>
+  <!-- <script language="JavaScript" src="/jquery-ui-1.9.2.custom.min.js"></script> -->
+  <!--[if IE]>
+  <style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style>
+  <![endif]-->
+  <!-- Begin: Toolbar-->
 
-<!-- <script language="JavaScript" src="/jquery-ui-1.9.2.custom.min.js"></script> -->
-<!--[if IE]>
-<style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style>
-<![endif]-->
-<!-- Begin: Toolbar-->
-
-<div class="FCToolBar">
-  <div class="container">
-    <div class="row">
-      <div class="c-s-3 c-m-3 c-l-3">
-        <div class="FCToolBar-logo">
-          <a href="<StoreDomain>">
-            <div class="FCToolBarLogo">
-          <a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg?cccfc=1">"></a>
+  <div class="FCToolBar">
+    <div class="container">
+      <div class="row">
+        <div class="c-s-3 c-m-3 c-l-3">
+          <div class="FCToolBar-logo">
+            <a href="<StoreDomain>">
+              <div class="FCToolBarLogo">
+            <a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg">"></a>
+            </div>
+            </a>
           </div>
-          </a>
+        </div>
+        <div class="c-s-7 c-m-6 c-l-7">
+          <div class="row">
+            <div class="FCToolBar-search">
+              <form name="TopSearchToolbarForm" id="autocomplete-form-toolbar" class="TooBar-Form" method="GET" action="/listaProdutos.asp">
+                <input type="hidden" name="IDLoja" value="<IDLoja>">
+                <input type="hidden" name="Digitada" value="True">
+                <input type="text" id="autocomplete-toolbar" value="" name="Texto" class="" placeholder="Encontre seu produto erótico" autocomplete="off">
+                <a href="#search" onclick="sF$.fnSearchToolbarSubmit(document.TopSearchToolbarForm);" class="FCToolBar-Button">
+                  <button class="head-searc-button">
+                    <span class="HeaderSerachIMGIconFC">
+                      <img64 src="<Baseloja>images/search-icon.svg" plain="true" width="25" height="25" alt="Buscar" title="Buscar">
+                    </span>
+                  </button>
+                </a>
+              </form>
+            </div>
+            <div class="FCToolBar-Avanced-Searc">
+              <span class="advanced medium-hidden col-small-hidden"><a href="/buscaavancada.asp?idloja=<IDLoja>">Busca Avançada</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="c-s-2 c-m-3 c-l-2">
+          <div class="HeaderCartMainFC ToolBarCart">
+            <a href="/addProduto.asp?idloja=<IDLojaNum>">
+              <div class="HeaderCartMainIconFC">
+                <img64 src="<Baseloja>images/cart-icon.svg" alt="carrinho-compra" plain="true" width="35" height="35">
+              </div>
+            </a>
+            <a href="/addProduto.asp?idloja=<IDLojaNum>">
+              <div class="HeaderCartMainItemTotalFC">
+                <div id="HeaderCartItemFC"><span id="idCartItemsToolTop">0</span></div>
+                <div id="HeaderCartTotalFC"><span id="idCartTotalToolTop">R$ 0,00</span></div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="c-s-7 c-m-6 c-l-7">
+    </div>
+  </div>
+  <script>var w=jQuery(window).width();w>1024&&ToolbarCartExec();</script>
+  <!-- End: Toolbar -->
+  <div class="header">
+    <!-- BEGIN: Band-top  -->
+    <div class="Band-top">
+      <div class="container Band">
         <div class="row">
-          <div class="FCToolBar-search">
-            <form name="TopSearchToolbarForm" id="autocomplete-form-toolbar" class="TooBar-Form" method="GET" action="/listaProdutos.asp">
+          <div class="c-xs-2 c-s-1 c-m-2 c-l-3">
+            <span style="font-size:30px;cursor:pointer" class="open" onclick="navOpenClose.fn.openNav()">
+            <img alt="icone-menu" class="header-menu" src="<PathTo file="images/menu_icon.svg">">
+            </span>
+            <div id="mySidenav" class="sidenav">
+              <div class="container-SideNav">
+                <div class="row">
+                  <div class="mySidenav-list">
+                    <a href="javascript:void(0)" class="closebtn" onclick="navOpenClose.fn.closeNav()">&times;</a>
+                    <a href="/home.asp?idloja=<IDLoja>">Home</a>
+                    <a href="/account.asp?idloja=<IDLoja>"> Minha Conta</a>
+                    <a href="/account.asp?idloja=<IDLojaNum>&orders=1#Orders"> Meus Pedidos</a>
+                    <a href="/custom.asp?idloja=<IDLoja>&arq=quem-somos.htm"> Quem Somos</a>
+                    <a href="/addProduto.asp?idloja=<IDLojaNum>"> Carrinho</a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"> Clube Atração</a>
+                    <a href="/newsletter.asp?idloja=<IDLoja>"> Quer desconto?</a>
+                    <a href="/custom.asp?idloja=<IDLoja>&arq=contato.htm"> Fale Conosco</a>
+                  </div>
+                  <div class="">
+                    <div onclick="menu_close()" class="SideNav-overlay"></div>
+                  </div>
+                  <script>
+                    function drop_close() {document.getElementById("MegaBox").style.display = "none";}
+                    function menu_close() {document.getElementById("mySidenav").marginLeft = "-320px";}
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-xs-10 c-s-7 c-m-6 c-l-6">
+            <div class="Band-top-links ">
+              <div class="header-help ">
+                <a href="/ajuda.asp?idloja=<IDLoja>"><span>Ajuda</span><img alt="icone-ajuda" class="help-icon" src="<PathTo file="images/help-icon.svg">"></a>
+              </div>
+              <div class="header-acess">
+                <a href="/cadastro.asp?idloja=<IDLoja>"><img alt="Minha Conta" class="user-icon" src="<PathTo file="images/user-icon.svg">"></a>
+                <li class="HeaderContainerSocialLoginPosition" id="Header_SocialLogin_NamePosition">
+                  <span class="loginInfo"></span><script>sF$.fnLoginUserName("<NomeCliente>","<FotoCliente>");</script>
+                </li>
+                <span class="header-social-login" id="idImgGlobalSignFC"></span>
+              </div>
+            </div>
+          </div>
+          <div class="c-s-4 c-m-4 c-l-3 text-right xs-hidden">
+            <div class="Home-Cat fones">
+              <ul class="MegaMenu">
+                <li>
+                  <div class="MegaMenu-Select">
+                    <img alt="icone-contato" class="down-phone" src="<PathTo file="images/contact.svg">"> contato@atracaosexshop.com.br
+                    <span class="PhoneIcon"></span>
+                  </div>
+                  <div class="PhoneBox">
+                    <ul>
+                      <li>(11) 9 9999 9999</li>
+                      <li>(11) 9 9999 9999</li>
+                      <li>(11) 9 9999 9999</li>
+                      <li>(11) 9 9999 9999</li>
+                    </ul>
+                  </div>
+                </li>
+               <div onclick="drop_close()" class="Menu-overlay"></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- BEGIN: HEAD  -->
+  <div class="container head">
+    <div class="head">
+      <div class="row">
+        <div class="c-xs-6 c-s-3 c-m-2 c-l-3">
+          <div class="head-logo">
+            <a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg">"></a>
+          </div>
+        </div>
+        <div class="c-xs-5 c-s-1 c-m-1 c-l-3">
+          <div class="head-cart">
+            <a href="/addProduto.asp?idloja=<IDLojaNum>" class="CartItens">
+            <img alt="Carrinho Compra" src="<PathTo file="images/cart-icon.svg">">
+              <div class="HeaderCartMainItemTotalFC">
+                <div id="HeaderCartItemFC"><span id="idCartItemsTop"></span></div>
+                <div id="HeaderCartTotalFC"><span id="idCartTotalTop"></span></div>
+              </div>
+            </a>
+            <script>FCLib$.onReady(function(){sF$.fnUpdateCart(false,false);});</script>
+            <!-- End: Carrinho -->
+            <!-- Begin Tolbar Carrinho -->
+          </div>
+        </div>
+        <div class="c-xs-12 c-s-7 c-m-7 c-l-6 text-center">
+          <div class="head-searc">
+            <form name="TopSearchToolbarForm" id="autocomplete-form" class="FCToolBarForm" method="GET" action="/listaProdutos.asp">
               <input type="hidden" name="IDLoja" value="<IDLoja>">
               <input type="hidden" name="Digitada" value="True">
-              <input type="text" id="autocomplete-toolbar" value="" name="Texto" class="" placeholder="Encontre seu produto erótico" autocomplete="off">
-              <a href="#search" onclick="sF$.fnSearchToolbarSubmit(document.TopSearchToolbarForm);" class="FCToolBar-Button">
+              <input type="text" id="autocomplete" value="" name="Texto" class="InputTextBusca ui-autocomplete-input" placeholder="Encontre seu produto erótico" autocomplete="off">
+              <a href="#search" onclick="sF$.fnSearchToolbarSubmit(document.TopSearchToolbarForm);">
                 <button class="head-searc-button">
                   <span class="HeaderSerachIMGIconFC">
                     <img64 src="<Baseloja>images/search-icon.svg" plain="true" width="25" height="25" alt="Buscar" title="Buscar">
@@ -45,632 +181,488 @@
                 </button>
               </a>
             </form>
+            <a href="/buscaavancada.asp?idloja=<IDLoja>"><span class="head-advanced-search">Busca Avançada</span></a>
           </div>
-          <div class="FCToolBar-Avanced-Searc">
-            <span class="advanced medium-hidden col-small-hidden"><a href="/buscaavancada.asp?idloja=<IDLoja>">Busca Avançada</a></span>
-          </div>
-        </div>
-      </div>
-      <div class="c-s-2 c-m-3 c-l-2">
-        <div class="HeaderCartMainFC ToolBarCart">
-          <a href="/addProduto.asp?idloja=<IDLojaNum>">
-            <div class="HeaderCartMainIconFC">
-              <img64 src="<Baseloja>images/cart-icon.svg" alt="carrinho-compra" plain="true" width="35" height="35">
-            </div>
-          </a>
-          <a href="/addProduto.asp?idloja=<IDLojaNum>">
-            <div class="HeaderCartMainItemTotalFC">
-              <div id="HeaderCartItemFC"><span id="idCartItemsToolTop">0</span></div>
-              <div id="HeaderCartTotalFC"><span id="idCartTotalToolTop">R$ 0,00</span></div>
-            </div>
-          </a>
         </div>
       </div>
     </div>
   </div>
-</div>
-<script>var w=jQuery(window).width();w>1024&&ToolbarCartExec();</script>
-<!-- End: Toolbar -->
-<div class="header">
-  <!-- BEGIN: Band-top  -->
-  <div class="Band-top">
-    <div class="container Band">
-      <div class="row">
-        <div class="c-xs-2 c-s-1 c-m-2 c-l-3">
-          <span style="font-size:30px;cursor:pointer" class="open" onclick="navOpenClose.fn.openNav()">
-          <img alt="icone-menu" class="header-menu" src="<PathTo file="images/menu_icon.svg?cccfc=1">">
-          </span>
-          <div id="mySidenav" class="sidenav">
-            <div class="container-SideNav">
-              <div class="row">
-                <div class="mySidenav-list">
-                  <a href="javascript:void(0)" class="closebtn" onclick="navOpenClose.fn.closeNav()">&times;</a>
-                  <a href="/home.asp?idloja=<IDLoja>">Home</a>
-                  <a href="/account.asp?idloja=<IDLoja>"> Minha Conta</a>
-                  <a href="/account.asp?idloja=<IDLojaNum>&orders=1#Orders"> Meus Pedidos</a>
-                  <a href="/custom.asp?idloja=<IDLoja>&arq=quem-somos.htm"> Quem Somos</a>
-                  <a href="/addProduto.asp?idloja=<IDLojaNum>"> Carrinho</a>
-                  <a href="#"> Clube Atração</a>
-                  <a href="/newsletter.asp?idloja=<IDLoja>"> Quer desconto?</a>
-                  <a href="/custom.asp?idloja=<IDLoja>&arq=contato.htm"> Fale Conosco</a>
-                </div>
-                <div class="">
-                  <div onclick="menu_close()" class="SideNav-overlay"></div>
-                </div>
-                <script>
-                  function drop_close() {document.getElementById("MegaBox").style.display = "none";}
-                  function menu_close() {document.getElementById("mySidenav").marginLeft = "-320px";}
-                </script>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="c-xs-10 c-s-7 c-m-6 c-l-6">
-          <div class="Band-top-links ">
-            <div class="header-help ">
-              <a href="/ajuda.asp?idloja=<IDLoja>"><span>Ajuda</span><img alt="icone-ajuda" class="help-icon" src="<PathTo file="images/help-icon.svg?cccfc=1">"></a>
-            </div>
-            <div class="header-acess">
-              <a href="/cadastro.asp?idloja=<IDLoja>"><img alt="Minha Conta" class="user-icon" src="<PathTo file="images/user-icon.svg?cccfc=1">"></a>
-              <li class="HeaderContainerSocialLoginPosition" id="Header_SocialLogin_NamePosition">
-                <span class="loginInfo"></span><script>sF$.fnLoginUserName("<NomeCliente>","<FotoCliente>");</script>
-              </li>
-              <span class="header-social-login" id="idImgGlobalSignFC"></span>
-            </div>
-          </div>
-        </div>
-        <div class="c-s-4 c-m-4 c-l-3 text-right  xs-hidden">
-          <div class="Home-Cat fones">
-            <ul class="MegaMenu">
-              <li>
-                <div class="MegaMenu-Select">
-                  <img alt="icone-contato" class="down-phone" src="<PathTo file="images/contact.svg?cccfc=1">"> contato@atracaosexshop.com.br
-                  <span class="PhoneIcon"></span>
-                </div>
-                <div class="PhoneBox">
-                  <ul>
-                    <li>(11) 9 9999 9999</li>
-                    <li>(11) 9 9999 9999</li>
-                    <li>(11) 9 9999 9999</li>
-                    <li>(11) 9 9999 9999</li>
-                  </ul>
-                </div>
-              </li>
-              <div onclick="drop_close()" class="Menu-overlay"></div>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div class="line-brand"></div>
+  <!-- END: HEAD    -->
+  <!-- END: Band-top -->
+  <div class="container carrossel scrol-hidden">
+    <!-- BEGIN: SLIDE CATEGORIAS -->
+    <div class="MagicScroll Cath scrol-hidden" data-options="items: [ [320,3], [600,7], [800,6], [1000,9], [1200,10], [1500,9], [1700,9], [1800,9], [1900,9], [2000,9] ]">
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261538"> <img alt="Acessórios" src="<PathTo file="images/acessorios.svg">">Acessórios</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539"> <img alt="Aumente seu Pênis" src="<PathTo file="images/penis.svg">">Aumente seu Pênis</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261540"> <img alt="Brincadeiras" src="<PathTo file="images/sado.svg">">Brincadeiras</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541"> <img alt="Géis e lubrificantes" src="<PathTo file="images/gel.svg">">Géis e lubrificantes</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261542"> <img alt="Kits" src="<PathTo file="images/kit_icon.svg">">Kits</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261543"> <img alt="Lingeries Eróticas" src="<PathTo file="images/lingeries.svg">">Lingeries Eróticas</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261546"> <img alt="Pênis e Proteses" src="<PathTo file="images/preservativos.svg">">Pênis e Proteses</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545"> <img alt="Perfumes" src="<PathTo file="images/cosmeticos.svg">">Perfumes</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261547"> <img alt="Vibradores" src="<PathTo file="images/vibradores.svg">">Vibradores</a>
+      <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261544"> <img alt="Categorias" src="<PathTo file="images/outros.svg">">Outras Categorias</a>
     </div>
   </div>
 
-</div>
-<!-- BEGIN: HEAD  -->
-<div class="container head">
-  <div class="head">
-    <div class="row">
-      <div class="c-xs-6 c-s-3 c-m-2 c-l-3">
-        <div class="head-logo">
-          <a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg?cccfc=1">"></a>
-        </div>
-      </div>
-      <div class="c-xs-5 c-s-1 c-m-1 c-l-3">
-        <div class="head-cart">
-          <a href="/addProduto.asp?idloja=<IDLojaNum>" class="CartItens">
-          <img alt="Carrinho Compra" src="<PathTo file="images/cart-icon.svg?cccfc=1">">
-            <div class="HeaderCartMainItemTotalFC">
-              <div id="HeaderCartItemFC"><span id="idCartItemsTop"></span></div>
-              <div id="HeaderCartTotalFC"><span id="idCartTotalTop"></span></div>
-            </div>
-          </a>
-          <script>FCLib$.onReady(function(){sF$.fnUpdateCart(false,false);});</script>
-          <!-- End: Carrinho -->
-          <!-- Begin Tolbar Carrinho -->
-        </div>
-      </div>
-      <div class="c-xs-12 c-s-7 c-m-7 c-l-6 text-center">
-        <div class="head-searc">
-          <form name="TopSearchToolbarForm" id="autocomplete-form" class="FCToolBarForm" method="GET" action="/listaProdutos.asp">
-            <input type="hidden" name="IDLoja" value="<IDLoja>">
-            <input type="hidden" name="Digitada" value="True">
-            <input type="text" id="autocomplete" value="" name="Texto" class="InputTextBusca ui-autocomplete-input" placeholder="Encontre seu produto erótico" autocomplete="off">
-            <a href="#search" onclick="sF$.fnSearchToolbarSubmit(document.TopSearchToolbarForm);">
-              <button class="head-searc-button">
-                <span class="HeaderSerachIMGIconFC">
-                  <img64 src="<Baseloja>images/search-icon.svg" plain="true" width="25" height="25" alt="Buscar" title="Buscar">
-                </span>
-              </button>
-            </a>
-          </form>
-          <a href="/buscaavancada.asp?idloja=<IDLoja>"><span class="head-advanced-search">Busca Avançada</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="line-brand"></div>
-<!-- END: HEAD    -->
-<!-- END: Band-top -->
-<div class="container carrossel scrol-hidden">
-  <!-- BEGIN: SLIDE CATEGORIAS -->
-  <div class="MagicScroll Cath scrol-hidden" data-options="items: [ [320,3], [600,7], [800,6], [1000,9], [1200,10], [1500,9], [1700,9], [1800,9], [1900,9], [2000,9] ]">
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261538"> <img alt="Acessórios" src="<PathTo file="images/acessorios.svg?cccfc=1">">Acessórios</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539"> <img alt="Aumente seu Pênis" src="<PathTo file="images/penis.svg?cccfc=1">">Aumente seu Pênis</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261540"> <img alt="Brincadeiras" src="<PathTo file="images/sado.svg?cccfc=1">">Brincadeiras</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541"> <img alt="Géis e lubrificantes" src="<PathTo file="images/gel.svg?cccfc=1">">Géis e lubrificantes</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261542"> <img alt="Kits" src="<PathTo file="images/kit_icon.svg?cccfc=1">">Kits</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261543"> <img alt="Lingeries Eróticas" src="<PathTo file="images/lingeries.svg?cccfc=1">">Lingeries Eróticas</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261546"> <img alt="Pênis e Proteses" src="<PathTo file="images/preservativos.svg?cccfc=1">">Pênis e Proteses</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545"> <img alt="Perfumes" src="<PathTo file="images/cosmeticos.svg?cccfc=1">">Perfumes</a>
-    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261547"> <img alt="Vibradores" src="<PathTo file="images/vibradores.svg?cccfc=1">">Vibradores</a>
-    <a href="/categorias.asp?idloja=<IDLoja>"> <img alt="Categorias" src="<PathTo file="images/outros.svg?cccfc=1">">Outras Categorias</a>
-  </div>
-</div>
-
-<!-- / Container -->
- <div class="container">
-   <div class="Home-Cat xs-hidden">
-     <ul class="MegaMenu">
-       <li>
-         <div class="MegaMenu-Select">
-           <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261538">
-             <img64 src="<Baseloja>images/acessorios.svg" plain="true" width="45" height="45" alt="Acessórios">
-             <span>Acessórios</span>
-           </a>
-         </div>
-         <div class="MegaBox">
-           <div class="container">
-             <div class="MegaView">
-               <div class="MegaBox-Categories">
-                 <ul class="one">
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                   <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                 </ul>
-               </div>
-               <div class="MegaBox-Categories">
-                 <ul class="one">
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261538"><li>Todos os acessórios</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261548"><li>Anéis</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261550"><li>Capa Peniana</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261551"><li>Cintas</li></a>
-                 </ul>
-               </div>
-               <div class="MegaBox-Categories">
-                 <ul class="two">
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261552"><li>Estimuladores</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261553"><li>Plug Anal</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261549"><li>Pompoarismo</li></a>
-                   <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261554"><li>Preservativos</li></a>
-                 </ul>
-               </div>
-               <div class="MegaBox-Categories">
-                 <div class="DivSlow">
-                   <prod out="p1" id="5667837">
+  <!-- / Container -->
+   <div class="container">
+     <div class="Home-Cat xs-hidden">
+       <ul class="MegaMenu">
+         <li>
+           <div class="MegaMenu-Select">
+             <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261538">
+               <img64 src="<Baseloja>images/acessorios.svg" plain="true" width="45" height="45" alt="Acessórios">
+               <span>Acessórios</span>
+             </a>
+           </div>
+           <div class="MegaBox">
+             <div class="container">
+               <div class="MegaView">
+                 <div class="MegaBox-Categories">
+                   <ul class="one">
+                     <a href=/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++e"><li class="bold-list">Os Mais vendidos</li></a>
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                     <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                     <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                   </ul>
+                 </div>
+                 <div class="MegaBox-Categories">
+                   <ul class="one">
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261538"><li>Todos os acessórios</li></a>
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261548"><li>Anéis</li></a>
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261550"><li>Capa Peniana</li></a>
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261551"><li>Cintas</li></a>
+                   </ul>
+                 </div>
+                 <div class="MegaBox-Categories">
+                   <ul class="two">
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261552"><li>Estimuladores</li></a>
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261553"><li>Plug Anal</li></a>
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261549"><li>Pompoarismo</li></a>
+                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261554"><li>Preservativos</li></a>
+                   </ul>
+                 </div>
+                 <div class="MegaBox-Categories">
+                   <div class="DivSlow">
+                     <prod out="p1" id="5667837">
+                   </div>
                  </div>
                </div>
              </div>
            </div>
-         </div>
-       </li>
+         </li>
 
-      <li>
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539">
-            <img64 src="<Baseloja>images/extensor_peniano.svg" plain="true" width="45" height="45" alt="Aumente seu Pênis">
-            <span>Aumente seu Pênis</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539"><li>Ver todos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261555"><li>Acessórios Bomba Peniana</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261556"><li>Bomba Peniana</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" id="5668224">
+        <li>
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539">
+              <img64 src="<Baseloja>images/extensor_peniano.svg" plain="true" width="45" height="45" alt="Aumente seu Pênis">
+              <span>Aumente seu Pênis</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261539"><li>Ver todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261555"><li>Acessórios Bomba Peniana</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261556"><li>Bomba Peniana</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" id="5668224">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li class="m-hidden">
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261540">
-            <img64 src="<Baseloja>images/brincadeiras.svg" plain="true" width="45" height="45" alt="Brincadeiras">
-            <span>Brincadeiras</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261540"><li>Ver Todos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261557"><li>Baralhos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261558"><li>Chaveiros</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261559"><li>Dados</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" id="5668237">
+        </li>
+        <li class="m-hidden">
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261540">
+              <img64 src="<Baseloja>images/brincadeiras.svg" plain="true" width="45" height="45" alt="Brincadeiras">
+              <span>Brincadeiras</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261540"><li>Ver Todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261557"><li>Baralhos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261558"><li>Chaveiros</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261559"><li>Dados</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" id="5668237">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li class="m-hidden o-hidden">
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541">
-            <img64 src="<Baseloja>images/gel.svg" plain="true" width="45" height="45" alt="Géis e Lubrificantes">
-            <span>Géis e Lubrificantes</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541"><li>Ver todos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261560"><li>Adstringentes</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261561"><li>Bolinhas explosivas</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262384"><li>Canetas comestiveis</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261562"><li>Excitantes Femininos</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261563"><li>Excitantes Masculinos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261564"><li>Excitantes Unissex</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262737"><li>Lubrificante Íntimo</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262736"><li>Óleo p/ Massagem</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261567"><li>Retardantes</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261568"><li>Sexo Anal</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261571"><li>Sexo Oral Esquenta/Esfria</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261569"><li>Sexo Oral Hot - Esquenta</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261570"><li>Sexo Oral Ice - Esfria</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261572"><li>Vibrador Líquido</li></a>
-                </ul>
-              </div>
+        </li>
+        <li class="m-hidden o-hidden">
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541">
+              <img64 src="<Baseloja>images/gel.svg" plain="true" width="45" height="45" alt="Géis e Lubrificantes">
+              <span>Géis e Lubrificantes</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541"><li>Ver todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261560"><li>Adstringentes</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261561"><li>Bolinhas explosivas</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262384"><li>Canetas comestiveis</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261562"><li>Excitantes Femininos</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261563"><li>Excitantes Masculinos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261564"><li>Excitantes Unissex</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262737"><li>Lubrificante Íntimo</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262736"><li>Óleo p/ Massagem</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261567"><li>Retardantes</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261568"><li>Sexo Anal</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261571"><li>Sexo Oral Esquenta/Esfria</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261569"><li>Sexo Oral Hot - Esquenta</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261570"><li>Sexo Oral Ice - Esfria</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261572"><li>Vibrador Líquido</li></a>
+                  </ul>
+                </div>
 
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" id="5668328">
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" id="5668328">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li>
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261542">
-            <img64 src="<Baseloja>images/brincadeiras.svg" plain="true" width="45" height="45" alt="Kits">
-            <span>Kits</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView flex-center">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261542"><li>Ver Todos</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" id="5668386">
+        <li>
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261542">
+              <img64 src="<Baseloja>images/brincadeiras.svg" plain="true" width="45" height="45" alt="Kits">
+              <span>Kits</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView flex-center">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261542"><li>Ver Todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261542"><li>Kits</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" id="5668386">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li class="o-hidden">
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261543">
-            <img64 src="<Baseloja>images/lingeries.svg" plain="true" width="45" height="45" alt="Lingeries">
-            <span>Lingeries Eróticas</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView flex-rigth">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261543"><li>Ver todos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261582"><li>Calcinhas comestíveis</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261573"><li>Camisolas</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261574"><li>Cintas-Liga e Meias</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261575"><li>Espartilhos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261577"><li>Fantasias Femininas</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261578"><li>Fantasias Masculinas</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" em="rand">
+        </li>
+        <li class="o-hidden">
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261543">
+              <img64 src="<Baseloja>images/lingeries.svg" plain="true" width="45" height="45" alt="Lingeries">
+              <span>Lingeries Eróticas</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView flex-rigth">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261543"><li>Ver todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261582"><li>Calcinhas comestíveis</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261573"><li>Camisolas</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261574"><li>Cintas-Liga e Meias</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261575"><li>Espartilhos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261577"><li>Fantasias Femininas</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261578"><li>Fantasias Masculinas</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" em="rand">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li class="o-hidden">
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261546">
-            <img64 src="<Baseloja>images/penis.svg" plain="true" width="45" height="45" alt="Próteses">
-            <span>Pénis e Próteses</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView flex-rigth">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
+        </li>
+        <li class="o-hidden">
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261546">
+              <img64 src="<Baseloja>images/penis.svg" plain="true" width="45" height="45" alt="Próteses">
+              <span>Pénis e Próteses</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView flex-rigth">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261546"><li>Ver todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261590"><li>+ de 18 cm</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261591"><li>+ de 18 cm com vibro</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261592"><li>15cm a 16cm</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261593"><li>15 a 16 cm com vibro</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261594"><li>17 a 18 cm</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261595"><li>17 a 18 cm com vibro</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261595"><li>17 a 18 cm com vibro</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261596"><li>Outros</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" em="rand">
+                  </div>
+                </div>
               </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261546"><li>Ver todos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261590"><li>+ de 18cm</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261591"><li>+ de 18cm com vibro</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261592"><li>15cm a 16cm</li></a>
-                </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545">
+              <img64 src="<Baseloja>images/cosmeticos.svg" plain="true" width="45" height="45" alt="Perfumes">
+              <span>Perfumes</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView flex-rigth">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545"><li>Ver todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261589"><li>Feminino</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261588"><li>Masculino</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" id="5668461">
+                  </div>
+                </div>
               </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261593"><li>15 a 16cm com vibro</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261594"><li>17 a 18cm</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261595"><li>17 a 18cm com vibro</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261595"><li>17 a 18cm com vibro</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261596"><li>Outros</li></a>
+            </div>
+          </div>
+        </li>
+        <li class="m-hidden">
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261547">
+              <img64 src="<Baseloja>images/vibradores.svg" plain="true" width="45" height="45" alt="Vibradores">
+              <span>Vibradores</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView flex-rigth">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261547"><li>Ver todos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261598"><li>Butterfly</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261599"><li>Clássicos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261603"><li>Ovos Vibratórios</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261600"><li>Ponto G</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261601"><li>Rotativos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262738"><li>Outros Vibradores</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" id="5668515">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="MegaMenu-Select">
+            <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261544">
+              <img64 src="<Baseloja>images/outros.svg" plain="true" width="45" height="45"  alt="Categorias">
+              <span>Outras Categorias</span>
+            </a>
+          </div>
+          <div class="MegaBox">
+            <div class="container">
+              <div class="MegaView flex-rigth">
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="one">
+                    <a href="/categorias.asp?idloja=<IDLoja>"><li>Todas as Categorias</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261544"><li>Outras Categorias</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261579"><li>Afrodisíacos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261580"><li>Beijo</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261581"><li>Boneca Inflável</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <ul class="two">
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261583"><li>Casa Romântica</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261584"><li>Cuidados Íntimos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261585"><li>Masturbadores Masculinos</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261586"><li>Sado e Fetiche</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261587"><li>Velas Beijáveis</li></a>
+                  </ul>
+                </div>
+                <div class="MegaBox-Categories">
+                  <div class="DivSlow">
+                    <prod out="p1" id="5668418">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
 
-
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" em="rand">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545">
-            <img64 src="<Baseloja>images/cosmeticos.svg" plain="true" width="45" height="45" alt="Perfumes">
-            <span>Perfumes</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView flex-rigth">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545"><li>Ver todos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261589"><li>Feminino</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261588"><li>Masculino</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" id="5668461">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="m-hidden">
-        <div class="MegaMenu-Select">
-          <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261547">
-            <img64 src="<Baseloja>images/vibradores.svg" plain="true" width="45" height="45" alt="Vibradores">
-            <span>Vibradores</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView flex-rigth">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261547"><li>Ver todos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261598"><li>Butterfly</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261599"><li>Clássicos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261603"><li>Ovos Vibratórios</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261600"><li>Ponto G</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261601"><li>Rotativos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262738"><li>Outros Vibradores</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" id="5668515">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="MegaMenu-Select">
-          <a href="/categorias.asp?idloja=<IDLoja>">
-            <img64 src="<Baseloja>images/outros.svg" plain="true" width="45" height="45"  alt="Categorias">
-            <span>Outras Categorias</span>
-          </a>
-        </div>
-        <div class="MegaBox">
-          <div class="container">
-            <div class="MegaView flex-rigth">
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Os Mais vendidos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="one">
-                  <a href="/categorias.asp?idloja=<IDLoja>"><li>Todas as Categorias</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261579"><li>Afrodisíacos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261580"><li>Beijo</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261581"><li>Boneca Inflável</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <ul class="two">
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261583"><li>Casa Romântica</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261584"><li>Cuidados Íntimos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261585"><li>Masturbadores Masculinos</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261586"><li>Sado e Fetiche</li></a>
-                  <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261587"><li>Velas Beijáveis</li></a>
-                </ul>
-              </div>
-              <div class="MegaBox-Categories">
-                <div class="DivSlow">
-                  <prod out="p1" id="5668418">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <div onclick="drop_close()" class="Menu-overlay"></div>
-       </ul>
+        <div onclick="drop_close()" class="Menu-overlay"></div>
+         </ul>
+     </div>
    </div>
- </div>
-<div class="line-brand carrossel"></div>
-<!-- BEGIN: SLIDE CATEGORIAS  -->
-<!-- BEGIN: SLIDE BANNERS HOME -->
-<IncludeHTMLIn src="BannerHome.html" in="home">
-<script>
-  var navOpenClose = (function () {
-
-    var elem = document.getElementById("mySidenav");
-
-    var fn = {
-
-      openNav: function () {
-        setTimeout(function(){elem.setAttribute('data-active','true')},500);
-        elem.style.width = "100%";
-        elem.style.marginLeft = "0px";
-        navOpenClose.fn.outterClose();
-      },
-      closeNav: function () {
-        elem.style.width = "0";
-        elem.style.left = "0em";
-        elem.style.marginLeft = "-320px";
-        elem.style.transition = "all 0.3s";
-        elem.removeAttribute('data-active','true');
-      },
-
-      outterClose: function () {
-        document.body.addEventListener('click',function(e){
-          if(elem.dataset.active == 'true'){
-            e.stopPropagation();
-            if(e.target.id != 'mySidenav'){
-              elem.removeAttribute('data-active','true');
-              navOpenClose.fn.closeNav();
+  <div class="line-brand carrossel"></div>
+  <!-- BEGIN: SLIDE CATEGORIAS  -->
+  <!-- BEGIN: SLIDE BANNERS HOME -->
+  <IncludeHTMLIn src="BannerHome.html" in="home">
+  <script>
+    var navOpenClose = (function () {
+      var elem = document.getElementById("mySidenav");
+      var fn = {
+        openNav: function () {
+          setTimeout(function(){elem.setAttribute('data-active','true')},500);
+          elem.style.width = "100%";
+          elem.style.marginLeft = "0px";
+          navOpenClose.fn.outterClose();
+        },
+        closeNav: function () {
+          elem.style.width = "0";
+          elem.style.left = "0em";
+          elem.style.marginLeft = "-320px";
+          elem.style.transition = "all 0.3s";
+          elem.removeAttribute('data-active','true');
+        },
+        outterClose: function () {
+          document.body.addEventListener('click',function(e){
+            if(elem.dataset.active == 'true'){
+              e.stopPropagation();
+              if(e.target.id != 'mySidenav'){
+                elem.removeAttribute('data-active','true');
+                navOpenClose.fn.closeNav();
+              }
             }
-          }
-        },false)
+          },false)
+        }
+      }
+      return{
+        fn:fn
       }
 
-    }
-
-    return{
-      fn:fn
-    }
-
-  })();
-// FCLib$.LazyLoadWaitImage="<BaseLoja>images/loading-atracao.gif";
-</script>
-<!-- BEGIN: CONTAINER BODY  -->
-<div class="container all">
-<div class="row">
+    })();
+  </script>
+  <!-- BEGIN: CONTAINER BODY  -->
+  <div class="container all">
+  <div class="row">
