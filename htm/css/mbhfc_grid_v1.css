@@ -50,7 +50,7 @@ li.FCDescritorGridActivated.FCSelectedGrid:before {
     width: 16px;
     height: 16px;
     position: absolute;
-    background: url(../../images/checkedgrid.svg?cccfc=1) no-repeat;
+    background: url(../../images/checkedgrid.svg) no-repeat;
     z-index: 1; 
     display: block;
     bottom: 1.5em;
@@ -69,7 +69,7 @@ li.FCDescritorGridActivated.FCSelectedGrid:before {
 .FCDescritorGridActivated{cursor:pointer;}
 .FCDescritorGridActivated:hover{border-color:#3e98e4;}
 
-.FCCheckedGrid{width:16px;height:16px;position:absolute;background:url('../../images/ampcheckedgrid.svg?cccfc=1') no-repeat;z-index:1;top:-5px;right:-3px;display:none;}
+.FCCheckedGrid{width:16px;height:16px;position:absolute;background:url('../../images/ampcheckedgrid.svg') no-repeat;z-index:1;top:-5px;right:-3px;display:none;}
 .FCSelectedGrid .FCCheckedGrid{display:block;}
 a.FCGridBtnZoom{width:160px;color:#e3037d;background:#e8e8e8;display:block;padding:7px 0;text-align:center;font-size:12px;margin:5px auto;border-radius:5px;}
 td#idCommentsClickFC a { background: #e3037d; padding: 0 4px; border-radius: 5px; color: #fff; }
