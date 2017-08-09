@@ -1,5 +1,5 @@
 <ProdTop>
-  <link rel="stylesheet" href="<PathTo file="htm/css/buytogether.css?cccfc=1">">
+  <link rel="stylesheet" href="<PathTo file="htm/css/buytogether.css">">
 
   <!-- VER MAIS DESCRIÇÃO   -->
   <script>
@@ -68,7 +68,7 @@
     }
   OffsetAutoPagFC=290;
 </script>
- <div id="idPagProdTop"></div>  
+ <div id="idPagProdTop"></div>
 
 <script>
 function IndicaProd(IDProduto){document.write("<a href='javascript:MostraIndique(10590,"+IDProduto+")'>Recomende</a>");}
@@ -77,29 +77,30 @@ function IndicaProd(IDProduto){document.write("<a href='javascript:MostraIndique
 </ProdTop>
 
 <ProdLista>
-  <div class="c-xs-12 c-s-4 c-m-4 c-l-3 ListProd">
+   <div class="c-xs-12 c-s-4 c-m-4 c-l-3 ListProd">
+
     <div class="DivListProd">
-     <div onclick="location.href='<URLProd>'">
-        <!-- FLAG DE HIGHLIGHTS -->
-        <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
-        <script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>
-        <!-- FLAG DE HIGHLIGHTS -->
-        <!-- PRODUCT IMAGE ZOOM -->
-        <div class="DivHomeImagemProd">
-          <a href="<URLProd>">
-            <ImagemProd>
-          </a>
-        </div>
-        <!-- PRODUCT IMAGE ZOOM -->
-        <!-- NAME PRODUCT -->
-        <div class="ProdList-NameProd">
-          <a href="<URLProd>">
-            <h1>
-              <NomeProd>
-            </h1>
-          </a>
-        </div>
-        <!-- NAME PRODUCT -->
+      <!-- FLAG DE HIGHLIGHTS -->
+      <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
+      <script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>
+      <!-- FLAG DE HIGHLIGHTS -->
+
+      <!-- PRODUCT IMAGE ZOOM -->
+      <div class="imgeList">
+       <ImagemProd>
+      </div>
+      <!-- PRODUCT IMAGE ZOOM -->
+
+      <!-- NAME PRODUCT -->
+      <div class="ProdList-NameProd">
+        <a href="<URLProd>">
+          <h1>  <NomeProd>  </h1>
+        </a>
+      </div>
+      <!-- NAME PRODUCT -->
+
+      <!-- PRICES  -->
+      <a href="<URLProd>">
         <div class="DivHomePriceProd">
           <!-- PRODUCT PRICES -->
           <div id="idProdPrice<IDProduto>">
@@ -114,38 +115,39 @@ function IndicaProd(IDProduto){document.write("<a href='javascript:MostraIndique
           </div>
           <!-- ECONOMY -->
         </div>
-      </div>
-      <!-- BUTTONS URLPROD -->
-      <div class="line-brand"></div>
-      <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos" class="Club-link">
-        <div class="Club">
-          <span>Sócios do clube <script>sF$.fnMostraDescontoProdDet(<PrecoNum>);</script></span>
-          <button class="Club-Button">Saiba como funciona!</button>
-        </div>
       </a>
+     <!-- PRICES  -->
+
+     <!-- BUTTONS URLPROD -->
+     <div class="line-brand"></div>
+     <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos" class="Club-link">
+       <div class="Club">
+         <span>Sócios do clube <script>sF$.fnMostraDescontoProdDet(<PrecoNum>);</script></span>
+         <button class="Club-Button">Saiba como funciona!</button>
+       </div>
+     </a>
+     <div class="line-brand"></div>
+     <div class="ProdOut-Buttons">
+       <a href="<URLProd>"><button class="ProdOut-Button details">Ver mais</button></a>
+       <a href="#Spy" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'>
+       <button class="ProdOut-Button">Comprar</button>
+       </a>
+     </div>
       <div class="line-brand"></div>
-      <div class="ProdOut-Buttons">
-        <a href="<URLProd>"><button class="ProdOut-Button">Ver mais</button></a>
-        <a href="#Spy" class="xs-hidden" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'>
-        <button class="ProdOut-Button">Comprar</button>
-        </a>
-      </div>
-       <div class="line-brand"></div>
-      <!-- BUTTON URLPROD -->
-      <!-- BUTTON CATEGORY -->
-      <div class="ProdOut-Cacategory">
-        <span>
-          +
-          <NomeCat>
-        </span>
-      </div>
-      <!-- BUTTON CATEGORY -->
+     <!-- BUTTON URLPROD -->
+     <!-- BUTTON CATEGORY -->
+     <div class="ProdOut-Cacategory">
+         <NomeCat> 
+     </div>
+     <!-- BUTTON CATEGORY -->
+
     </div>
+
   </div>
 </ProdLista>
 <ProdDet>
   <link  rel="stylesheet" type="text/css" href="<PathTo file="htm/css/fc_grid_v1.css">">
-  <link rel="stylesheet" href="/js/magictoolbox/magiczoomplusv1/magiczoomplus.css?cccfc=1"/>
+  <link rel="stylesheet" href="/js/magictoolbox/magiczoomplusv1/magiczoomplus.css"/>
 
     <div class="row">
       <div class="c-xs-12 c-s-6 c-m-6 c-l-6 Breadcrumb">
@@ -269,13 +271,8 @@ function IndicaProd(IDProduto){document.write("<a href='javascript:MostraIndique
         </div>
         <script>
             function MostraTituloDesc() {
-              if(document.getElementById('desc').innerText){
-                  document.getElementById('title').style.display = "block";
-              }else {
-
-             }
-            }
-            MostraTituloDesc();
+              if(document.getElementById('desc').innerText){document.getElementById('title').style.display = "block";}
+            }MostraTituloDesc();
         </script>
         <li class="Smais">
           <a class="link-descr" href="#">
@@ -382,10 +379,10 @@ function IndicaProd(IDProduto){document.write("<a href='javascript:MostraIndique
       colorImg : false,
       colorImgFormat : '.gif',
       stock: false,
-      btnSelectImg : 'botselecionegrid.svg?cccfc=1',
-      btnBuyImg : 'botcarrinho.svg?cccfc=1',
-      btnContactUSImg : 'botconsultegrid.svg?cccfc=1',
-      btnSoldOut : 'botcarrinhoesgotado.svg?cccfc=1',
+      btnSelectImg : 'botselecionegrid.svg',
+      btnBuyImg : 'botcarrinho.svg',
+      btnContactUSImg : 'botconsultegrid.svg',
+      btnSoldOut : 'botcarrinhoesgotado.svg',
       textGrid : 'Selecione as opções abaixo',
       order : ['cor', 'adicional1', 'adicional2', 'adicional3', 'adicionalD1', 'adicionalD2', 'adicionalD3'],
       nameDescriptor : {
