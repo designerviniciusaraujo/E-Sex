@@ -9,7 +9,6 @@
     <script>sF$.ProdListaSelect();</script>
 </div>
 </ProdTop>
-
 <ProdLista>
 <div class="amp-prod-list-container">
   <div class="swiper-container-prodlist">
@@ -36,32 +35,24 @@
                 <button class="action-purchase" type="button" name="button">Comprar</button>
               </div>
             </a>
-
           </div>
         </div>
       </div>
 
       <div class="swiper-slide">
         <div class="amp-prod-list-descr">
-          <a href="<URLProd>">
-            <DescricaoCurta>
-          </a>
-           <a href="<URLProd>"><button class="amp-prod-home-btn">+ detalhes</button></a>
-           <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><button class="amp-prod-home-btn blub">Clube atração 10% off</button></a>
-        </div>
-
-      </div>
-
+          <a href="<URLProd>"><DescricaoCurta></a>
+          <a href="<URLProd>"><button class="amp-prod-home-btn">+ detalhes</button></a>
+          <a href="/clube-de-assinatura-produtos-eroticos"><button class="amp-prod-home-btn blub">Clube atração 10% off</button></a>
+        </div>  
+      </div> 
     </div>
     <!-- Add Arrows -->
     <div class="swiper-button-next"></div>
-  </div>
-
+  </div> 
 </div>
 </ProdLista>
-
 <ProdDet>
-
 <!-- Prod Det -->
 <link href='<PathTo file="htm/css/mbhfc_grid_v1.css">' rel="stylesheet">
 <link rel="stylesheet" href="/js/magictoolbox/magiczoomplusv1/magiczoomplus.css" />
@@ -72,8 +63,6 @@
     </ul>
   </div>
 <!-- Prod Det -->
-
-<!-- End: Description -->
 <!-- Begin: Product Name -->
 <div class="row">
   <h1 id="idNameProductGridFC" class="amp-prod-det-name"><NomeProd></h1>
@@ -81,12 +70,10 @@
   <script>sF$.reviewProd(<IDProduto>,<OpiniaoQtd>,'<OpiniaoMedia>');</script>
 </div>
 <!-- End: Product Name -->
-
 <!-- FLAG DE HIGHLIGHTS -->
 <div id="idFlagSale<IDProduto>" class="FCfnShowEconomy"></div>
 <script type="text/javascript">sF$.fnBadgeProdZF(<PrecoOri>,<PrecoNum>,"<Lancamento>","<Destaque>")</script>
 <!-- FLAG DE HIGHLIGHTS -->
-
 <!-- Begin: Product Image -->
 <div class="row">
   <div class="MainContainer">
@@ -96,39 +83,29 @@
   </div>
 </div>
 <!-- End: Product Image -->
-
 <!-- Begin: Product Ref -->
 <div class="row">
   <div class="DivDetRef"><span class="prod-info" id="idCodProdGrid"><CodProd></span></div>
   <div class="DivDetBtnRelease"><lancamento></div>
 </div>
-<!-- End: Product Ref -->
-
+<!-- End: Product Ref --> 
 <!-- AVALIAÇÔES DO PRODUTO -->
-    <div class="ProdDet-Evaluation">
-      <ul class="avalia">
-        <li class="text-left ProdRating stars">
-          <script type="text/javascript">
-            iQtdOp=<OpiniaoQtd>;
-            if(iQtdOp==0){document.write("<div class='ProductStyleReviewOffBoxFC'><div class='NotaOpiniaoVazio NotaOpiniaoVazio1'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio2'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio3'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio4'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio5'></div> </div>")}
-            else {document.write("<div class='ProductStyleReviewOnBoxFC'><div class='ProductStyleReviewStarsOnFC'><OpiniaoMedia></div><div class='ProductStyleReviewQtyOnFC'>(<a href='#OP' style='text-decoration:none;'><OpiniaoQtd></a>)</div></div>")}
-          </script>
-        </li>
-        <li class="ProdRating font-14">
-          <a href="/Opiniao.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>">Avalie este produto</a> | <script>IndicaProd(<IDProduto>);</script>
-        </li>
-      </ul>
-
-    </div>
-    <!-- AVALIAÇÔES DO PRODUTO -->
-
-<style type="text/css">
-button.ProdDet-Clu-button { max-width: 310px; width: 100%; background: #e20b7c; border: 0; margin: 0px auto 10px; border-radius: 5px; height: 35px; color: #ffffff; }
-.ProdDet-Club p { color: #e20b7c; font-weight: bold; margin: 5px 5px 5px; width: 101%; font-size: 16px !important; text-transform: uppercase; text-align: center; }
-.ProdDet-Club-tittle { display: flex; margin: 0 auto 5px; }
-.ProdDet-Club-tittle span { color: #1ec013; }
-.ProdDet-Club { margin: 20px auto; width: 270px; }
-</style>
+<div class="ProdDet-Evaluation">
+  <ul class="avalia">
+    <li class="text-left ProdRating stars">
+      <script type="text/javascript">
+        iQtdOp=<OpiniaoQtd>;
+        if(iQtdOp==0){document.write("<div class='ProductStyleReviewOffBoxFC'><div class='NotaOpiniaoVazio NotaOpiniaoVazio1'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio2'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio3'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio4'></div><div class='NotaOpiniaoVazio NotaOpiniaoVazio5'></div> </div>")}
+        else {document.write("<div class='ProductStyleReviewOnBoxFC'><div class='ProductStyleReviewStarsOnFC'><OpiniaoMedia></div><div class='ProductStyleReviewQtyOnFC'>(<a href='#OP' style='text-decoration:none;'><OpiniaoQtd></a>)</div></div>")}
+      </script>
+    </li>
+    <li class="ProdRating font-14">
+      <a href="/Opiniao.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>">Avalie este produto</a> | <script>IndicaProd(<IDProduto>);</script>
+    </li>
+  </ul> 
+</div>
+<!-- AVALIAÇÔES DO PRODUTO -->
+ 
 <!-- Begin: Product Price -->
 <div class="row">
   <div class="MainContainer">
@@ -166,7 +143,7 @@ button.ProdDet-Clu-button { max-width: 310px; width: 100%; background: #e20b7c; 
      <img src="<Baseloja>/images/coracao_icon.svg">
     <p>Sócios do clube <script>sF$.fnMostraDescontoProdDet(<PrecoNum>);</script></p>
   </div>
-  <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><button class="ProdDet-Clu-button">Conheça o clube da atração!</button></a>
+  <a href="/clube-de-assinatura-produtos-eroticos"><button class="ProdDet-Clu-button">Conheça o clube da atração!</button></a>
 </div>
 
 <!-- Begin: Share Prod -->
@@ -181,24 +158,11 @@ button.ProdDet-Clu-button { max-width: 310px; width: 100%; background: #e20b7c; 
     </li>
   </ul>
   <div style="margin:15px;text-align:center;"><Facebook type="save"></div>
-</div>
-
-<!-- Begin: Product ZipCode
-<div class="row">
-  <div class="MainContainer">
-    <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left">
-      <div id="ShowCEP<IDProduto>"></div>
-    </div>
-  </div>
-</div>
-<!-- End: Product ZipCode -->
-
-<!-- Begin: Description -->
+</div> 
 
 <div class="row">
   <div class="MainContainer">
-      <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left descr-prod">
-
+      <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left descr-prod"> 
         <div class="ProdDet-Desc-Short-Description" id="desc">
           <div id="title" style="display: none;">Dica da Sexóloga</div>
           <DescricaoCurta>
@@ -231,11 +195,7 @@ button.ProdDet-Clu-button { max-width: 310px; width: 100%; background: #e20b7c; 
   </div>
 </div>
 <!-- End: Description -->
-
-
-
-
-
+ 
 <!-- Begin: Buy Together -->
 <div class="row">
   <div class="MainContainer">
@@ -251,11 +211,8 @@ button.ProdDet-Clu-button { max-width: 310px; width: 100%; background: #e20b7c; 
   </div>
 </div>
 <!-- End: Buy Together -->
-
-
-
-<!-- Begin: CrossSelling -->
-
+ 
+<!-- Begin: CrossSelling --> 
 <div class="row">
   <div class="MainContainer">
       <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 text-left descr-prod">
@@ -267,8 +224,7 @@ button.ProdDet-Clu-button { max-width: 310px; width: 100%; background: #e20b7c; 
 </div>
 <!-- End: CrossSelling -->
 
-<div class="FullDoubleSpaceFC"></div>
-
+<div class="FullDoubleSpaceFC"></div> 
 <!-- Begin: Reviews -->
 <div class="row">
   <div class="MainContainer">
@@ -335,7 +291,7 @@ FCGrid$.myOptions = {
   colorImg : false,
   colorImgFormat : '.gif',
   stock: false,
-  btnSelectImg : 'ampbotselecionegrid.svg',
+  btnSelectImg : 'botselecionegrid.svg',
   btnBuyImg : 'ampbotcarrinho.svg',
   btnContactUSImg : 'ampbotconsultegrid.svg',
   btnSoldOut : 'ampbcarrinhoesgotado.svg',
@@ -365,8 +321,7 @@ FCGrid$.myOptions = {
 FCGrid$.init("idMainGridFC_<IDProduto>", aProductListGrid, aProductOnlyOneGrid); /* Inicia a grade */
 </script>
 <!-- End: JS scripts grid -->
-</ProdDet>
-
+</ProdDet> 
 <prodbottom>
   <script>
     setTimeout(function(){
