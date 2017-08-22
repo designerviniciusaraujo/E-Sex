@@ -1,5 +1,5 @@
 </section>
-<script>sF$.CupomDesconto();</script>
+
 
 <!-- BEGIN: NEWS LETTER FOOTER -->
 <section>
@@ -17,13 +17,12 @@
 	        <div class="c-xs-12 c-s-12 c-m-5 c-l-6">
 	          <div class="news-low-form">
 	            <form name="FormCadNewsletter" class="advantages-newsletter" method="GET" action="/newsletter.asp">
-	              <input type="hidden" name="IDLoja" value="10590">
-	              <input type="hidden" name="Y" value="1630726197540">
+	              <input type="hidden" name="IDLoja" value="<IDLoja>">
+	              <input type="hidden" name="Y" value="<Y>">
 	              <input type="hidden" name="FormatoHTML" value="True">
-	              <input type="hidden" name="EnviarAssinante" value="Enviar">
-	              <input type="email" name="Email" class="FooterNewsletterInput" placeholder="Cadastre-se seu e-mail">
+	              <input type="email" name="Email" class="FooterNewsletterInput" required placeholder="Cadastre-se seu e-mail">
 	              <input type="submit" name="ok" value="Eu quero" class="advantages-newsletter-button">
-	            </form>
+	            </form> 
 	          </div>
 	        </div>
 	      </div>
@@ -56,21 +55,19 @@
 	      	<ListPathCat out="13" id="-1">
 	      </div>
 	    </section>
-	  <a href="/account.asp?idloja=<idloja>">Minha conta</a>
-	  <a href="/account.asp?idloja=<idloja>&orders=1#Orders">Meus pedidos</a>
-	  <a href="<PathAMP url="/noticias.asp?idloja=<idloja>">">Notícias</a>
-	  <a href="<PathAMP url="/ajuda.asp?idloja=<idloja>">">Ajuda</a>
-	  <a href="/faleconosco.asp?idloja=<idloja>">Fale conosco</a>
+			<a href="<PathAMP url="/account.asp?idloja=<idloja>">">Minha conta</a>
+  	  <a href="<PathAMP url="/account.asp?idloja=<idloja>&orders=1#Orders">">Meus pedidos</a>
+  	  <a href="<PathAMP url="/noticias.asp?idloja=<idloja>">">Notícias</a>
+  	  <a href="<PathAMP url="/ajuda.asp?idloja=<idloja>">">Ajuda</a>
+  	  <a href="<PathAMP url="/contato">">Fale conosco</a> 
 	</nav>
 
 	<div class="container">
-		<div class="amp-footer-socials" id="idShareHeader">
-	     <div class="amp-social-share-twitter"><ShareTwitter></div>
-	     <div class="amp-social-share-gplus"><ShareGooglePlus></div>
-	     <div class="amp-social-share-email"><a href="/indique.asp?idloja=<idloja>"></a></div>
-	     <div class="amp-social-share-pinterest"><SharePinterest></div>
-       <div class="amp-social-share-whatsapp"><a href="#na" target="_blank" id="idLinkWhatsApp"></a></div>
+		<div class="amp-footer-socials" id="idShareHeader"> 
+       <a href="/indique.asp?idloja=<IDLoja>"><img height="44px" src="<BaseLoja>images/icone_share.svg" alt="ico-social-share"></a>
 	     <div class="amp-social-share-facebook"><ShareFacebook></div>
+	     <a href="#" onclick="Insta()"><img src="<BaseLoja>/images/instagram_ic.svg"></a>
+       <script>function Insta() {alert("Aguarde conta instagram da Atração");}</script>
 		</div>
 	</div>
 
@@ -92,7 +89,6 @@
 <!-- CHAMA FUNÇÃO SLIDE BANNERS 1, 2, 3 TIPOS SWIPER -->
 <script>
   setTimeout(function(){
-
     carousel.swipers.banners();
 		carousel.swipers.home();
 
@@ -116,6 +112,6 @@
 	fnInsertLinkWhatsApp();
 </script>
 
-
+<script>sF$.CupomDesconto();</script>
 <link rel="stylesheet" href="<BaseLoja>htm/css/mbhswipermin.css">
 <script src="<BaseLoja>htm/js/mbhswipermin.js"></script>
