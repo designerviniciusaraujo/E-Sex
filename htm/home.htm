@@ -1,4 +1,4 @@
-<!--ZFAST 09-08-2017 -->
+<!--ZFAST 22-08-2017 -->
 <!-- PopNews -->
 <script type="text/javascript" src="<BaseLoja>htm/popnews/popnews.js"></script>
 <link type="text/css" rel="stylesheet" href="<BaseLoja>htm/popnews/popnews.css">
@@ -9,15 +9,15 @@
   </a>
   <span>10% de Desconto <br>na primeira compra ?</span>
   <p> Cadastre-se e ganhe cupom: </p>
-  <form class="formNews" id="formPopup" name=FormNewsletter method=GET action="Newsletter.asp" onSubmit="return ValidaNew();"/>
+    <form class="formNews" id="formPopup" name=FormNewsletter method=GET action="Newsletter.asp" onSubmit="return ValidaNew();"/>
     <input type=hidden name=IDLoja value="<idloja>">
     <input type=hidden name=Y value="<Y>">
     <input type=hidden name=FormatoHTML value="True">
     <input type=hidden name=EnviarAssinante value="Enviar">
-    <input type="text" required name=NomeAssinante placeholder="Insira seu nome">
+    <input type="text" id="FirstName" required name=NomeAssinante placeholder="Insira seu nome">
     <input type="email" required name=Email placeholder="Insira seu e-mail aqui"><br><br>
-    <input type="submit" class="bt_news btnSubPop" name="ok" value="Eu quero"/>
-  </form>
+    <input type="submit" id="FirstSubmit" class="bt_news btnSubPop" name="ok" value="Eu quero"/>
+  </form>  
   <div class="popnews-down">
     <a href="#" class="btnClose">
       <button class="btn-popnews">Não quero este desconto entrar no site!</button>
@@ -25,7 +25,6 @@
   </div>
 </div>
 <!-- PopNews -->
-
 <script type="text/javascript">PopNews();</script>
 <!-- PopNews -->
 <div class=HomeContent>
@@ -46,11 +45,7 @@
                   <input type="hidden" name="EnviarAssinante" value="Enviar">
                   <label class="btn" for="modal-one">Insira seu e-mail <span class="advantages-newsletter-button">ok</span></label>
                 </form>
-                <a href="#search" onclick="sF$.fnSearchToolbarSubmit(document.TopSearchToolbarForm);" class="btn1 btn-sent FCToolBarButton">
-                  <span class="HeaderSerachIMGIconFC">
-                    <img64 src="<Baseloja>images/iconsearch.svg" plain="true" width="25" height="25" alt="Buscar" title="Buscar">
-                  </span>
-                </a>
+                <a href="#search" onclick="sF$.fnSearchToolbarSubmit(document.TopSearchToolbarForm);" class="btn1 btn-sent FCToolBarButton"></a>
               </div>
             </div>
             <div class="c-xs-12 c-s-3 c-m-6 c-l-7 advantages-topics xs-hidden">
@@ -120,11 +115,12 @@
     <div class="line-brand"></div>
     <div class="container Prodout">
       <div class="Prodout-tittle">
-        <h3><a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><img alt="Mais Vendidos" src="<PathTo file="images/mais_vendidos.png">"></a</h3>
+        <h3><a href="/listaProdutos.asp?idloja=<IDLojaNum>&order=2&Digitada=True&Texto=++"><img alt="Mais Vendidos" src="<PathTo file="images/mais_vendidos.png">"></a></h3>
       </div>
       <div class="row">
-        <div class="xs-hidden s-hidden c-m-3 c-l-3 Banner-First">
-            <div class="Prodout-Home-Banners" onclick="location.href='/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++'">
+        <div class="xs-hidden s-hidden c-m-3 c-l-3 Banner-First" >  
+          <a href="/listaprodutos.asp?idloja=<IDLoja>&fil=9463&avancada=true&tfil=Mais+vendidos"> 
+            <div class="Prodout-Home-Banners">
               <span class="Home-Banners-tittle">Mais<br>vendidos</span>
                   <div class="Home-Banners-button">
                     <div class="line-brand"></div>
@@ -132,9 +128,10 @@
                     <div class="line-brand"></div>
                   </div>
                  <!-- BANNER TAG -->
-                  <banner 6>
+                 <img src="<PathTo file="images/os-mais-vendidos.png">">
                  <!-- BANNER TAG -->
             </div>
+            </a>
         </div>
 
         <div class="c-xs-12 c-s-12 c-m-9 c-l-9 Prodout-display-First">
@@ -162,17 +159,19 @@
       <div class="line-brand separator"></div>
       <div class="row">
         <div class="xs-hidden s-hidden c-m-3 c-l-3 Banner-First">
-          <div class="Prodout-Home-Banners" onclick="location.href='/listaprodutos.asp?idloja=<IDLoja>&promocao=true'">
-            <span class="Home-Banners-tittle">Promoções<br>Lançamentos</span>
-            <div class="Home-Banners-button">
-              <div class="line-brand"></div>
-              <button>Quero ver mais</button>
-              <div class="line-brand"></div>
+          <a href="/ListaProdutos.asp?IDLoja=<IDlo>&Avancada=True&Promocao=True&Lancamento=True">
+            <div class="Prodout-Home-Banners">
+              <span class="Home-Banners-tittle">Promoções<br>Lançamentos</span>
+              <div class="Home-Banners-button">
+                <div class="line-brand"></div>
+                <button>Quero ver mais</button>
+                <div class="line-brand"></div>
+              </div>
+              <!-- BANNER TAG -->
+              <img src="<PathTo file="images/promo-lanc.png">">
+              <!-- BANNER TAG -->
             </div>
-            <!-- BANNER TAG -->
-            <banner 7>
-            <!-- BANNER TAG -->
-          </div>
+          </a>
         </div>
         <div class="c-xs-12 c-s-12 c-m-9 c-l-9 Prodout-display-First">
           <div class="MagicScroll promo" data-options="items: [ [320,1], [600,1], [700,2], [800,3], [1000,4], [1200,4], [1500,4] ]">
@@ -286,12 +285,32 @@
     <!-- END: BODY NEWS LETTER -->
 
     <!-- MODAL DESCONTO -->
-
     <div class="modal">
       <input class="modal-open" id="modal-one" type="checkbox" hidden>
-      <IncludeHTMLIn src="ligth-box-form.htm" in="home">
+      <div class="modal-wrap" aria-hidden="true" role="dialog">
+        <label class="modal-overlay" for="modal-one"></label>
+        <div class="modal-dialog">
+          <div class="modal-header">
+            <h3>Cadastre-se e receba seu código de desconto!</h3>
+            <label class="btn-close" for="modal-one" aria-hidden="true">×</label>
+          </div>
+          <div class="modal-body">
+            <form class="Modalform" id="formPopup" name=FormNewsletter method=GET action="Newsletter.asp" onSubmit="return ValidaNew();"/>
+              <input type=hidden name=IDLoja value="<idloja>">
+              <input type=hidden name=Y value="<Y>">
+              <input type=hidden name=FormatoHTML value="True">
+              <input type=hidden name=EnviarAssinante value="Enviar">
+              <input type="text" id="NomeAssinante" class="Iname" required name="NomeAssinante" placeholder="Insira seu nome">
+              <input type="email" id="Email" class="Iemail" required name=Email placeholder="Insira seu e-mail"><br><br>
+              <input type="submit" id="EnviarAssinante" class="bt_news btnSubPop MdSubmit" name="ok" value="Enviar" />
+            </form>
+          </div>
+          <div class="modal-footer">
+          <label class="btn btn-primary" for="modal-one">Fechar</label>
+          </div>
+        </div>
+      </div> 
     </div>
-
     <!-- MODAL DESCONTO -->
 
       <!-- BEGIN: DISPLAY LINGERIES -->
