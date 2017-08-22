@@ -9,29 +9,43 @@ ImgOnError=FC$.PathImg+"nd";
 
 
 function CupomDesconto(){
-  if (FC$.Page=="Newsletter"){
-    var NomeAss=(document.getElementById('NomeAssinante').value);
-    var EmailAss=(document.getElementById('Email').value);
-    var CodeDesc = " PRAZER10 "
-    //localStorage.setItem("Email", "Meu e-mail é: "+EmailAss);
-    localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+" use o código de desconto: " +CodeDesc+" em suas compras!");
-  }
-
-  if (FC$.Page=="Newsletter" || localStorage.getItem("NomeAssinante")==null) {
-  }  else {
-      document.getElementById("ExibeMsgCode").innerHTML = (localStorage.getItem("NomeAssinante"));
-      document.querySelector(".ZFBg-MostraCod").style.display = "block";
-      document.querySelector(".ZFBox-MostraCod").style.bottom = "0em";
-      document.querySelector(".ZFBox-MostraCod").style.transition = "0.3s";
-      document.getElementById('ZFPopClose').onclick = function() {
-        document.querySelector(".ZFBg-MostraCod").style.display = "none";
-        localStorage.removeItem("NomeAssinante");
+    if (FC$.Page=="Newsletter"){  
+      document.getElementById('EnviarAssinante').onclick = function(){
+        var NomeAss=(document.getElementById('NomeAssinante').value);
+        var EmailAss=(document.getElementById('Email').value); 
+        var DisableCupom =(document.getElementById('FormatoHTMLNenhum').checked);
+        var CodeDesc = " PRAZER10 " 
+     if (DisableCupom==false) {
+          localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!");
+           alert("Bem vindo")
+        }else{alert("Removemos seu e-mail!");}        
       }
-      document.getElementById('closeTopCode').onclick = function() {
-        document.querySelector(".ZFBg-MostraCod").style.display = "none";
-        localStorage.removeItem("NomeAssinante");
-      };
+
     }
+    if (FC$.Page=="Home"){  
+      document.getElementById('EnviarAssinante').onclick = function(){
+        var NomeAss=(document.getElementById('NomeAssinante').value);
+        var EmailAss=(document.getElementById('Email').value);  
+        var CodeDesc = " PRAZER10 " 
+         localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!"); 
+      }
+    }
+
+    if (FC$.Page=="Newsletter" || localStorage.getItem("NomeAssinante")==null) {
+    }  else {
+        document.getElementById("ExibeMsgCode").innerHTML = (localStorage.getItem("NomeAssinante"));
+        document.querySelector(".ZFBg-MostraCod").style.display = "block";
+        document.querySelector(".ZFBox-MostraCod").style.bottom = "0em";
+        document.querySelector(".ZFBox-MostraCod").style.transition = "0.3s";
+        document.getElementById('ZFPopClose').onclick = function() {
+          document.querySelector(".ZFBg-MostraCod").style.display = "none";
+          localStorage.removeItem("NomeAssinante");
+        }
+        document.getElementById('closeTopCode').onclick = function() {
+          document.querySelector(".ZFBg-MostraCod").style.display = "none";
+          localStorage.removeItem("NomeAssinante");
+        };
+      }
  }
 
 var sF$=(function(){
@@ -637,6 +651,17 @@ function fnMaxInstallmentsGrid(PrecoProd,MaxParcelas){
   }
 }
 
+/*Função para mostrar formulario na custom*/
+function GoForm(){
+    document.getElementById('teste').onclick = function() {
+      setTimeout(function(){
+        document.querySelector(".Gform").style.height = "800px";
+        document.querySelector(".Gform").style.visibility = "visible";
+        document.querySelector(".Gform").style.transition = "all 2s";
+      }, 350);
+    }
+}
+
 /*Função para mostrar valor formatado*/
 function FormatNumber(num){
   var num=num.toString().replace(/\$|\,/g,'');
@@ -811,7 +836,7 @@ var plugins  = function(d){
 
   /* Sidebar */
   var btnShow = d.querySelector(".amp-sidebar-btn"),
-      btnClose = d.querySelector(".amp-sidebar-btn-close"),
+      btnClose = d.querySelector(".sidebar-close-container"),
       divSidebar = d.querySelector(".sidebar-container"),
       mask = d.querySelector(".sidebar-mask");
 
@@ -939,7 +964,7 @@ var carousel = function(){
   },
 
   removeLazyLoad: function(){
-    var allElemImg = document.querySelectorAll(".amp-prod-home-img a img");
+    var allElemImg = document.querySelectorAll(".swiper-slide a img");
     for(var i=0; i< allElemImg.length; i++){
       var oImg = allElemImg[i].getAttribute("data-src");
       if(oImg != null){ allElemImg[i].src= oImg;}
