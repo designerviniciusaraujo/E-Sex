@@ -1,0 +1,92 @@
+<head>
+  <title>Clube Atração :: Atração Sex Shop</title>
+ 
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+   <script type="text/javascript" src="<BaseLoja>htm/LojaLib.js"></script> 
+</head>  
+	<div class="FCClube">
+		<div class="FCClube-header">
+			<div class="container">
+				<span class="ClubeStyle">
+					<img alt="Estamos criando o melhor Clube de produtos eróticos para você!" src="<PathTo file="images/estamos_criando3.svg">" class="First-title o-hidden m-hidden">
+					<img alt="Estamos criando o melhor Clube de produtos eróticos para você!" src="<PathTo file="images/estamos_criando2.svg">" class="First-title xs-hidden ">
+				</span>
+				<img alt="Estamos criando o melhor Clube de produtos eróticos para você!" src="<PathTo file="images/embreve.svg">" class="First-breve">
+				<div class="FCClube-msg">
+					<p>
+						<img alt="Estamos criando o melhor Clube de produtos eróticos para você!" src="<PathTo file="images/quer_saber_primeiro3.svg">" class="Second-title m-hidden o-hidden">
+						<img alt="Estamos criando o melhor Clube de produtos eróticos para você!" src="<PathTo file="images/quer_saber_primeiro2.svg">" class="Second-title xs-hidden">
+					</p>
+				</div> 
+				<div class="FCClube-label">
+					<div class="">
+						<a href="#Goform" id="teste" class="ancora_menu"><img alt="Estamos criando o melhor Clube de produtos eróticos para você!" src="<PathTo file="images/deixe_seu_email.svg">"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="FCClube-Icdown"><img alt="Continue lendo" src="<PathTo file="images/down-club.svg">"></span>
+
+		<div id="Goform"></div>
+			<div class="FCClube-body">
+				<div class="container">
+					<div>
+						<img alt="logo-clube-atração" src="<PathTo file="images/clube_atracao.svg">" class="ClubeLogo">
+					</div>
+					<div class="Gform">
+						<h4 class="FCClube-sub">Preencha os campos a seguir, é rapidinho!</h4>
+						<div class="">
+							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScX4uALm_XmVYTetsWSkDJL8puhiEGF7Aou_-pu7OBp33c2sw/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+						</div>
+					</div>
+					<div class="FCClube-cols">
+						<h4>Podemos te adiantar algumas vantagens !</h4>
+						<div class="row">
+							<div class="c-xs-12 c-s-6 c-m-3 c-l-3">
+								<span>  <img src="<Baseloja>images/icon_desconto.png" alt="Desconto" title="Desconto"></span>
+								<p>Desconto de 10% em todos os produtos da Loja.</p>
+							</div>
+							<div class="c-xs-12 c-s-5 c-m-3 c-l-3">
+								<span>  <img src="<Baseloja>images/icon_entrega.png" alt="Entrega" title="Entrega"></span>
+								<p>Conteúdos sobre amor, sexualidade e relacionamentos</p>
+							</div>
+							<div class="c-xs-12 c-s-6 c-m-3 c-l-3">
+								<span>  <img src="<Baseloja>images/icon_noticias.png" alt="Noticias" title="Noticias"></span>
+								<p>Frete grátis para compras avulsas na Loja.</p>
+							</div>
+							<div class="c-xs-12 c-s-5 c-m-3 c-l-3">
+								<span>  <img src="<Baseloja>images/icon_presente.png" alt="Presente" title="Presentes"></span>
+								<p>Seleção de produtos feita de acordo com seus interesses pessoais.</p>
+							</div>
+						</div>
+					</div> 
+				<!-- btn promoção -->
+				<div class="line-brand"></div>
+				<div class="FCClube-promo">
+					<p>Já se cadastrou?<br>Aproveite nossas</p>
+					<a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true" class="zFPromoNotFound">Promoções</a>
+				</div>
+				<div class="line-brand"></div>
+				<!-- btn promoção --> 
+				</div>
+			</div> 
+	</div>
+<style type="text/css"> 
+  p { text-align: center; padding: 0px; margin: 0px; }
+	p.ClubeStyle { font-size: 1em !important; margin: 4px auto 40px; width: 25%; }
+</style>
+
+<script>
+$(document).ready(function(){
+       $('.ancora_menu').click(function(){
+          var alvo = $(this).attr('href').split('#').pop();
+          $('html, body').animate({scrollTop: $('#'+alvo).offset().top }, 500);
+          return false;
+       });
+    });
+</script>
+<script>
+ GoForm();
+</script>
