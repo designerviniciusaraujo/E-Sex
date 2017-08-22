@@ -24,7 +24,7 @@
           <div class="FCToolBar-logo">
             <a href="<StoreDomain>">
               <div class="FCToolBarLogo">
-            <a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg">"></a>
+              <a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg">"></a>
             </div>
             </a>
           </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="c-s-2 c-m-3 c-l-2">
           <div class="HeaderCartMainFC ToolBarCart">
-            <a href="/addProduto.asp?idloja=<IDLojaNum>">
+            <a href="/addProduto.asp?idloja=<IDLojaNum>">  
               <div class="HeaderCartMainIconFC">
                 <img64 src="<Baseloja>images/cart-icon.svg" alt="carrinho-compra" plain="true" width="35" height="35">
               </div>
@@ -76,33 +76,25 @@
       <div class="container Band">
         <div class="row">
           <div class="c-xs-2 c-s-1 c-m-2 c-l-3">
-            <span style="font-size:30px;cursor:pointer" class="open" onclick="navOpenClose.fn.openNav()">
-            <img alt="icone-menu" class="header-menu" src="<PathTo file="images/menu_icon.svg">">
+            <span style="font-size:30px;cursor:pointer" class="open">
+              <img alt="icone-menu" class="header-menu" src="<PathTo file="images/menu_icon.svg">">
             </span>
-            <div id="mySidenav" class="sidenav">
-              <div class="container-SideNav">
-                <div class="row">
-                  <div class="mySidenav-list">
-                    <a href="javascript:void(0)" class="closebtn" onclick="navOpenClose.fn.closeNav()">&times;</a>
-                    <a href="/home.asp?idloja=<IDLoja>">Home</a>
-                    <a href="/account.asp?idloja=<IDLoja>"> Minha Conta</a>
-                    <a href="/account.asp?idloja=<IDLojaNum>&orders=1#Orders"> Meus Pedidos</a>
-                    <a href="/custom.asp?idloja=<IDLoja>&arq=quem-somos.htm"> Quem Somos</a>
-                    <a href="/addProduto.asp?idloja=<IDLojaNum>"> Carrinho</a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"> Clube Atração</a>
-                    <a href="/newsletter.asp?idloja=<IDLoja>"> Quer desconto?</a>
-                    <a href="/custom.asp?idloja=<IDLoja>&arq=contato.htm"> Fale Conosco</a>
-                  </div>
-                  <div class="">
-                    <div onclick="menu_close()" class="SideNav-overlay"></div>
-                  </div>
-                  <script>
-                    function drop_close() {document.getElementById("MegaBox").style.display = "none";}
-                    function menu_close() {document.getElementById("mySidenav").marginLeft = "-320px";}
-                  </script>
-                </div>
+            <nav class="sidebar"> 
+              <div class="MenuList">
+                <span id="close">x</span>
+                <ul>
+                  <li><a href="/home.asp?idloja=<IDLoja>">Home</a></li>
+                  <li><a href="/account.asp?idloja=<IDLoja>">Minha Conta</a></li>
+                  <li><a href="/account.asp?idloja=<IDLojaNum>&orders=1#Orders">Meus Pedidos</a></li>
+                  <li><a href="/custom.asp?idloja=<IDLoja>&arq=quem-somos.htm">Quem Somos</a></li>
+                  <li><a href="/addProduto.asp?idloja=<IDLojaNum>">Carrinho</a></li>
+                  <li><a href="/clube-de-assinatura-produtos-eroticos">Clube Atração</a></li>
+                  <li><a href="/newsletter.asp?idloja=<IDLoja>">Quer Desconto ?</a></li>
+                  <li><a href="/contato">Fale Conosco</a></li>
+                </ul>
               </div>
-            </div>
+              <div class="MenuOverlay"></div> 
+            </nav>  
           </div>
           <div class="c-xs-10 c-s-7 c-m-6 c-l-6">
             <div class="Band-top-links ">
@@ -150,12 +142,13 @@
       <div class="row">
         <div class="c-xs-6 c-s-3 c-m-2 c-l-3">
           <div class="head-logo">
-            <a href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg">"></a>
+              <a style="display:block;" href="/home.asp?idloja=<IDLoja>"><img alt="logo-sexshop" src="<PathTo file="images/logo-sexshop.svg">"></a>
           </div>
         </div>
         <div class="c-xs-5 c-s-1 c-m-1 c-l-3">
-          <div class="head-cart">
+          <div class="head-cart">  
             <a href="/addProduto.asp?idloja=<IDLojaNum>" class="CartItens">
+            <span class="cart-alert">Clique para ver itens no carrinho !</span>
             <img alt="Carrinho Compra" src="<PathTo file="images/cart-icon.svg">">
               <div class="HeaderCartMainItemTotalFC">
                 <div id="HeaderCartItemFC"><span id="idCartItemsTop"></span></div>
@@ -222,10 +215,10 @@
                <div class="MegaView">
                  <div class="MegaBox-Categories">
                    <ul class="one">
-                     <a href=/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++e"><li class="bold-list">Os Mais vendidos</li></a>
-                     <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                     <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                     <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                     <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261538"><li class="bold-list">Os Mais vendidos</li></a>
+                     <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261538&promocao=true"><li class="bold-list">Promoções</li></a>
+                     <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261538&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                     <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                    </ul>
                  </div>
                  <div class="MegaBox-Categories">
@@ -266,10 +259,10 @@
               <div class="MegaView">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261539"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261539&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261539&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -300,10 +293,10 @@
               <div class="MegaView">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261540"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261540&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261540&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -335,10 +328,10 @@
               <div class="MegaView">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261541"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261541&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261541&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -367,8 +360,7 @@
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261570"><li>Sexo Oral Ice - Esfria</li></a>
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261572"><li>Vibrador Líquido</li></a>
                   </ul>
-                </div>
-
+                </div>  
                 <div class="MegaBox-Categories">
                   <div class="DivSlow">
                     <prod out="p1" id="5668328">
@@ -391,10 +383,10 @@
               <div class="MegaView flex-center">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261542"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261542&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261542&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -424,10 +416,10 @@
               <div class="MegaView flex-rigth">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261543"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261543&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261543&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -466,10 +458,10 @@
               <div class="MegaView flex-rigth">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261546"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261546&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261546&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -510,10 +502,10 @@
               <div class="MegaView flex-rigth">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261545"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261545&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261545&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -544,10 +536,10 @@
               <div class="MegaView flex-rigth">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261547"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261547&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261547&lancamento=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -586,10 +578,10 @@
               <div class="MegaView flex-rigth">
                 <div class="MegaBox-Categories">
                   <ul class="one">
-                    <a href="/listaProdutos.asp?idloja=<Baseloja>&order=2&Digitada=True&Texto=++"><li class="bold-list">Os Mais vendidos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&promocao=true"><li class="bold-list">Promoções</li></a>
-                    <a href="/listaprodutos.asp?idloja=<Baseloja>&order=1&lancamento=true"><li class="bold-list">Lançamentos</li></a>
-                    <a href="https://www.atracaosexshop.com.br/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&fil=9463&avancada=true&tfil=Mais+vendidos&IDCategoria=261544"><li class="bold-list">Os Mais vendidos</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261544&promocao=true"><li class="bold-list">Promoções</li></a>
+                    <a href="/listaprodutos.asp?idloja=34190&IDCategoria=261544&promocao=true"><li class="bold-list">Lançamentos</li></a>
+                    <a href="/clube-de-assinatura-produtos-eroticos"><li class="bold-list">Clube Atração</li></a>
                   </ul>
                 </div>
                 <div class="MegaBox-Categories">
@@ -619,50 +611,17 @@
             </div>
           </div>
         </li>
-
         <div onclick="drop_close()" class="Menu-overlay"></div>
          </ul>
      </div>
    </div>
   <div class="line-brand carrossel"></div>
+  <script>MenuStore();</script>
   <!-- BEGIN: SLIDE CATEGORIAS  -->
   <!-- BEGIN: SLIDE BANNERS HOME -->
   <IncludeHTMLIn src="BannerHome.html" in="home">
-  <script>
-    var navOpenClose = (function () {
-      var elem = document.getElementById("mySidenav");
-      var fn = {
-        openNav: function () {
-          setTimeout(function(){elem.setAttribute('data-active','true')},500);
-          elem.style.width = "100%";
-          elem.style.marginLeft = "0px";
-          navOpenClose.fn.outterClose();
-        },
-        closeNav: function () {
-          elem.style.width = "0";
-          elem.style.left = "0em";
-          elem.style.marginLeft = "-320px";
-          elem.style.transition = "all 0.3s";
-          elem.removeAttribute('data-active','true');
-        },
-        outterClose: function () {
-          document.body.addEventListener('click',function(e){
-            if(elem.dataset.active == 'true'){
-              e.stopPropagation();
-              if(e.target.id != 'mySidenav'){
-                elem.removeAttribute('data-active','true');
-                navOpenClose.fn.closeNav();
-              }
-            }
-          },false)
-        }
-      }
-      return{
-        fn:fn
-      }
 
-    })();
-  </script>
+
   <!-- BEGIN: CONTAINER BODY  -->
   <div class="container all">
   <div class="row">
