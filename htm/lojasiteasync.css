@@ -1,5 +1,6 @@
   /* Fastcommerce - Xtreme Responsive Store Async - Agosto/2016 (v5) */
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,latin-ext);
+  ::selection { background: #e3037d; color: #fff; } ::-moz-selection { background: #1f6a8f; color: #fff; }
   #idListaProdCategoriasFC { width: 34%; float: left; padding: 0px; box-sizing: border-box; }
   #idListaProdAdicional1FC { width: 22%; float: left; padding: 00px; box-sizing: border-box; }
   #idListaProdCategoriasFC a { font-size: 14px; line-height: 1.5; color: #424242; }
@@ -10,8 +11,8 @@
   .ProdDet-Club-tittle img { margin-right: 5px;width: 30px;   height: 28px}
 
   /*Modals library*/
-   @media (max-width:$screen-xs-max){}@media (min-width:$screen-sm){}@media (min-width:$screen-sm){}.modal .btn-close{color:#aaa;cursor:pointer;font-size:2rem;position:absolute;top:0;right:5px;text-decoration:none}.modal .btn-close:hover,.modal .btn-close:focus{color:#999}.modal-wrap:before{content:'';display:none;background:rgba(0,0,0,0.6);position:fixed;top:0;right:0;bottom:0;left:0;z-index:101}.modal-overlay{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:102}.modal-open:checked ~ .modal-wrap:before,.modal-open:checked ~ .modal-wrap .modal-overlay{display:block}.modal-open:checked ~ .modal-wrap .modal-dialog{transform:translate(-50%,-50%);position:fixed;top:40%}.modal-dialog{background:#fefefe;border:#555 solid 1px;border-radius:5px;position:fixed;left:50%;top:-100%;transform:translate(-50%,-150%);transition:transform .6s ease-in-out;width:80%;max-width:600px;z-index:103}.modal-body{padding:20px}.modal-body p{margin:0}.modal-header,.modal-footer{padding:20px 20px}.modal-header{border-bottom:#eaeaea solid 1px}.modal-header h2{font-size:2rem;margin:0}.modal-footer{border-top:#eaeaea solid 1px;text-align:right}
-  /*Modals library*/
+  @media (max-width:$screen-xs-max){}@media (min-width:$screen-sm){}@media (min-width:$screen-sm){}.modal .btn-close{color:#aaa;cursor:pointer;font-size:1.5rem;position:absolute;top:0;right:10px;text-decoration:none;}.modal .btn-close:hover,.modal .btn-close:focus{color:#999}.modal-wrap:before{content:'';display:none;background:rgba(0,0,0,0.6);position:fixed;top:0;right:0;bottom:0;left:0;z-index:101}.modal-overlay{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:102}.modal-open:checked ~ .modal-wrap:before,.modal-open:checked ~ .modal-wrap .modal-overlay{display:block}.modal-open:checked ~ .modal-wrap .modal-dialog{transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);position:fixed;top:50%}.modal-dialog{background:#fefefe;border:#555 solid 1px;border-radius:5px;position:fixed;left:50%;top:-150%;transform:translate(-50%,-150%);transition:transform .6s ease-in-out;width:80%;max-width:600px;z-index:103}.modal-body{padding:20px;}.modal-body p{margin:0}.modal-header,.modal-footer{padding:20px 20px}.modal-header{border-bottom:#eaeaea solid 1px;}.modal-header h2{font-size:2rem;margin:0}.modal-footer{border-top:#eaeaea solid 1px;text-align:right}
+ 
 
   /* History */
   #idPageHistory { width: 100%; margin-top: 30px; color: <tag-FCCSSMainColor>; }
@@ -22,9 +23,9 @@
   #idPageHistoryFC ul li { display: inline-block; }
   #idListPageHistoryFC li { margin: 0 5px 30px 5px; }
   .EstImagePageHistory { text-align: center; margin: 5px; min-height: 100px; background-color: transparent; border: 0 solid <tag-FCCSSColor2>; }
-  .EstImagePageHistory .EstFotoPageHistory { max-width: 100px; max-height: 100px; margin: 2px 0 0 2px; }
+  .EstImagePageHistory .EstFotoPageHistory { max-width: 100px; max-height: 95px; margin: 2px 0 0 2px; }
   .EstNamePageHistory { text-align: center; margin: 0 0 10px 0; font-family: 'Open Sans', verdana, arial; font-weight: 400; line-height: 1; }
-  3.EstNamePageHistory a { height: 40px; font-size: 14px; text-decoration: none; background-color: <tag-FCCSSColor8>; border: 0 solid <tag-FCCSSColor2>; color: <tag-FCCSSColor22>; }
+  .EstNamePageHistory a { height: 40px; font-size: 14px; text-decoration: none; background-color: <tag-FCCSSColor8>; border: 0 solid <tag-FCCSSColor2>; color: <tag-FCCSSColor22>; }
   .EstPricePageHistory { text-align: center; margin: 0; font-size: 14px; font-weight: 600; background-color: transparent; border: 0 solid #999999; color: #292723; }
   .EstNamePageHistory a { color: black !important; font-weight: bold; font-size: 0.9em; text-align: center; }
 
@@ -112,6 +113,7 @@
   .EstCampo {font-size:8pt;font-family:tahoma,verdana}
 
   /* EM USO ATRAǇÃO SEXSHOP */
+  body.FCRegister img#idImgBotPreviousPageFC {display: none;}
   .EstLinkASEnews { display: none;}ul#idUlPathSearchFC a { color: #e3037d;}
   button.buttonAddSearch {display: none;}
   body.FCNews h2 {font-size: 15px !important;  margin: 40px auto 0 !important;}
@@ -123,6 +125,25 @@
   /* EM USO ATRAǇÃO SEXSHOP */
   .EstQtdInv td { background: #ffe6e6 !important }
   .EstQtdInv .FCCartQtyInput { background: #fff; border: 1px solid red; }
+  a.CartItens:hover span.cart-alert {display: flex; visibility: visible; transition: 0.3s}
+  span.cart-alert {
+    display: inline;   
+    box-shadow: 1px 1px 13px -7px #888888;
+    background: #f9f9f9;
+    position: absolute;
+    z-index: 999;
+    margin: 0;
+    padding: 4px 20px;
+    color: #8e8e8e;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    font-size: 0.9em;
+    align-items: center;
+    border-radius: 25px;
+    top: 10%;
+    right: 7%;
+    transition: 0.3s; }
 
   /* Menu Mega Menu */
   .DivMenuPreview {width: 185px;height: 130px; margin: 0 auto;}
@@ -147,6 +168,7 @@
   .FooterInputBtnPosition { margin: 0 0 0 -5px !important; }
   button.btnicon { cursor: pointer;  transition: 0.2s; background: transparent; color: #d4d4d4; border: 0; padding: 0px; margin: 3px auto; font-size: 0.8em; outline: none;}
   button.btnicon:hover {color: #fff; transition: 0.2s}
+  table#idTabRequiredFieldFC {display: none;}
 
   /*Seletor Pag login*/
   input[type="image"] { width: 50px; }
@@ -202,7 +224,7 @@
   .FCNewsletter .container.history { display: none; }
 
   /*modals and forms-modals*/
-  .advantages-newsletter .btn {font-size: 17px;text-align: left;line-height: 1.8;color: #a9a9a9;}
+  
   .modal-header h3 { color: #e20b7c;  font-size: 21px;}
   label.btn.btn-primary { cursor: pointer;}
   .modal-body { padding: 20px;  display: flex; justify-content: space-around;flex-direction: column; }
@@ -233,7 +255,7 @@
   }
   @media (min-width:768px) {
   .FooterULSecurityFC li { margin-right: 2px;}
-  ul.FooterULSecurityFC { width: 85%; }
+  ul.FooterULSecurityFC { width: 100%; }
   ul.FooterULSecurityFC img {display: block}
   .Modalform { display: flex;  align-items: center;justify-content: center; }
   input.Iname, .Imail {margin: 5px;}
