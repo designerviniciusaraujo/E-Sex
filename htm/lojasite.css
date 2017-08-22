@@ -8,14 +8,14 @@
 	TD {font-size:8pt;font-family:tahoma,verdana}
 	img {border-style:none;}
 	input,form {outline-color: #ff87c8  !important;}
-	.FCHome .container.all { padding: 0;}
+	.FCHome .container.all { padding: 0;} 
 	*,*:after,
 	*::before {	-webkit-box-sizing: border-box;	-moz-box-sizing: border-box;	box-sizing: border-box;}
-	.vex-content { max-height: 540px !important;}
+	.vex-content { max-height: 540px !important; min-width: 800px;}
 	.vex-content iframe {max-height:100%;height:100%; }
 	#popupNews{background-image: url('<Baseloja>images/atracao-girl.png'); position: absolute; background-position: 100%; background-repeat: no-repeat; z-index: 999999991; background-color:#fff; width: 735px; min-height: 315px; border-radius: 5px; box-shadow: 0 0 5px 0 black; text-align: center; padding:5px 10px; display: none;}
 	/*  Estilo para os fomularios botões e inputs  */
-	.InputText { border-color: #efefef !important; border-width: 1; border-style: solid; background-color: #F5F5F5; font-size: 11; font-family: tahoma, verdana; color: #6C6C6C; width: 90%; height: 30px; padding: 0 5px; border-radius: 5px; }
+	.InputText { border-color: #efefef !important; border-width: 1s; border-style: solid; background-color: #F5F5F5; font-size: 11; font-family: tahoma, verdana; color: #6C6C6C; width: 90%; height: 30px; padding: 0 5px; border-radius: 5px; }
 	.InputTextBusca { border-color: transparent; background-color: transparent !important; font-size: 11; color: #6C6C6C; height: 50px !important; border-color: transparent !important; outline: none !important; }
 	.InputButton {border-width:1;font-size:11;font-family:verdana}
 
@@ -35,10 +35,9 @@
 	/* ESTILOS ATRAÇÃO SEXSHOP  */
 	======================================
 
-
 	/* BEGIN: GERAL STYLES */
 	body { font-size: 1.1em; font-family: 'Roboto' !important, verdana, arial }
-	.Newspopup input[type="text"],input[type="email"]{background:#fff;border-radius:5px;box-shadow:0;padding:5px 5px;width:210px;color:#000;border:0;height:47px;border:1px solid #979797; font-size: 1.1em}
+	.Newspopup input[type="text"],input[type="email"]{background:#fff;border-radius:5px;box-shadow:0;padding:5px 5px;width:210px;border:0;height:47px;border:1px solid #979797; font-size: 1.1em}
 	.Prodout-tittle {margin: 60px auto;}
 	.HomeContent { width: 100% !important; font-family: 'Roboto'; margin: 0 auto !important; padding: 0 !important; }
 	.Home-Banners-button .line-brand { width:85%;margin:0 auto;background-image: url("<PathTo file="images/line-white.svg">"); background-repeat: repeat-x; height: 1px; }
@@ -82,6 +81,51 @@
 	.MagicZoomPlusHint {color: #424242 !important;	font-size: 11px !important;}
 	::-ms-clear { display: none;}
 	.DivMenuPreview .installments {display: none;}
+  #idCheckoutFC .EstChkNomeCampo,#idCheckoutFC td {font-size: 14px !important; }
+  input#Email { border-radius: 8px !important;  height: 50px !important;}
+  span.cart-alert {display: none; visibility: hidden; transition: 0.3s} 
+  
+  /*Menu lateral*/	
+	nav.sidebar { background: transparent; position: fixed; width: 100%; left: 0; top: 0; height: 100%; display: flex; visibility: hidden; z-index: 99; }
+	.MenuOverlay { opacity: 0; background: #616161; display: block; height: 100%; float: right; width: 100%; cursor: pointer; }
+	.MenuList { float: left; width: 270px; background: #eee; color: #000; padding: 18px; margin-left: -270px; }
+	.MenuList a:before { content: ' ';  
+	background-image: url("<PathTo file="images/seta.svg">"); background-color: transparent; width: 10px; background-repeat: no-repeat; height: 10px; margin: 6px -10px; position: absolute;}
+	.sidebar a { transition: 0.3s; padding: 8px 8px 8px 8px; text-decoration: none; color: #000000; display: block; font-family: 'Roboto'; text-transform: uppercase; font-size: 1.1em; border-bottom: 1px solid #e4e4e4; }
+	.sidebar a:hover { border-bottom: 1px solid #e3037d; transition: 0.3s; color: #e3037d; } 
+	span#close { float: right; font-size: 19px; padding: 0; color: #b8b8b8; border: 1px solid; border-radius: 84px; width: 27px; height: 27px; text-align: center; display: flex; display: -webkit-flex; display: -ms-flexbox; justify-content: center; -ms-justify-content: center; -webkit-justify-content: center; align-items: center; -webkit-align-items: center; -ms-align-items: center; cursor: pointer; }
+	
+	/*BANNERS HOME*/
+	.swiper-slide img{width:100%}.swiper-container-banners{overflow:hidden}.swiper-container-banners img{min-width:100%;} 
+  .swiper-pagination-bullet-active {opacity: 1; background: #e20b7c !important;}
+  .swiper-slide img {opacity: 1 !important;}
+	/*BANNERS HOME*/
+
+	/*Custom*/
+	.FCClube-ms { background: white; width: 320px; margin: 0 auto; }
+	.FCClube-msg p { background: white; border: 3px solid #ffb919; padding: 0; width: 100%; margin: 0 auto; font-family: 'Roboto' !important; color: #424242 !important; font-size: 22px !important; }
+	label.activomodal { display: flex; justify-content: space-between; width: 100%; background: #ffffff; display: flex; align-items: center; border-radius: 5px; padding-left: 5px; padding: 5px; }
+	span.FCClube-Icdown { width: 50px; display: block; text-align: center; margin: 0 auto; position: relative;   }
+	h4.FCClube-sub { margin: 4px auto 90px; }
+	img.ClubeLogo { display: block; width: 390px;     margin: 30px auto 10px; max-width: 100%; }
+	img.First-title { margin: 0px auto; width: 100%; display: block;   }
+	img.Second-title { padding: 10px; display: block; margin: 0 auto; width: 80%; }
+	img.First-breve { margin: 10px auto 30px; width: 90%; display: block; }
+	.FCClube-cols p { margin: 0 auto; font-weight: bold; }
+	.FCClube-cols span { margin: 0 auto; display: block; text-align: center; }
+	.FCClube-cols h4 { text-align: center; font-size: 2em; margin: 10px auto 55px; }
+	.FCClube-body h4 { text-align: center; margin-top: 0; margin-bottom: 40px; }
+	.FCClube-cols p { margin: 0 auto 55px; }
+	.FCClube-cols span img { width: 150px; }
+	.zFPromoNotFound { transition: 0.3s; box-shadow: 1px 2px 7px #888888; width: 200px; display: block; background: #e20b7c; color: #fff; font-size: 1.35em; text-decoration: none; border-radius: 5px; text-align: center; padding: 10px 0; margin: 10px auto 0px; text-transform: uppercase; font-family: 'Roboto'; color: #fff; }
+	.zFPromoNotFound:visited { color: #fff; }
+	.FCClube-promo p { font-size: 22px !important; }
+	.FCClube-promo { padding: 20px; }
+	.FCClube-label img { cursor: pointer;}
+	.ClubePage .container.all {min-width: 100%;	}
+	.Gform { height: 800px; margin: 30px auto; height: 0px; visibility: hidden; background: #ffffff; overflow: hidden; max-width: 760px; }
+	.Gform iframe { max-width: 100%;}
+	/*Custom*/
 
 	/* BEGIN: HOME */
   .Prodout-Menu li:before { content: ''; width: 10px; height: 10px; background-image: url('<PathTo file="images/seta.svg">'); background-repeat: no-repeat; display: block; float: left; }
@@ -97,8 +141,9 @@
 	.banners-scrol .MagicScroll[data-mode="scroll"] .mcs-item:hover .mcs-caption, .MagicScroll[data-mode="animation"] .mcs-item:hover .mcs-caption
 	{ -webkit-transform: translateY(150%) !important; -ms-transform: translate(0, 150%)!important; transform: translateY(150%)!important; }
 	.advantages-newsletter label.btn {display: flex; justify-content: space-between;   width: 100%;overflow: hidden;}
-
+	.advantages-newsletter .btn {font-size: 17px;text-align: left;line-height: 1.8;color: #a9a9a9;}
   span.mcs-caption {width: 100%;  float: right;}
+  
 	/*ICONES-RACK*/
 	img.help-icon{width:25px;height:33px;}
 	img.user-icon{width:32px;height:33px;}
@@ -112,8 +157,7 @@
 	.banners-scrol .mcs-item:after, .mcs-item > a:after { display: none; }
 	.Col-PreView .col-small-12.col-medium-12.col-large-12.col-xlarge-12.FCGridMain { margin: 0;}
 	.col-small-12.col-medium-12.col-large-12.col-xlarge-12.FCGridMain {  width: 260px;  margin: 0 auto;}
-	.ViewHome-MoreDetails a {bottom: 14px;
-    position: relative;    text-decoration: underline;  color: #444444;  float: right;  font-size: 0.9em;}
+	.ViewHome-MoreDetails a {bottom: 14px; position: relative; text-decoration: underline;  color: #444444; float: right;  font-size: 0.9em;}
 	 /* Estilos de fundo */
 	.swiper-button-next, .swiper-button-prev	 {opacity: 0.8}
   .swiper-button-next, .swiper-container-rtl .swiper-button-prev {background-image: url('<PathTo file="images/icoRigthgray.svg">') !important; z-index: 0 !important; width: 55px !important;  height: 100px !important;   background-size: contain !important; right: 0 !important;}
@@ -130,14 +174,12 @@
 	.FCLabelForm {font-family: 'Roboto';}
 
 
-	/* BEGIN: SLIDE CATEGORIAS */
-	/*	.container.carrossel .MagicScroll-horizontal .mcs-item {height: auto;}*/
+	/* BEGIN: SLIDE CATEGORIAS */ 
 	.container.carrossel .mcs-item img{width:40px;}
 	.container.carrossel{padding:0;}
 	.container.carrossel .MagicScroll {max-height: 80px;
     margin: 0 auto -10px;}
-	.container.carrossel span.mcs-caption{text-transform:uppercase;}
-	/*	.container.carrossel .mcs-wrapper{height:140px;}*/
+	.container.carrossel span.mcs-caption{text-transform:uppercase;}  
 	.container.carrossel .mcs-item{overflow:inherit;}
 	.container.carrossel .MagicScroll[data-mode="scroll"] .mcs-item .mcs-caption,.MagicScroll[data-mode="animation"] .mcs-item .mcs-caption{ bottom: 10px; background-color:#31333D;background-color:transparent!important;color:#000;}
 	.container.carrossel button.mcs-button.mcs-horizontal.mcs-button-arrow.mcs-button-arrow-next{display:none!important;}
@@ -259,7 +301,6 @@
 	.DivHomeProd { font-size:0.9em;border: 1px solid #c9c9c9; cursor: pointer !important; padding: 0px; margin: 0px auto; height: 100%; max-height: 100%; min-height: 100%; }
 	.DivHomeImagemProd img { max-width: 100%; }
 	span.HomeNomeProd.font-16 a {line-height: 1.2; white-space: normal; text-decoration: none; color: #5d5d5d; font-family: 'Roboto';}
-
 	.FCfnShowEconomy .circle { width: 50%; border-radius: 5px; padding: 5px; color: #ffffff }
 	.prices { display: flex;display:-webkit-flex;	display:-ms-flexbox; -ms-justify-content: center; -webkit-justify-content: center; justify-content: center; align-items: baseline; margin: 0px auto 0; font-family: 'Roboto'; font-size: 1.1em; }
 	.old-price { position: relative; right: 5px; top: 1px; color: black; font-weight: bold;}
@@ -304,6 +345,14 @@
 	.c-xs-12.c-s-12.c-m-9.c-l-9.Prodout-display-First { height: 375px; }
 	.FCHome .zFProdSeloProd { margin: 15px 10px;	width: 85%; position: absolute; }
 	.zFProdSeloProd span { float: right; }
+   .avista {background: #eee; height: 50px; color: #fff;}
+  a.Club-link { margin: 0 auto; display: block; min-width: 100%; left: 0;}
+  .Prodout-display-First .more-category a {line-height: 4;}
+  .ProdOut-Cacategory a {display: block;width: 100%;margin: 0px !important; }
+  .ProdOut-Buttons a { width: 50%;  margin: 0 0px;}
+  .more-category a:before { content: '+';  margin: 0 5px;}
+  .more-category { height: 35px; line-height: 3;}
+  .more-category a {display: block; color: #000;font-size: 12px;}
 	/* END: PRODOUT */
 
 	/* BEGIN: PRODDET */
@@ -333,7 +382,6 @@
 	.DontGoPopupCloseButton:hover,.DontGoPopupCloseButton:focus{cursor:pointer;}
 	@media only screen and (max-width:1680px){.DontGoPopupContent{width:48%;}}
 	@media only screen and (min-width:1681px){.DontGoPopupContent{width:40%;}}
-
 	div#topcontrol img{min-height:25px!important;width:30px!important;}
 	body.FCHome .MainContainer.hide-small{display:none;}
 	.FCBoxGridBuy img{display:block;margin:0;padding: 0;cursor:pointer;}
@@ -348,8 +396,11 @@
 	.EstLinhaProd{display:none;}
 	span#idEstNoCommentsProdOpFC,span#idEstNoCommentsClickProdOpFC{font-size:1.3em;}
 	span#idEstNoCommentsClickProdOpFC a{color:#e3037d;}
-	.ProdDet-Desc{margin:40px auto 40px;}
-	/*.bTItem:after{content:"";background:url("<PathTo file=!string!>") no-repeat;background-size:100%;width:18px;height:18px;position:absolute;margin:10% 45%;}*/
+	.ProdDet-Desc{margin:40px auto 40px;} 
+	.FCGridZoomMain img {max-height: 500px;max-width: 500px;}
+ 	/*AJUDA*/
+ 	.FCHelp p{padding:0px;margin:10px auto!important}p.Help-high strong{font-size:31px!important;margin:23px auto -140px!important;position:relative;top:50px}.FCHelp .Answer h3,h2{color:#d1188b}.Help-doubt ul{margin-right:5%}.Help-doubt li{margin-top:20px}.Help-doubt li a{color:#d1188b;font-family:'Roboto';font-weight:bold}.Help-Answers{max-width:550px;margin:0 auto}.Answer span.foco{width:10%;display:block;position:relative;top:-65px;background:red}@media (min-width:1360px){.Help-Answers{max-width:750px}}@media (min-width:1400px){.Help-Answers{max-width:950px}.Answer span.foco{top:-115px;background:red}}
+ 	/*AJUDA*/
 
 	.FCGridMain .FCDescritorGrid{border-radius:4px;min-width:28px;min-height:28px;display:block;text-align:center;border:1px solid #11b0b6;padding:4px;margin:0;line-height:17px;cursor:pointer;}
 	.ProdDet-Doubts-desc p{color:#8e8e8e;font-size:0.9em!important;line-height:1.3;}
@@ -410,10 +461,10 @@
 
 	div#idFCLeftContentRight {width: 100%;}
 	.c-m-3.c-l-3.filters {display: block;}
-	::-webkit-input-placeholder { /* Chrome/Opera/Safari */color: #848282; font-size: 14px; text-transform: uppercase;}
-	::-moz-placeholder { /* Firefox 19+ */color: #848282; font-size: 14px; text-transform: uppercase;}
-	:-ms-input-placeholder { /* IE 10+ */	color: #848282; font-size: 14px; text-transform: uppercase;}
-	:-moz-placeholder { /* Firefox 18- */	color: #848282; font-size: 14px; text-transform: uppercase;}
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */color: #848282; font-size: 14px; }
+	::-moz-placeholder { /* Firefox 19+ */color: #848282; font-size: 14px; }
+	:-ms-input-placeholder { /* IE 10+ */	color: #848282; font-size: 14px; }
+	:-moz-placeholder { /* Firefox 18- */	color: #848282; font-size: 14px; }
 
 	/* BEGIN: TOOLBAR */
 	.FCToolBar { background: #ffffff; box-shadow: 0 0 5px #000000; width: 100%; height: 65px; box-sizing: border-box; position: fixed; left: 0; top: 45px; z-index: 9999; overflow: visible !important; display: none; padding: 5px; }
@@ -436,29 +487,14 @@
 	.HeaderCartMainItemTotalFC { background: #e3037d; left: 21px; position: relative; bottom: 59px; border-radius: 50%; padding: 0; width: 28px; height: 28px; text-align: center; color: #fff; display: flex;display:-webkit-flex;
 	display:-ms-flexbox; justify-content: center;  -ms-justify-content: center;-webkit-justify-content: center; align-items: center;-webkit-align-items:center;
 	-ms-align-items:center;}
-  .head-cart a {text-decoration: none;}
-	.sidenav { height: 100%; width: 0; position: fixed; z-index: 99; top: 0; left: 0; background-color:transparent; overflow-x: hidden; transition: 0.5s; padding-top: 0px; }
-	.sidenav a { transition: 0.3s; padding: 8px 8px 8px 8px; text-decoration: none; color: #000000; display: block; font-family: 'Roboto'; text-transform: uppercase; font-size: 1.1em; border-bottom: 1px solid #e4e4e4; }
-	.sidenav a:hover { border-bottom: 1px solid #e3037d; transition: 0.3s}
-	.sidenav a:hover, .offcanvas a:focus { color:#e3037d; }
-	.sidenav .closebtn {position: absolute; top: 0; right: 15px; font-size: 19px; margin: 12px 0; padding: 0; color: #b8b8b8; border: 1px solid; border-radius: 84px; width: 27px; height: 27px; text-align: center; display: flex; display: -webkit-flex; display: -ms-flexbox; justify-content: center; -ms-justify-content: center; -webkit-justify-content: center; align-items: center; -webkit-align-items: center; -ms-align-items: center;}
-	.sidenav .closebtn:hover {box-shadow: 9px 5px 16px -4px #d8d8d8; background:transparent;}
-	.sidenav img {display: none;}
-	.sidenav { margin: 0 -320px; }
+  .head-cart a {text-decoration: none;}  
 	.header-menu { position: relative;  top: 3px;}
 	.EstListCat ul {margin: 0 !important;   padding: 0!important ;}
-	ul.CatOpened a:before {  content: ' ';}
-	.container-SideNav { margin: 0; width: 100%; margin: 0 auto; }
-	a.closebtn { border: 0;  padding: 0;}
-	a.closebtn:before {display: none;}
-	.sidenav h2 { color: #c5c5c5; font-family: 'Roboto'; padding: 0 8px; font-weight: normal; text-transform: uppercase; text-decoration: underline; }
-	.SideNav-overlay { width: 90%; height: 100%; position: absolute; right: 0px; z-index: -1; opacity: 0;}
-	.mySidenav-list { overflow:auto;background: #eee; height: 100%; position: fixed; padding-top: 24px; padding-right: 40px; padding-left: 30px; }
-	.mySidenav-list a:before { content: '';	background-image: url('<PathTo file="images/seta.svg">');	background-color: transparent;width: 10px;background-repeat: no-repeat;height: 10px;margin: 6px -10px;position: absolute;}
+	ul.CatOpened a:before {  content: ' ';}   
+	.overlay-menustore {background: white; width: 100%; position: fixed; left: 0; height: 100%; opacity: 0.5; visibility: hidden; top: 0; transition: 0.3s;}  
   .Home-Cat.fones .MegaMenu-Select span {width: 14px;margin: 0 5px !important;}
 	.MegaBox-Categories a:before {margin: 8px -10px;position: absolute;	background-image: url('<PathTo file="images/seta.svg">');	content: '';background-repeat: no-repeat;width: 10px;height: 10px; }
-	.MegaBox-Categories a {color: #424242; text-decoration: none;}
-	@media screen and (max-height:450px) {.sidenav { padding-top: 15px; }	.sidenav a { font-size: 18px; }	}
+	.MegaBox-Categories a {color: #424242; text-decoration: none;} 
 	a.login { color: #fff; text-decoration: none; }
 	span.header-social-login { display: flex;display:-webkit-flex;
 	display:-ms-flexbox; align-items: center;-webkit-align-items:center;
@@ -476,7 +512,6 @@
 	.MegaView {width: auto;	background: #ffffff;display: inline-flex;height: 100%;box-shadow: 0px 4px 12px -2px rgba(0, 0, 0, 0.1);}
 	.MegaView.flex-rigth { float: right;}
 	.MegaView.flex-center { position: relative;  right: 25%;  left: 25%;    float: left;}
-
 	ul.MegaMenu a {text-decoration: none;color: #424242;}
 	.MegaBox-Categories li { text-transform: uppercase; line-height: 2.0; font-size: 0.8em; transition: left 1s; left: 0px; }
 	.MegaBox-Categories li:hover { position: relative; left: 10px; transition: 0.3s; color: #e61c8a; }
@@ -491,14 +526,12 @@
 	.MegaMenu-Select span:after { content: ''; display: block; border-bottom: 3px solid; position: relative; top: 0; opacity: 0; width: 0px; transition: 0.6s; }
 	.MegaMenu-Select a { display: flex;display:-webkit-flex;
 	display:-ms-flexbox; flex-direction: column; color: #000000; text-decoration: none; font-size: 0.6em; font-family: 'Roboto'; margin: 0; padding: 0; text-transform: uppercase; text-align: center; line-height: 2.1; }
-
   .Contact h3 { color: #444444; font-size: 35px; margin-bottom: 0; }
 	.Contact-phone { margin: 30px auto 15px; }
 	span.Contact-phone-num { font-size: 2.0em; font-weight: bold; font-family: 'Roboto'; }
 	.Contact input, textarea.form-control { font-family: 'Roboto'; width: 100%; height: 40px; margin: 0 auto 10px; padding: 0 5px; border-radius: 5px; }
 	textarea.form-control { height: 100px; padding: 9px 5px; font-family: 'Roboto'; }
 	input.Contact-Submit { width: 160px; height: 50px; font-size: 19px; text-transform: uppercase; border: 0; background: #1ec013; color: #fff; float: right; cursor: pointer; font-family: 'Roboto'; }
-
 	.Contact-forms { width: 80%; margin: 80px auto; }
 	span.Contact-email { font-weight: bold; font-family: 'Roboto'; }
 	p.par-smal { font-size: 0.8em !important; margin: 0; }
@@ -506,7 +539,6 @@
 	.Home-Cat .MegaMenu-Select:hover span:after { opacity: 1; transition: opacity 0.3s; width: 100%; transition: width 0.3s; }
 	.MegaBox { opacity: 1; visibility: hidden; position: absolute; z-index: 999; width: 100%; height: 0px; left: 0; box-shadow: 0px;}
 	 .Home-Cat ul li:hover .MegaBox {display:block; opacity: 1;height:auto; background: transparent; transition: 0.4s; visibility: visible;  display: block;z-index: 3; }
-	/*.MegaBox .container { background: #ffffff;box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.2); height: 0px;transition: 0.3s;}*/
 	.Home-Cat ul li:hover .MegaBox .container {padding: 0px !important;background:transparent; height: 300px;transition: 1s;}
  	.Menu-overlay { position:absolute;  opacity: 0; background: #ffffff; height: 100%; width: 100%; position: absolute; left: 0; right: 0; top: 0;  visibility: hidden; transition: 1.5s; }
 	.Home-Cat.xs-hidden ul li:hover ~ .Menu-overlay {display: block; z-index: 2;  position: absolute;  background:#ffffff;  opacity: 0.5; transition: 1.2s; visibility: visible;}
@@ -539,7 +571,6 @@
 	/* Coluna 1 */
 	.Home-Cat ul li ul.one { opacity: 0; transition: 0.3s; position: relative; left: 10px;  }
 	.Home-Cat ul li:hover ul.one {opacity: 1; transition: 2s; position: relative; left: 0px }
-
 	.Home-Cat.xs-hidden ul li:hover path,.MegaMenu-Select ellipse { fill: #e3037d; transition: 1.0s;}
 	.Home-Cat.xs-hidden ul li path,.MegaMenu-Select ellipse { fill: #c0c0c0; transition: 1.0s;}
 	.Home-Cat.xs-hidden ul li:hover .MegaMenu-Select span {color: #e3037d;}
@@ -547,8 +578,6 @@
 	/* Coluna 2 */
 	.Home-Cat ul li ul.two { opacity: 0; transition: 0.1s; position: relative; left: 10px; }
 	.Home-Cat ul li:hover ul.two { opacity: 1; transition: 2s; position: relative; left: 0px; }
-
-
 	/* END: BARRATOPO */
 
 	/* BEGIN: CUSTOM */
@@ -558,6 +587,11 @@
 	.container.FCHelp p { color: #252525; font-size: 0.8em !important; margin: 0 auto 40px; font-family: 'Roboto';}
 	.container.FCHelp h2 { background: #e6e6e6; color: #444444; padding: 9px; border-radius: 5px; font-size: 0.9em; font-family: 'Roboto';}
 	.F-Pag span { display: block; width: 380px; margin: 0 auto; }
+	.FCClube { margin: 0 -10px;}
+	.FCClube-header {background-image: url('<PathTo file="images/clube_atracao_fundo2.jpg">');background-repeat: no-repeat;	background-position: center;	width: 100%;	height: 100%;background-size: cover; }  
+	.FCClube h2 { text-align: center; padding: 35px 0 0; font-weight: normal; }
+	.FCClube-msg { background: white; border: 1px solid #ffffff; padding: 5px; width: 450px; margin: 45px auto; }
+	.FCClube-label { width: 390px; margin: 0px auto; height: 80px; border-radius: 5px; padding: 5px; }
 	/* END: CUSTOM */
 
 	/* Login */
@@ -585,7 +619,6 @@
 	span#idTxtAskNewsFC { font-family: 'Roboto';}
 	.captchaImg {margin: 4px 0 0 5px;}
  	/* News Letter */
-
 
  	/* Noticias */
  	.FCLabelForm {  text-align: center;}
@@ -624,8 +657,7 @@
   body.FCCart .container.news.xs-hidden { margin: 70px auto 0;}
   .FCCartQtyInput { text-align: center;}
 	.FCCartLeftCol {margin: 0 auto 50px;}
-	body.FCCart .container.news {display: none}body.FCCart .banners-footer {display: none}
-
+	body.FCCart .container.news {display: none}body.FCCart .banners-footer {display: none} 
 	/* CARRINHO */
 
 	/* TRACK */
@@ -686,20 +718,6 @@
 	.Contact { margin: 45px auto -40px; }
 	/* CONTATO */
 
-	/* CADASTRO */
-	#idRegisterFC input.InputText {background: transparent !important; border: 1px solid #c7c7c7!important;  height: 40px;    margin-bottom: 5px;}
-	#idRegisterFC font {color: #444444;}
-	form#idForm1FC {width: 630px; margin: 0 auto;}
-	#idPreviousPageFC img { display: none;}
-	#idRegisterFC .smSelect {height: 39px; border-radius: 5px; background: #e8e8e8;}
-	#idTabRequiredFieldFC,.EstTabTopo {display: none;	}
-	#idPreviousPageFC a {text-decoration: none;}
-	.FCCheckout #idRegisterFC input.InputText {margin-bottom: 0px;}
-	tr#idOccupationFC { display: none;}
-	/* CADASTRO */
-
-	/* =================== BEFIN:  MY CHECK-OUT ===========================*/
-
 	/* =================== ESTRUTURA RESPONSIVA LOGIN =========================*/
 	.FCCheckoutLogin {  width: 100%;   padding: 0 10px;}
 	#idChkLoginIntFC { box-shadow: 0px 1px 22px 1px #f3f3f3;}
@@ -712,39 +730,23 @@
 	td.EstChkOptSit { line-height: 4;}
 	#idChkAllFC {  width: 100% !important;}
 	.EstTabPedidoTit {background: #62d7e6 !important; color: #fff !important;}
-  #idCheckoutFC .EstTitCheckoutFC {font-size: 14px !important;  font-family: 'Roboto'!important; text-transform: uppercase;    padding: 22px}
+  #idCheckoutFC .EstTitCheckoutFC {font-size: 20px !important;  font-family: 'Roboto'!important; text-transform: uppercase;}
   .EstChkRequiredField { color: #000000 !important;}
-  td.EstChkNomeCampo.EstChkRequiredField { line-height: 4;}  /* Space line form */
+  td.EstChkNomeCampo.EstChkRequiredField { line-height: 2;}  /* Space line form */
   .EstTxtErrField { color: #ff0d8c  !important;  background-color: transparent  !important; font-size: 11px  !important; text-transform: uppercase;}
 	/* =================== ESTRUTURA RESPONSIVA LOGIN =========================*/
 
 	/* =================== RESUMO DO PEDIDO =========================*/
-  #idChkTxtPedConfirmadoFC { margin: 10px auto 0;}
+  #idChkTxtPedConfirmadoFC { margin: 10px auto 0; padding: 0px !important;}
   #idChkOrderNumberFC { color: #e20b7c !important;}
   div#idChkCompletionIntFC p {padding: 0; margin: 10px auto;}
-  div#idChkCompletionIntFC {  width: 80%;}
   #idTxtPaymentMethodFC { font-size: 18px !important;  font-family: 'Roboto'!important; margin: 0!important; text-transform: uppercase;}
   div#idShowOrderDetailsFC a {color: #e3037d;}
   .idTxtTrackConfFC p a {color: #e3037d;}
   #idCheckoutFC .EstChkTabTopo { background:transparent !important;    padding: 8px 0px 8px 0px !important; font-family: 'Roboto' !important;  font-size: 18px !important;  text-transform: uppercase !important;}
-	/* =================== RESUMO DO PEDIDO =========================*/
+	/* =================== RESUMO DO PEDIDO =========================*/   
 
-
-	/* =================== INTERFACE CHECK-OUT ===========================*/
-  #idDivLinkContinueFC {float: right;}
-  #idCheckoutFC #idChkTopFC { text-align: right;  height: 1px !important;  float: right;   width: 100%;  position: relative;}  /* BOTï¿½O COMPRAR CHECK-OUT */
-  #idTitRegisterFC { background: #ffffff url('<PathTo file="images/01.svg">') no-repeat scroll 10px 10px;  height: 63px;  padding: 20px 0;} /* BULLET 01 */
-  #idTitFreightFC {background: #ffffff url('<PathTo file="images/02.svg">') no-repeat scroll 10px 10px;  height: 63px;  padding: 20px 0;} /* BULLET 02 */
-  #idTitPaymentFC {background: #ffffff url('<PathTo file="images/03.svg">') no-repeat scroll 10px 10px;height: 63px;  padding: 20px 0;} /* BULLET 03 */
-  #idTitCartFC {background: #ffffff url('<PathTo file="images/04.svg">') no-repeat scroll 10px 10px; height: 63px; padding: 20px 0;} /* BULLET 04 */
-  #idCheckoutFC .EstChkOrderConfirmationFC { float: right; width: 280px;}
-  div#idTitRegisterFC h5 {font-size: 22px;  margin: 0;  text-transform: uppercase;  font-family: 'Roboto';}
-  td.EstChkRadioOptSit {padding: 15px 0 !important;}
-  /* =================== INTERFACE CHECK-OUT ===========================*/
-
-
-	/* =================== END:  MY CHECK-OUT ===========================*/
-
+	/* =================== END:  MY CHECK-OUT ===========================*/ 
 	.FCHelp .EstTabTopo {padding: 15px;  font-size: 18px !important; background: #dedede !important;}
 
 	/* BEGIN: ADVANTAGES */
@@ -810,23 +812,18 @@
 	.DivListProd { max-width: 55%;}
 	.MagicSlideshow.mss-horizontal {min-height: 160px;}
 	span.HomeNomeProd.font-16 a { width: 60%; margin: 0 auto;}
-
 	}
 
 	@media (max-width: 767px) {
-
-
 	div#FCCartButtons ul { display: flex;display:-webkit-flex;
 	display:-ms-flexbox;  flex-direction: column-reverse;}	/*Ordem dos botões carrinho*/
 	div#idDivSearch { display: none;}/* Filtros none mobile*/
 	div#idHeadFilters { display: none;} /* Filtros none mobile*/
-
 	.EstDescrProdCross {display: none !important;}
 	#idListProdCrossFC li { min-width: 100% !important;}
 	.ProdDet-Club {margin: 9px auto;	width: 95%;}
 	.bTItem {margin: 60px auto 100px;	}
 	.bTImgProd {width: 50%;	margin: 0 auto;}
-
 
 	/* PRODET */
 	body.FCProduct.ProductDet .zFProdSeloProd {	display: flex;	justify-content: flex-start;}
@@ -840,13 +837,11 @@
 	.banners-scrol .mcs-item {width: 90%!important; 	margin: 0 3px;}
 	.banners-scrol .mcs-item img {min-height: 50px !important;width: 300px !important;}
 	.ProdDet-Club p {font-size: 14.8px !important; margin: 5px auto;}
-
 	/*PRODLIST*/
 
 	.ProdOut-Buttons a { min-width: 50%; text-align: center;}
 	body.FCProduct.ProductList button.ProdOut-Button.details { background: #e3037d; color: #fff; }
 	body.FCProduct.ProductList button.ProdOut-Button { background: #26c515;  color: #fff; border-radius: 5px; width: 78%;}
-
 
 	/*BEGIN: HOME */
 	.DivListProd {width: 85%;    margin: 0 auto;}
@@ -872,10 +867,8 @@
 	.Band-top-links span {display: none;}
 	.header-help { margin-right: 1em;}
 	.Band-top .c-xs-10.c-s-7.c-m-6.c-l-6 { margin-right: 0;}
-
 	span.head-advanced-search {  margin: 10px auto 10px;}
-	.InputTextBusca {width: 100%;}
-	.sidenav a {padding: 15px 0;}
+	.InputTextBusca {width: 100%;} 
 	.container.carrossel .mcs-item {width: 40% !important;}
 	/*BEGIN: BARRATOPO*/
 
@@ -883,7 +876,6 @@
 	.DivHomeImagemProd {width: 100%; display: flex;justify-content: center;}
 	.ui-autocomplete {background-color: red; max-width: 100%;}
 	.DivHomeProd {width: 95%;}
-
 	button.mcs-button.mcs-horizontal.mcs-button-arrow.mcs-button-arrow-next {position: relative; width: 51px; }
   /* BEGIN: PRODOUT */
 
@@ -903,6 +895,18 @@
   .Help-doubt {display: block;}
 	/*ajuda*/
 
+	/*CUstom*/
+	p.ClubeStyle {min-width: 100%;}
+	.FCClube-msg,.FCClube-label {max-width: 250px;}
+	img.ClubeLogo {padding: 0 25px;}
+	.FCClube-cols p {max-width: 70%;}
+	img.First-title {padding: 40px 10px 10px;}
+	.MenuOverlay {max-width: 10%;}
+	.FCClube-header {background-image: url('<PathTo file="images/clube_atracao_mob.png">');background-repeat: no-repeat;	background-position: center;	width: 100%;	height: 100%;background-size: cover; }  
+	/*Custom*/
+
+	/*PEDS*/
+	.pedtoptel,.pedtophelp {font-size: 13px;  display: flex;  align-items: center;}
 	#idChkAllFC {width: 100% !important;max-width: 320px;}
 	.FCCartChk { width: 100% !important;}
 	.FCFreightChk { width: 100%!important;   max-width: 100%!important;}
@@ -910,8 +914,6 @@
 	form#idForm1FC {width: 320px;  margin: 0 auto;}
 	.news-style-image img { position: relative;  top: 5px;}
 	}
-
-
 
 	/* BEGIN: TABLETS */
 	@media (min-width: 992px) and (max-width: 1023px) {
@@ -925,20 +927,13 @@
 	@media (min-width: 768px) {
 	.swiper-button-next,.swiper-button-prev{margin-top:-190px!important;top:inherit!important}.container.news{padding:0}
 	.col-small-12.col-medium-12.col-large-12.col-xlarge-12.FCGridMain {margin: 0;}
-	/* CHECK-OUT */
-	.FCCheckoutMain {display: flex; flex-wrap: wrap; width: 590px !important;} /* FIRST CONTAINER CHECK-OUT */
-	#idChkCol1FC,#idChkCol2FC,#idChkCol3FC,#idChkCol74FC {width: 290px !important;} /* COLUNAS CHECK-OUT */
-	#idChkCol3FC {float: left !important; }
-	#idCheckoutFC .EstChkOrderConfirmationFC {width: 580px;}
-	.bott-footer {width: 100%;  bottom: 0px;}
 
 	/* INTERFACE LOGIN */
 	#idTabLoginFC #Email { min-width: 380px;}
 	#idChkLoginIntFC { width: 470px !important;    margin: 40px !important;} /* LOGIN */
 	tr#idOptSitSenhaLoginFC, input#SenhaAtual {  width: 310px !important;} /* input senha width */
-
 	/* INTERFACE LOGIN */
-	/* CHECK-OUT */
+
 	.scrol-hidden {display: none;}
 	hr.brand.separator {margin: 0 auto 20px;}
 	.MagicSlideshow.mss-horizontal {max-height: 200px;}
@@ -967,7 +962,6 @@
 	li.bold-list { font-weight: bold;}
   .container.head,.container.Band { padding: 0;}
 	.Dest .installments { display: none;}
-
 	/* BARRATOPO */
 
 	/* HOME */
@@ -1055,11 +1049,19 @@
 	/*ajuda	*/
   .Help-doubt {display: flex;}
 
+	/*Custom*/
+	img.First-title { max-width: 65%; }
+	img.First-breve {   max-width: 50%;  }
+	img.First-title {padding: 30px 10px 10px;}
+	.FCClube-cols p { margin: 0 auto 55px; width: 60%; }
+	.FCClube-body h4 { width: 490px; }
+	.FCClube-msg { margin: 45px auto; }
+	.FCClube-header { min-height: 410px;}
+  /*Custom*/
 
 	}
 
 	@media (min-width: 768px) and (max-width: 1023px) {
-
 	.c-xs-12.c-s-6.c-m-4.c-l-4.banners-footer-first { margin-left: 0; margin-right: 10px; }
 	.c-xs-12.c-s-6.c-m-4.c-l-4.banners-footer-second { margin-left: 0; margin-right: 0; }
 	.m-hidden { display: none !important; }
@@ -1075,15 +1077,13 @@
 	form.advantages-newsletter {width: 70%;}
 	span.advantages-newsletter-titulo {width: 100%; text-align: left;	min-height: 100%;padding: 0 5px;}
 	/*Home*/
-
 	#idChkCartIntFC {width: 280px !important;}
 	.banners-scrol.second .MagicScroll { max-height: 245px; min-height: 245px; }
 
 	}
 
 
-	@media (min-width: 994px) and (max-width: 1023px) {.c-xs-12.c-s-12.c-m-9.c-l-10 { width: 100%; }}
-
+	@media (min-width: 994px) and (max-width: 1023px) {.c-xs-12.c-s-12.c-m-9.c-l-10 { width: 100%; }} 
 	@media (min-width: 1024px) {
 	.c-xs-12.c-s-12.c-m-12.c-l-12.About{width:70%;margin:0 auto}
 	body.FCProduct.ProductList .c-m-3.c-l-3.filters{display:block;}
@@ -1157,21 +1157,20 @@
 	/* ERROS */
 
 	li.FCCartBuy {display: none;}
-	.FCCheckoutMain { width: 875px !important;}
-
-	/* CHECK-OUT 1024 */
-	#idCheckoutFC .EstChkOrderConfirmationFC {  width: 84%;}
-	.EstChkDiv {margin: 0px 0px 5px 0px !important;}
-	/* CHECK-OUT 1024 */
 	.about-image {width: 400px;}
-
 	ul.FooterULSecurityFC { max-width: 65%; }
 
+	/*Custom*/
+	.FCClube-label { margin: 0px auto;}
+	img.First-title.o-hidden { display: none !important;}
+	img.Second-title {  min-width: 100%;}
+	img.First-title {padding: 70px 10px 10px;}
+	img.First-breve {max-width: 35%;}
+	h4.FCClube-sub { margin: 22px auto 53px;  max-width: 240px;} 
+	.FCClube-msg {min-width: 560px;} 
+  /*Custom*/
 }
-
-
 	@media (min-width: 1200px) {
-
 	/*GERAL MONITORES*/
 	.o-hidden {display: block !important;}
 	.s-hidden {display: block !important;}
@@ -1223,8 +1222,8 @@
   /* CUSTOM */
 	.container.FCHelp { margin: 50px auto;padding:0px;}
 	.container.FCHelp p {font-size: 1.0em !important;}
+	img.Second-title.m-hidden.o-hidden { display: none !important;}
 	/* CUSTOM */
-
 	}
 
 
@@ -1283,22 +1282,11 @@
 	/* PRODET */
 
  	.FProdNotErrOr { width: 60%;}
- 	.footer { padding: 27px 0;}
-
- 	/* CHECKOUT */
- 	#idCheckoutFC .EstChkOrderConfirmationFC { width: 66%;} /* CONTAINER FIRST CHECKOUT */
- 	#idChkAllFC,.FCCheckoutMain {width: 1260px!important;} /* CONTAINER FIRST AND SECOND CHECKOUT */
- 	#idChkCol1FC,#idChkCol2FC,#idChkCol3FC {width: 420px !important;} /* WIDTH ALL COLS */
- 	#idChkRegisterIntFC {width: 410px !important;} /* WIDTH CHILD FIRST COL */
- 	#idChkExtRegisterFC {width: 420px !important;}
- 	#idChkCartIntFC {width: 420px !important;}
- 	#idChkFreightIntFC {width: 415px !important;}
- 	#idChkPaymentIntFC  {max-width: 415px !important; width: 415px !important;float: left; }
- 	#idCheckoutFC .EstTitCheckoutFC {font-size: 18px !important;}
- 	/* CHECKOUT */
-
+ 	.footer { padding: 27px 0;} 
+	.FCClube-header { min-height: 590px;}  
 	ul.FooterULSecurityFC { max-width: 50%; }
-    }
+	.Contact p {width: 370px;}
+  }
 
 	@media (min-width: 1900px) {
 
@@ -1325,17 +1313,13 @@
 	.xs-hidden.s-hidden.c-m-3.c-l-3.Prodout-Menu {width: 15%;}
 	.c-xs-12.c-s-12.c-m-9.c-l-9.Prodout-Display {width: 84%;}
   /*AJUSTES DO GRID E BANNERS HOME PARA MONITORES MAIORES */
-
  	}
-
-	======================================
+ 
 	/* ESTILOS ATRA?O SEXSHOP  */
-	======================================
-
-
+ 
 	/*pedtopo*/
-	.FCRegister footer { background: #333333;  height: 100%;}
-	.row.Ped { justify-content: space-between;}
+	.FCRegister footer { background: #ffffff;  height: 100%;}
+	.c-xs-6.c-s-6.c-m-6.c-l-6.flex-end { align-items: flex-end;  display: flex;  justify-content: flex-end;}
 	.pedlogo { width: 100%; text-align: center; margin: 10px 0 5px 0; }
 	.pedblackbar { width: 100%; height: 50px; background-color: #000; color: rgb(255, 255, 255); padding: 10px; }
 	.pedline { margin-bottom: 10px; }
