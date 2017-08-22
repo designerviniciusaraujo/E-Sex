@@ -7,21 +7,39 @@ ImgLoadingFC = FC$.PathImg + "loading.gif";
 ImgOnError = FC$.PathImg + "nd";
 
 var sF$ = (function () {
-
+  
   var sCurrentPage = document.location.href.toUpperCase();
   function fnGetID(id) {
     return document.getElementById(id);
   }
 
   function CupomDesconto(){
-    if (FC$.Page=="Newsletter"){
+     if (FC$.Page=="Newsletter"){  
       document.getElementById('EnviarAssinante').onclick = function(){
         var NomeAss=(document.getElementById('NomeAssinante').value);
-        var EmailAss=(document.getElementById('Email').value);
-        var CodeDesc = " PRAZER10 "
-        localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!");
+        var EmailAss=(document.getElementById('Email').value); 
+        var DisableCupom =(document.getElementById('FormatoHTMLNenhum').checked);
+        var CodeDesc = " PRAZER10 " 
+     if (DisableCupom==false) {
+          localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!");
+           alert("Bem vindo")
+        }else{alert("Removemos seu e-mail!");}        
       }
 
+    }
+    if (FC$.Page=="Home"){  
+      document.getElementById('EnviarAssinante').onclick = function(){
+        var NomeAss=(document.getElementById('NomeAssinante').value);
+        var EmailAss=(document.getElementById('Email').value);  
+        var CodeDesc = " PRAZER10 " 
+         localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!"); 
+      }
+      document.getElementById('FirstSubmit').onclick = function(){
+        var NomeAss=(document.getElementById('FirstName').value);
+        var EmailAss=(document.getElementById('Email').value);  
+        var CodeDesc = " PRAZER10 " 
+         localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!"); 
+      }
     }
 
     if (FC$.Page=="Newsletter" || localStorage.getItem("NomeAssinante")==null) {
@@ -570,11 +588,57 @@ var sF$ = (function () {
     fnCreateEventGA: fnCreateEventGA,
     fnHideShowBannersHome: fnHideShowBannersHome,
     fnLinkDisp: fnLinkDisp,
-    fnShowEconomyFlag: fnShowEconomyFlag
+    fnShowEconomyFlag: fnShowEconomyFlag,
+
   }
 
 })();
 
+
+function GoForm(){
+    document.getElementById('teste').onclick = function() {
+      setTimeout(function(){
+        document.querySelector(".Gform").style.height = "1400px";
+        document.querySelector(".Gform").style.visibility = "visible";
+        document.querySelector(".Gform").style.transition = "all 2s";
+      }, 350);
+    }
+}
+
+function MenuStore(){ 
+var status = null;  
+function mais() { 
+  if (status == null) { 
+        document.querySelector(".open").onclick = function (){  
+        document.querySelector(".sidebar").style.visibility = "visible";
+        document.querySelector(".sidebar").style.transition = "all 0.3s";
+        setTimeout(function(){document.querySelector(".MenuList").style.marginLeft = "0px";}, 150); 
+        document.querySelector(".MenuList").style.transition = "all 0.2s";
+         teste(); 
+         }
+      }
+    }mais();
+   function teste() {
+      var status = true;
+      if (status == true) { 
+       document.querySelector(".open").onclick = function(){  
+        document.querySelector(".sidebar").style.visibility = "hidden";
+        document.querySelector(".MenuList").style.marginLeft = "-500px";
+          mais();
+       }
+       document.querySelector(".MenuOverlay").onclick = function(){  
+        document.querySelector(".sidebar").style.visibility = "hidden";
+        document.querySelector(".MenuList").style.marginLeft = "-500px";
+          mais();
+       }
+        document.getElementById("close").onclick = function(){  
+        document.querySelector(".sidebar").style.visibility = "hidden";
+        document.querySelector(".MenuList").style.marginLeft = "-500px";
+          mais();
+       } 
+      } 
+    } 
+ } 
 //Funções para o carrinho
 var oDivShowCartOnPage = null;
 var iLastCartOnPage = 0;
@@ -607,7 +671,7 @@ function ShowCartOnPage(IDLoja, iErr, sMsg, sCartText, sCheckoutText, este) {
   sHTML += "<tr onclick=window.location.href='/addproduto.asp?idloja=" + IDLoja + "'><td id=idTDTitShowCartOnPageFC colspan=2 align=center style='background-color:#" + sBackColor + ";color:#ffffff;border-width:1px;border-color:#3b6e22;font-weight:bold;font-size:12px;cursor:pointer'><div style='padding:5px; line-height:" + iLH + "px;'>" + sMsg + "</div></td></tr>";
   if (iErr == 0) {
     sHTML += "<tr height=45>";
-    sHTML += "<td valign=top align=center style=cursor:pointer onclick=window.location.href='/addproduto.asp?idloja=" + IDLoja + "'><a href='/addproduto.asp?idloja=" + IDLoja + "' style='color:#444444;text-decoration:none;font-size:14px;font-weight:bold;'>Finalizar compra</a></td>";
+    sHTML += "<td valign=top align=center style=cursor:pointer onclick=window.location.href='/addproduto.asp?idloja=" + IDLoja + "'><a target='_parent' href='/addproduto.asp?idloja=" + IDLoja + "' style='color:#444444;text-decoration:none;font-size:14px;font-weight:bold;'>Finalizar compra</a></td>";
     sHTML += "<td align=left><img src='" + FC$.PathImg + "iconclose.svg' width=20 height=20 hspace=5 style='cursor:pointer;margin-top:10px' onclick=oDivShowCartOnPage.style.visibility='hidden'></td>";
     sHTML += "</tr>";
     sF$.fnUpdateCart(true, false);
