@@ -5,7 +5,6 @@
 #ContentFil .DivFiltrarPor {padding:0px 0px 10px 0px; display: block;}
 #ContentFil .DivFiltrarPor .Label{border-radius: 5px;background: #e3037d;font-weight:normal;font-size:15px;width:auto;display:block;padding:5px 0 5px 5px;color:#FFFFFF;}
 
-  
 #ContentFil .FilSearch{padding:0 4%;margin:0;list-style-type:none;}
 #ContentFil .FilSearch .FilName{margin:10px 0 5px 0;font-weight:bold;cursor:pointer;}
 #ContentFil .FilSearch .FilName img{padding:0 4px 0 0;cursor:pointer;width:16px;height:16px;}
@@ -35,98 +34,30 @@
 #ContentFil #idFilSearchTextOriSpanFC a{color: #333;}
 #ContentFil .FilInputSearch {padding-bottom: 10px}
 
-.FilItemsList label {
-	display: inline-block;
-	position: relative;
-	padding-left: 25px;
-}
-.FilItemsList input[type=radio],
-.FilItemsList input[type=checkbox] {
-	display: none;
-}
-.FilItemsList label:before {
-	content: "";
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	margin-right: 10px;
-	position: absolute;
-	left: 3px;
-	bottom: 1px;
-  background: #ffffff;
-}
-
-.FilItemsList label:before {
-	border-radius: 3px;
-  border: 1px solid #b2b2b2;
-}
-.FilItemsList input[type=checkbox] + label {
-	/*margin-bottom: 10px;*/
-}
-.FilItemsList input[type=radio] + label:before {
-    border-radius: 8px;
-}
-
-.FilItemsList input[type=radio]:checked + label:before {
-    content: "\2022";
-    color: #f3f3f3;
-    font-size: 31px;
-    text-align: center;
-    line-height: 18px;
-    background-color: #000000;
-    border: none;
-}
-
-.FilItemsList input[type=checkbox]:checked + label:before {
-	content: "\2713";
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-	font-size: 15px;
-	color: #f3f3f3;
-	text-align: center;
-  line-height: 15px;
-  background-color: #000000;
-  border: none;
-}
+.FilItemsList label {display: inline-block;	position: relative;	padding-left: 25px;}
+.FilItemsList input[type=radio],.FilItemsList input[type=checkbox] {display: none;}
+.FilItemsList label:before {content: "";display: inline-block;width: 16px;height: 16px;	margin-right: 10px;	position: absolute;	left: 3px;	bottom: 1px;  background: #ffffff;}
+.FilItemsList label:before {border-radius: 3px; border: 1px solid #b2b2b2;}
+.FilItemsList input[type=radio] + label:before { border-radius: 8px;}
+.FilItemsList input[type=radio]:checked + label:before {  content: "\2022";  color: #f3f3f3;  font-size: 31px;  text-align: center;  line-height: 18px;  background-color: #000000;  border: none;}
+.FilItemsList input[type=checkbox]:checked + label:before {content: "\2713";text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);font-size: 15px;	color: #f3f3f3;	text-align: center;  line-height: 15px;  background-color: #000000; border: none;}
 
 @media (max-width: 767px) {
-  #ContentFil {border-bottom: 1px solid #eeeeee; width: 100%;}
-  #ContentFil .DivFiltrandoPor{border-bottom:1px solid #eeeeee;}
-  #ContentFil .FilSearch .SearchFil{height: 30px; margin: 0;}
-  #ContentFil .FilItems .FilItemsList label {font-weight: normal; font-size: .9em; padding-top: 5px; padding-bottom: 5px; width: 99%}
-  #ContentFil .DivFiltrarPor .Label {display: none; padding-top: 5px; padding-bottom: 5px;}
-  #ContentFil .FilSearch .FilName {font-size: 1em; font-weight: normal}
-  #ContentFil .SetaBaixo:before{margin-right: 8px;}
-  #ContentFil .SetaDireita:before {margin-right: 13px; border-left: 5px solid #000000;}
-  #ContentFil .FilItems .FilItemsList{max-height: 140px; background: rgba(235, 235, 235,.4); border-bottom: 1px solid #ebebeb;}
-  #ContentFil .FilItems .FilItemsList label:active {background: rgba(13, 196, 150, .5);}
+#ContentFil {border-bottom: 1px solid #eeeeee; width: 100%;}
+#ContentFil .DivFiltrandoPor{border-bottom:1px solid #eeeeee;}
+#ContentFil .FilSearch .SearchFil{height: 30px; margin: 0;}
+#ContentFil .FilItems .FilItemsList label {font-weight: normal; font-size: .9em; padding-top: 5px; padding-bottom: 5px; width: 99%}
+#ContentFil .DivFiltrarPor .Label {display: none; padding-top: 5px; padding-bottom: 5px;}
+#ContentFil .FilSearch .FilName {font-size: 1em; font-weight: normal}
+#ContentFil .SetaBaixo:before{margin-right: 8px;}
+#ContentFil .SetaDireita:before {margin-right: 13px; border-left: 5px solid #000000;}
+#ContentFil .FilItems .FilItemsList{max-height: 140px; background: rgba(235, 235, 235,.4); border-bottom: 1px solid #ebebeb;}
+#ContentFil .FilItems .FilItemsList label:active {background: rgba(13, 196, 150, .5);}
 
-  #ContentFil #idFilSearchTextInputFC {
-    border: 1px solid #cecece;
-    width: 85%;
-    height: 25px;
-    margin-right: 5px;
-    font-size: 1em;
-  }
-  #ContentFil .FilRemoveFilters a,  #ContentFil .FilMoreOptionsSearch a {
-    padding: 8px 10px;
-    display: inline-block;
-    box-shadow: 0 2px 1px #666;
-    width: 99%;
-    margin: 0 auto;
-    font-size: 1em;
-  }
-
-  #ContentFil .FilRemoveFilters a:active,  #ContentFil .FilMoreOptionsSearch a:active {
-     background-color:#b50063;color:#fcfcfc;
-     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2); font-size: 15px; color: #f3f3f3; text-align: center; line-height: 15px; background-color: #e3037d; border: none;
-  }
-
-  .FilItemsList label:before {bottom: 5px;}
-
-  #ContentFil .FiltrandoPor img {
-    width: 19px;
-    border: 2px solid #CCD;
-    border-radius: 9px;
-  }
+#ContentFil #idFilSearchTextInputFC { border: 1px solid #cecece;  width: 85%;  height: 25px;  margin-right: 5px;  font-size: 1em; }
+#ContentFil .FilRemoveFilters a,  #ContentFil .FilMoreOptionsSearch a { padding: 8px 10px; display: inline-block; box-shadow: 0 2px 1px #666; width: 99%; margin: 0 auto; font-size: 1em; }
+#ContentFil .FilRemoveFilters a:active,  #ContentFil .FilMoreOptionsSearch a:active { background-color:#b50063;color:#fcfcfc; text-shadow: 1px 1px 1px rgba(0, 0, 0, .2); font-size: 15px; color: #f3f3f3; text-align: center; line-height: 15px; background-color: #e3037d; border: none;}
+.FilItemsList label:before {bottom: 5px;}
+#ContentFil .FiltrandoPor img { width: 19px; border: 2px solid #CCD; border-radius: 9px; }
 
 }
