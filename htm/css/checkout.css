@@ -9,7 +9,7 @@
 	#idCheckoutFC #idTxtLinkContinueFC:hover { background: #18a50e !important;  transition: 0.3s;}  /* button continue login */
 	tr#idOptSitSenhaLoginFC svg { margin: 10px;}
 
- 
+   
   .EstChkDiv {border-color: transparent !important;}
 	td.EstChkOptSit { line-height: 4;}
 	#idChkAllFC {  width: 100% !important;}
@@ -49,3 +49,4 @@
   /* INTERFACE CHECK-OUT   */  
 
 	/* =================== MY CHECK-OUT ===========================*/ 
+ }
