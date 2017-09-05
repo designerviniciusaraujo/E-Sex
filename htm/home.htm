@@ -1,7 +1,7 @@
 <!--ZFAST 22-08-2017 -->
-<!-- PopNews -->
-<script type="text/javascript" src="<BaseLoja>htm/popnews/popnews.js"></script>
-<link type="text/css" rel="stylesheet" href="<BaseLoja>htm/popnews/popnews.css">
+ <button id=rdate></button>
+
+<div id="BasePorNews">
 <div id="FullBackground"></div>
 <div id="popupNews" class="Newspopup">
   <a href="#" class="btnClose">
@@ -19,14 +19,37 @@
     <input type="submit" id="FirstSubmit" class="bt_news btnSubPop" name="ok" value="Eu quero"/>
   </form>  
   <div class="popnews-down">
-    <a href="#" class="btnClose">
-      <button class="btn-popnews">Não quero este desconto entrar no site!</button>
+    <a href="#" id="btnClose">
+      <button active class="btn-popnews">Não quero este desconto entrar no site!</button>
     </a>
   </div>
 </div>
+</div>
 <!-- PopNews -->
-<script type="text/javascript">PopNews();</script>
-<!-- PopNews -->
+ 
+  
+
+  <script>
+    function storageNews(){
+      var cls = document.querySelector(".btnClose");
+      var bgAl = document.getElementById("FullBackground");
+      var dCls = document.getElementById("btnClose");
+ 
+
+      cls.onclick = function(){
+        document.getElementById("BasePorNews").style.display = "none";
+      }
+      bgAl.onclick = function(){
+        document.getElementById("BasePorNews").style.display = "none";
+      }
+       dCls.onclick = function(){
+        document.getElementById("BasePorNews").style.display = "none";
+      }
+      
+
+    } storageNews()
+  </script>
+ 
 <div class=HomeContent>
   <main class="Home" role="main">
    <section>
@@ -208,7 +231,7 @@
             </div>
             <ul>
               <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261561">
-                <li>Bolinhas explosivas</li>
+                <li>Bolinhas aromáticas</li>
               </a>
               <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261562">
                 <li>Excitantes Femininos</li>
