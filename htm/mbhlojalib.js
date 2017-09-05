@@ -655,7 +655,7 @@ function fnMaxInstallmentsGrid(PrecoProd,MaxParcelas){
 function GoForm(){
     document.getElementById('teste').onclick = function() {
       setTimeout(function(){
-        document.querySelector(".Gform").style.height = "800px";
+        document.querySelector(".Gform").style.height = "1200px";
         document.querySelector(".Gform").style.visibility = "visible";
         document.querySelector(".Gform").style.transition = "all 2s";
       }, 350);
