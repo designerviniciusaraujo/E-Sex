@@ -6,38 +6,78 @@ var iDescontoAvista = 0;
 ImgLoadingFC = FC$.PathImg + "loading.gif";
 ImgOnError = FC$.PathImg + "nd";
 
-var sF$ = (function () {
-  
+var sF$ = (function () {  
   var sCurrentPage = document.location.href.toUpperCase();
   function fnGetID(id) {
     return document.getElementById(id);
   }
+  function storagePopNews(){
+  console.log("IE Browser test")
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1;  
+  var yyyy = today.getFullYear();
+  
+  today = dd + '/' + mm + '/' + yyyy; 
+     
+  var convert = today;
+  var ExDate;
+  var c = localStorage.getItem("curDate");    
+ 
+   document.getElementById("rdate").onclick = function(){localStorage.removeItem("curDate");}
+  
+  if (c==null) {var dA = localStorage.setItem("curDate", convert);} 
+  if (convert==ExDate) {localStorage.removeItem("curDate");}
 
+  var ExSplit = c.split("/");     
+  var mEx = Number(ExSplit[1])+1  
+  var dEx = Number(ExSplit[0])   
+  var yEx = Number(ExSplit[2]);
+  
+  if (mEx>12) { 
+    var yEx = Number(ExSplit[2])+1  
+    mEx=1;
+    
+  }  
+  var ExDate = ExSplit[0] +'/'+ mEx +'/'+ yEx;   
+ 
+  if (mm<=mEx & dd<=dEx & yyyy<=yEx ) {  
+     
+    document.getElementById("BasePorNews").style.display = "none" 
+  }else { 
+
+      document.getElementById("BasePorNews").style.display = "block"
+      localStorage.removeItem("curDate"); 
+  } 
+
+   }
   function CupomDesconto(){
-     if (FC$.Page=="Newsletter"){  
+     if (FC$.Page=="Newsletter"){
       document.getElementById('EnviarAssinante').onclick = function(){
         var NomeAss=(document.getElementById('NomeAssinante').value);
-        var EmailAss=(document.getElementById('Email').value); 
+        var EmailAss=(document.getElementById('Email').value);
         var DisableCupom =(document.getElementById('FormatoHTMLNenhum').checked);
-        var CodeDesc = " PRAZER10 " 
+        var CodeDesc = " PRAZER10 "
      if (DisableCupom==false) {
           localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!");
            alert("Bem vindo")
-        }else{alert("Removemos seu e-mail!");}        
+        }else{alert("Removemos seu e-mail!");}
       }
 
-    }
-    if (FC$.Page=="Home"){  
+   }
+ 
+
+    if (FC$.Page=="Home"){
       document.getElementById('EnviarAssinante').onclick = function(){
         var NomeAss=(document.getElementById('NomeAssinante').value);
-        var EmailAss=(document.getElementById('Email').value);  
-        var CodeDesc = " PRAZER10 " 
-         localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!"); 
+        var EmailAss=(document.getElementById('Email').value);
+        var CodeDesc = " PRAZER10 "
+         localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!");
       }
       document.getElementById('FirstSubmit').onclick = function(){
         var NomeAss=(document.getElementById('FirstName').value);
-        var EmailAss=(document.getElementById('Email').value);  
-        var CodeDesc = " PRAZER10 " 
+        var EmailAss=(document.getElementById('Email').value);
+        var CodeDesc = " PRAZER10 "
          localStorage.setItem("NomeAssinante"," Parabéns "+NomeAss+", use o código de desconto: " +CodeDesc+" em suas compras!"); 
       }
     }
@@ -563,7 +603,8 @@ var sF$ = (function () {
     fnShowEconomy: fnShowEconomy,
     fnBadgeProdZF: fnBadgeProdZF,
     fnLogout: fnLogout,
-    CupomDesconto:CupomDesconto,
+    CupomDesconto:CupomDesconto, 
+    storagePopNews:storagePopNews,
     fnShowPrice: fnShowPrice,
     fnPriceTop:fnPriceTop,
     fnShowParcels: fnShowParcels,
@@ -588,8 +629,7 @@ var sF$ = (function () {
     fnCreateEventGA: fnCreateEventGA,
     fnHideShowBannersHome: fnHideShowBannersHome,
     fnLinkDisp: fnLinkDisp,
-    fnShowEconomyFlag: fnShowEconomyFlag,
-
+    fnShowEconomyFlag: fnShowEconomyFlag
   }
 
 })();
@@ -605,40 +645,40 @@ function GoForm(){
     }
 }
 
-function MenuStore(){ 
-var status = null;  
-function mais() { 
-  if (status == null) { 
-        document.querySelector(".open").onclick = function (){  
+function MenuStore(){
+var status = null;
+function mais() {
+  if (status == null) {
+        document.querySelector(".open").onclick = function (){
         document.querySelector(".sidebar").style.visibility = "visible";
         document.querySelector(".sidebar").style.transition = "all 0.3s";
-        setTimeout(function(){document.querySelector(".MenuList").style.marginLeft = "0px";}, 150); 
+        setTimeout(function(){document.querySelector(".MenuList").style.marginLeft = "0px";}, 150);
         document.querySelector(".MenuList").style.transition = "all 0.2s";
-         teste(); 
+         teste();
          }
       }
     }mais();
    function teste() {
       var status = true;
-      if (status == true) { 
-       document.querySelector(".open").onclick = function(){  
+      if (status == true) {
+       document.querySelector(".open").onclick = function(){
         document.querySelector(".sidebar").style.visibility = "hidden";
         document.querySelector(".MenuList").style.marginLeft = "-500px";
           mais();
        }
-       document.querySelector(".MenuOverlay").onclick = function(){  
+       document.querySelector(".MenuOverlay").onclick = function(){
         document.querySelector(".sidebar").style.visibility = "hidden";
         document.querySelector(".MenuList").style.marginLeft = "-500px";
           mais();
        }
-        document.getElementById("close").onclick = function(){  
+        document.getElementById("close").onclick = function(){
         document.querySelector(".sidebar").style.visibility = "hidden";
         document.querySelector(".MenuList").style.marginLeft = "-500px";
           mais();
-       } 
-      } 
-    } 
- } 
+       }
+      }
+    }
+ }
 //Funções para o carrinho
 var oDivShowCartOnPage = null;
 var iLastCartOnPage = 0;
