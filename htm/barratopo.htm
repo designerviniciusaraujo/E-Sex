@@ -1,5 +1,6 @@
   <link rel="stylesheet" href="<PathTo file="htm/css/flexgrid.css">">
   <link rel="stylesheet" href="<PathTo file="htm/css/lojasite.css">">
+  <link rel="stylesheet" href="<PathTo file="htm/popnews/popnews.css">">
   <link rel="stylesheet" type="text/css" href="/js/MagicToolbox/MagicScrollV2/magicscroll.css"/>
   <link rel="stylesheet" href="<BaseLoja>htm/css/jquery_ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -7,8 +8,7 @@
   <script type="text/javascript" src="<BaseLoja>htm/LojaLib.js"></script>
   <script src="/js/magictoolbox/magiczoomplusv1/magiczoomplus.js"></script>
   <script type="text/javascript" src="/js/MagicToolbox/MagicScrollV2/magicscroll.js"></script>
-  <script language="JavaScript" src="/jquery-1.8.2.min.js"></script>
-  <script type="text/javascript" src="<BaseLoja>htm/popnews/jQueryCookie.js"></script>
+  <script language="JavaScript" src="/jquery-1.8.2.min.js"></script> 
   <script type="text/javascript" src="<BaseLoja>htm/autosuggest.js"></script>
 
   <!-- <script language="JavaScript" src="/jquery-ui-1.9.2.custom.min.js"></script> -->
@@ -52,10 +52,10 @@
         </div>
         <div class="c-s-2 c-m-3 c-l-2">
           <div class="HeaderCartMainFC ToolBarCart">
-            <a href="/addProduto.asp?idloja=<IDLojaNum>">  
+            <a href="/addProduto.asp?idloja=<IDLojaNum>">
               <div class="HeaderCartMainIconFC">
                 <img64 src="<Baseloja>images/cart-icon.svg" alt="carrinho-compra" plain="true" width="35" height="35">
-              </div>
+             </div>
             </a>
             <a href="/addProduto.asp?idloja=<IDLojaNum>">
               <div class="HeaderCartMainItemTotalFC">
@@ -79,7 +79,7 @@
             <span style="font-size:30px;cursor:pointer" class="open">
               <img alt="icone-menu" class="header-menu" src="<PathTo file="images/menu_icon.svg">">
             </span>
-            <nav class="sidebar"> 
+            <nav class="sidebar">
               <div class="MenuList">
                 <span id="close">x</span>
                 <ul>
@@ -93,8 +93,8 @@
                   <li><a href="/contato">Fale Conosco</a></li>
                 </ul>
               </div>
-              <div class="MenuOverlay"></div> 
-            </nav>  
+              <div class="MenuOverlay"></div>
+            </nav>
           </div>
           <div class="c-xs-10 c-s-7 c-m-6 c-l-6">
             <div class="Band-top-links ">
@@ -116,16 +116,16 @@
                 <li>
                   <div class="MegaMenu-Select">
                     <img alt="icone-contato" class="down-phone" src="<PathTo file="images/contact.svg">"> contato@atracaosexshop.com.br
-                    <span class="PhoneIcon"></span>
+                    <!-- <span class="PhoneIcon"></span> -->
                   </div>
-                  <div class="PhoneBox">
+                  <!-- <div class="PhoneBox">
                     <ul>
                       <li>(11) 9 9999 9999</li>
                       <li>(11) 9 9999 9999</li>
                       <li>(11) 9 9999 9999</li>
                       <li>(11) 9 9999 9999</li>
                     </ul>
-                  </div>
+                  </div> -->
                 </li>
                <div onclick="drop_close()" class="Menu-overlay"></div>
               </ul>
@@ -136,6 +136,7 @@
     </div>
 
   </div>
+ 
   <!-- BEGIN: HEAD  -->
   <div class="container head">
     <div class="head">
@@ -146,13 +147,13 @@
           </div>
         </div>
         <div class="c-xs-5 c-s-1 c-m-1 c-l-3">
-          <div class="head-cart">  
+          <div class="head-cart">
             <a href="/addProduto.asp?idloja=<IDLojaNum>" class="CartItens">
             <span class="cart-alert">Clique para ver itens no carrinho !</span>
             <img alt="Carrinho Compra" src="<PathTo file="images/cart-icon.svg">">
               <div class="HeaderCartMainItemTotalFC">
                 <div id="HeaderCartItemFC"><span id="idCartItemsTop"></span></div>
-                <div id="HeaderCartTotalFC"><span id="idCartTotalTop"></span></div>
+               <div id="HeaderCartTotalFC"><span id="idCartTotalTop"></span></div>
               </div>
             </a>
             <script>FCLib$.onReady(function(){sF$.fnUpdateCart(false,false);});</script>
@@ -239,7 +240,7 @@
                  </div>
                  <div class="MegaBox-Categories">
                    <div class="DivSlow">
-                     <prod out="p1" id="5667837">
+                     <prod out="p1" id="5667847">
                    </div>
                  </div>
                </div>
@@ -338,7 +339,7 @@
                   <ul class="one">
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261541"><li>Ver todos</li></a>
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261560"><li>Adstringentes</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261561"><li>Bolinhas explosivas</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261561"><li>Bolinhas aromáticas</li></a>
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=262384"><li>Canetas comestiveis</li></a>
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261562"><li>Excitantes Femininos</li></a>
                   </ul>
@@ -360,10 +361,10 @@
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261570"><li>Sexo Oral Ice - Esfria</li></a>
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261572"><li>Vibrador Líquido</li></a>
                   </ul>
-                </div>  
+                </div>
                 <div class="MegaBox-Categories">
                   <div class="DivSlow">
-                    <prod out="p1" id="5668328">
+                    <prod out="p1" id="5685127">
                   </div>
                 </div>
               </div>
@@ -439,7 +440,7 @@
                 </div>
                 <div class="MegaBox-Categories">
                   <div class="DivSlow">
-                    <prod out="p1" em="rand">
+                    <prod out="p1" id="5699991">
                   </div>
                 </div>
               </div>
@@ -483,7 +484,7 @@
                 </div>
                 <div class="MegaBox-Categories">
                   <div class="DivSlow">
-                    <prod out="p1" em="rand">
+                    <prod out="p1" id="5668514">
                   </div>
                 </div>
               </div>
@@ -511,7 +512,7 @@
                 <div class="MegaBox-Categories">
                   <ul class="one">
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261545"><li>Ver todos</li></a>
-                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261589"><li>Feminino</li></a>
+                    <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261589"><li>Fidinino</li></a>
                     <a href="/listaprodutos.asp?idloja=<IDLoja>&idcategoria=261588"><li>Masculino</li></a>
                   </ul>
                 </div>
@@ -559,7 +560,7 @@
                 </div>
                 <div class="MegaBox-Categories">
                   <div class="DivSlow">
-                    <prod out="p1" id="5668515">
+                    <prod out="p1" id="5668509">
                   </div>
                 </div>
               </div>
