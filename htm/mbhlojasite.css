@@ -42,7 +42,7 @@
 	 	/*Custom*/
 	.FCClube-ms { background: white; width: 320px; margin: 0 auto; }
 	.FCClube-msg p { background: white; border: 3px solid #ffb919; padding: 0; width: 100%; margin: 0 auto; font-family: 'Roboto' !important; color: #424242 !important; font-size: 22px !important; }
-	
+	body.FCCustom.MbhclubePage section.container.amp-main {  padding: 0 !important;}
 	label.activomodal { display: flex; justify-content: space-between; width: 100%; background: #ffffff; display: flex; align-items: center; border-radius: 5px; padding-left: 5px; padding: 5px; }
 	span.FCClube-Icdown { width: 50px; display: block; text-align: center; margin: 0 auto; position: relative;   }
 	h4.FCClube-sub { margin: 4px auto 90px; }
@@ -58,14 +58,26 @@
 	.FCClube-cols span img { width: 150px; }
 	.zFPromoNotFound { transition: 0.3s; box-shadow: 1px 2px 7px #888888; width: 200px; display: block; background: #e20b7c; color: #fff; font-size: 1.35em; text-decoration: none; border-radius: 5px; text-align: center; padding: 10px 0; margin: 10px auto 0px; text-transform: uppercase; font-family: 'Roboto'; color: #fff; }
 	.zFPromoNotFound:visited { color: #fff; }
-	.FCClube-promo p { font-size: 22px !important; }
+	.FCClube-promo p { font-size: 22px !important;}
 	.FCClube-promo { padding: 20px; }
 	.FCClube-label img { cursor: pointer;}
 	.ClubePage .container.all {min-width: 100%;	}
-	.Gform { height: 800px; margin: 30px auto; height: 0px; visibility: hidden; background: #ffffff; overflow: hidden; max-width: 760px; }
+	.Gform { height: 1400px; margin: 30px auto; height: 0px; visibility: hidden; background: #ffffff; overflow: hidden; max-width: 760px; }
 	.Gform iframe { max-width: 100%;}
-  .FCClube-header {background-image: url('<PathTo file="images/clube_atracao_mob.png">');background-repeat: no-repeat;	background-position: center;	width: 100%;	height: 100%;background-size: cover; }
+  .FCClube-header {background-image: url('<PathTo file="images/clube_atracao_mob.png">');background-repeat: no-repeat;	background-position: center;	width: 100%;	height: auto;background-size: cover; }
+  .swiper-slide,.swiper-wrapper {height: auto !important;}
 	/*Custom*/
+
+	/* NEWS LETTER FOOTER */
+.container.news { padding: 10px; }
+.news-low { background: #424242; color: #fff; padding: 15px 10px 20px; border-radius: 4px; }
+.news-low-text p { text-align: center; padding: 0; margin: 3px auto 0px; text-transform: uppercase; font-size: 1.0em !important; }
+.news-low span { color: #f9ce19; }
+.news-style-image { margin: 25px auto -4px; }
+.news-low form.advantages-newsletter { width: 100%; margin: 5px auto 0; border-radius: 5px !important; padding: 0 5px; }
+form.advantages-newsletter { display: flex; display: -webkit-flex; display:-ms-flexbox; background: white; height: 40px; }
+.news-low .advantages-newsletter-button { width: 35%; margin: 3px -3px; height: auto;text-transform: uppercase; }
+/* NEWS LETTER FOOTER */
 
 	/*slide categorias*/
 	.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("<PathTo file="images/icoLeftgray.svg">" )!important;background-color:transparent!important;background-size:contain!important;left:0px!important;height:85px!important;width:45px!important}
@@ -153,7 +165,7 @@
 	/* PRODDET */
 
 	/* ============== ATRAÇÂO STYLES MBH ============== */
-	.amp-main { padding-top: 0px; height: 100%; }
+	.amp-main { padding-top: 0px; height: auto;}
 	.FCHome .amp-main, .HighlightsPage .amp-main { padding-left: 0; padding-right: 0; }
 	.line-brand { background-image: url("<PathTo file="images/line.svg">"); height: 1px; width: 95%;   margin: 0 auto;}
 
